@@ -1,5 +1,6 @@
 package controllers.tcodtask.responcer.errors;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -21,6 +22,16 @@ public class ResponseExceptions
         try {
             final PrintWriter printWriter = response.getWriter();
             printWriter.print(" CODE_RESPONSE: 16\n Message: Wrong device type!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void wrongTypeRequest(HttpServletResponse response)
+    {
+        try {
+            final PrintWriter printWriter = response.getWriter();
+            printWriter.print("CODE_RESPONSE: 22\n Message: Wrong request type!");
         } catch (IOException e) {
             e.printStackTrace();
         }

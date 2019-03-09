@@ -1,9 +1,27 @@
 package main;
 
+/*
+    [*] ManagerDevices - This is mechanism which controls HardWare part of smart Home
+
+    Example of URL:
+    ../SmartHomeServer_2_0_war_exploded/managerTasks?p=123456789&type=task&device=tcod&temperature=14&humidity=23&light=12
+    where:
+    p - password
+    type - request type(hash - for getting hash code of tasks, task - for getting json file of tasks)
+    device - type of device: only TCOD at the moment
+    temperature/humidity/light - value of sensors from TCOD
+ */
+
 import controllers.tcodtask.ControllerTCODTask;
 import controllers.tcodtask.Factory;
+import controllers.tcodtask.request.RequestTypeUtils;
+import controllers.tcodtask.request.TypeRequest;
+import controllers.tcodtask.responcer.errors.ErrorLogs;
+import controllers.tcodtask.responcer.errors.ResponseExceptions;
 import device.Device;
 import device.DeviceUtils;
+import service.Service;
+import utils.hash.HashCode;
 import utils.password.PasswordUtils;
 
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +33,13 @@ import static controllers.tcodtask.responcer.errors.ResponseExceptions.wrongDevi
 import static controllers.tcodtask.responcer.errors.ResponseExceptions.wrongPassword;
 
 @WebServlet(name = "ManagerDevices")
-public class ManagerDevices extends HttpServlet {
+public class ManagerDevices extends HttpServlet
+{
+
+    public ManagerDevices() {
+        new Service().startService();
+    }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
         //nothing
     }
@@ -23,7 +47,7 @@ public class ManagerDevices extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     {
         if(PasswordUtils.passwordIsCorrect(request))
-            run(request,response);
+            hashCodeOrTasks(request,response);
         else
             wrongPassword(response);
     }
@@ -32,13 +56,27 @@ public class ManagerDevices extends HttpServlet {
     {
         if (DeviceUtils.whatDevice(request) == Device.TCOD)
             taskForTCOD(request, response);
-         else 
+         else
             wrongDeviceType(response);
+    }
+
+    private void hashCodeOrTasks(HttpServletRequest request,HttpServletResponse response)
+    {
+        controllers.tcodtask.request.TypeRequest i = RequestTypeUtils.whatTypeRequest(request);
+        if (i == TypeRequest.TASKS) {
+            run(request, response);
+        } else if (i == TypeRequest.HASH_CODE) {
+            HashCode.hashCodeTasks(getServletContext(), response);
+        } else {
+            ErrorLogs.errorOfTypeRequest();
+            ResponseExceptions.wrongTypeRequest(response);
+        }
     }
 
     private void taskForTCOD(HttpServletRequest request,HttpServletResponse response)
     {
-        final ControllerTCODTask controllerTCODTask = Factory.buildControllerTCODTask(this,request,response);
+        final ControllerTCODTask controllerTCODTask =
+                Factory.buildControllerTCODTask(getServletContext(),request,response);
         controllerTCODTask.execute();
     }
 }

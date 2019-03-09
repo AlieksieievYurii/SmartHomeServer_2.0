@@ -42,4 +42,14 @@ public class FileReader implements iReadTasks
 
         return textFromFile.toString();
     }
+
+    public String readFile()
+    {
+        try {
+            return readFileFrom(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

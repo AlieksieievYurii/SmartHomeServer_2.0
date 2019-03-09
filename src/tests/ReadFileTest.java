@@ -6,9 +6,13 @@ import task.PortType;
 import task.Task;
 import utils.converter.ConvertTasksTCOD;
 import utils.files.FileReader;
+import utils.hash.HashCode;
 import utils.json.JsonUtils;
 
 import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotSame;
 
 public class ReadFileTest
 {
@@ -95,5 +99,14 @@ public class ReadFileTest
         List<Task> list =  JsonUtils.convertTaskToList(jsonTest);
         iConverter iConverter = new ConvertTasksTCOD();
         System.out.println(iConverter.convert(list));
+    }
+
+    @Test
+    public void testSize()
+    {
+        String text = "2rfergreughirehf[eorijf[reihgoregregreg";
+        String text2 = "2rfergreughirehf[eorojf[reihgoregregreg";
+
+        assertNotSame(HashCode.hash(text),HashCode.hash(text2));
     }
 }
