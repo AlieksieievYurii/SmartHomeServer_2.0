@@ -1,0 +1,24 @@
+package device;
+
+public enum Device
+{
+    TCOD("tcod");
+
+    private String device;
+
+    Device(String device) {
+        this.device = device;
+    }
+
+    public String getDevice() {
+        return device;
+    }
+
+    public static Device whatDevice(String device)
+    {
+        if ("tcod".equals(device)) {
+            return TCOD;
+        }
+        return null;
+    }
+}

@@ -1,0 +1,19 @@
+[{
+  "type_port":"digital",
+  "port":0,
+  "status_port":1
+},{
+  "type_port":"analog",
+  "port":14,
+  "status_port":126
+},
+  {
+    "type_port":"digital",
+    "port":24,
+    "status_port":32
+  },{
+  "type_port":"analog",
+  "port":55,
+  "status_port":200
+}
+]
