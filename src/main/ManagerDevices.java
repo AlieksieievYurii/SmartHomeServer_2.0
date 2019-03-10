@@ -21,6 +21,7 @@ import controllers.tcodtask.responcer.errors.ResponseExceptions;
 import device.Device;
 import device.DeviceUtils;
 import service.Service;
+import utils.handlers.HandlerSensorsTCOD;
 import utils.hash.HashCode;
 import utils.password.PasswordUtils;
 
@@ -46,6 +47,7 @@ public class ManagerDevices extends HttpServlet
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     {
+        System.err.println("GETTING");
         if(PasswordUtils.passwordIsCorrect(request))
             hashCodeOrTasks(request,response);
         else
@@ -65,8 +67,10 @@ public class ManagerDevices extends HttpServlet
         controllers.tcodtask.request.TypeRequest i = RequestTypeUtils.whatTypeRequest(request);
         if (i == TypeRequest.TASKS) {
             run(request, response);
-        } else if (i == TypeRequest.HASH_CODE) {
-            HashCode.hashCodeTasks(getServletContext(), response);
+        } else if (i == TypeRequest.HASH_CODE)
+        {
+            HashCode.sendHashCodeTasks(getServletContext(), response);
+            HandlerSensorsTCOD.build(getServletContext(),request).handleParams();
         } else {
             ErrorLogs.errorOfTypeRequest();
             ResponseExceptions.wrongTypeRequest(response);

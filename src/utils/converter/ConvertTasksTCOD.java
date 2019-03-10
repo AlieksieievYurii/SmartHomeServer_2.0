@@ -5,19 +5,31 @@ import com.google.gson.JsonObject;
 import controllers.tcodtask.iConverter;
 import task.PortType;
 import task.Task;
+import utils.hash.HashCode;
 
+import javax.servlet.ServletContext;
 import java.util.List;
 
 public class ConvertTasksTCOD implements iConverter
 {
+    private ServletContext servletContext;
+
+    public ConvertTasksTCOD(ServletContext servletContext) {
+        this.servletContext = servletContext;
+    }
+
     @Override
     public String convert(List<Task> tasks) {
+        JsonObject jsonObject = new JsonObject();
         JsonArray jsonArray = new JsonArray();
 
         for(Task t : tasks)
             jsonArray.add(getJsonObject(t));
 
-        return jsonArray.toString();
+        jsonObject.addProperty("hash", HashCode.hashCodeTasks(servletContext));
+        jsonObject.add("tasks",jsonArray);
+
+        return jsonObject.toString();
     }
 
     private JsonObject getJsonObject(Task task)

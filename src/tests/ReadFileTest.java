@@ -97,7 +97,7 @@ public class ReadFileTest
                 "]";
 
         List<Task> list =  JsonUtils.convertTaskToList(jsonTest);
-        iConverter iConverter = new ConvertTasksTCOD();
+        iConverter iConverter = new ConvertTasksTCOD(null);
         System.out.println(iConverter.convert(list));
     }
 

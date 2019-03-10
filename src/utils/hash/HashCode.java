@@ -10,15 +10,11 @@ import java.io.PrintWriter;
 
 public class HashCode
 {
-    public static void hashCodeTasks(ServletContext servletContext, HttpServletResponse response)
+    public static void sendHashCodeTasks(ServletContext servletContext, HttpServletResponse response)
     {
-        final FileReader fileReader =
-                new FileReader(servletContext.getRealPath("/WEB-INF/res/Tasks.json"));
-         String s = fileReader.readFile();
-
         try {
             PrintWriter p = response.getWriter();
-            p.print("HASH_CODE:"+hash(s));
+            p.print("HASH_CODE: #"+hashCodeTasks(servletContext));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -31,5 +27,14 @@ public class HashCode
         for (int i = 0; i < len; i++)
             h = 31 * h + s.charAt(i);
         return h;
+    }
+
+    public static int hashCodeTasks(ServletContext servletContext)
+    {
+        final FileReader fileReader =
+                new FileReader(servletContext.getRealPath("/WEB-INF/res/Tasks.json"));
+        String s = fileReader.readFile();
+
+        return hash(s);
     }
 }

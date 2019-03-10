@@ -2,9 +2,11 @@ package utils.handlers;
 
 import com.google.gson.JsonObject;
 import controllers.tcodtask.iHandlerTCOD;
+import utils.files.FileWriter;
 import utils.files.iWriter;
 import utils.time.Timer;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
 public class HandlerSensorsTCOD implements iHandlerTCOD
@@ -16,7 +18,7 @@ public class HandlerSensorsTCOD implements iHandlerTCOD
     private HttpServletRequest request;
     private iWriter iWriter;
 
-    public HandlerSensorsTCOD(HttpServletRequest request, utils.files.iWriter iWriter)
+    private HandlerSensorsTCOD(HttpServletRequest request, utils.files.iWriter iWriter)
     {
         this.request = request;
         this.iWriter = iWriter;
@@ -58,6 +60,14 @@ public class HandlerSensorsTCOD implements iHandlerTCOD
 
     private int getLight(HttpServletRequest request)
     {
+
         return Integer.parseInt(request.getParameter(LIGHT_PARAM));
+    }
+
+    public static HandlerSensorsTCOD build(ServletContext servletContext, HttpServletRequest request)
+    {
+        return new HandlerSensorsTCOD(
+                request,
+                new FileWriter(servletContext.getRealPath("/WEB-INF/res/SensorsTCOD.json")));
     }
 }

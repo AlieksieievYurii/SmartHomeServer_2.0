@@ -7,18 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7fdb13b-a54b-4217-a4fc-adff1663355c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controllers/tcodtask/request/RequestTypeUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/tcodtask/request/TypeRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/tcodtask/responcer/errors/ErrorLogs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/hash/HashCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/TestFile.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/controllers/tcodtask/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/controllers/tcodtask/Factory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/controllers/tcodtask/responcer/errors/ResponseExceptions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/controllers/tcodtask/responcer/errors/ResponseExceptions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/main/ManagerDevices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/main/ManagerDevices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/tests/ReadFileTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/tests/ReadFileTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/utils/files/FileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/utils/files/FileReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/utils/handlers/HandlerSensorsTCOD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/utils/handlers/HandlerSensorsTCOD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/SensorsTCOD.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/SensorsTCOD.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Tasks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/tcodtask/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/tcodtask/Factory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/tcodtask/responcer/errors/ResponseExceptions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/tcodtask/responcer/errors/ResponseExceptions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/ManagerDevices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/ManagerDevices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/tests/ReadFileTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/tests/ReadFileTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/FileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/FileReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/handlers/HandlerSensorsTCOD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/handlers/HandlerSensorsTCOD.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/tcodtask/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/tcodtask/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/tcodtask/responcer/errors/ResponseExceptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/tcodtask/responcer/errors/ResponseExceptions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ManagerDevices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ManagerDevices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests/ReadFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/ReadFileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/files/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/files/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/converter/ConvertTasksTCOD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/converter/ConvertTasksTCOD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/handlers/HandlerSensorsTCOD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/handlers/HandlerSensorsTCOD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/hash/HashCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/hash/HashCode.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,33 +53,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="11" selection-start-column="11" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/ManagerDevices.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="357">
+              <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#688#689#0" expanded="true" />
-                <element signature="e#732#733#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/tcodtask/request/TypeRequest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -78,10 +67,36 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/hash/HashCode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+            <state relative-caret-position="146">
+              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/tcodtask/responcer/ResponseTCOD.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/converter/ConvertTasksTCOD.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#394#395#0" expanded="true" />
+                <element signature="e#446#447#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,17 +105,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Tasks.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="170" column="14" lean-forward="true" selection-start-line="170" selection-start-column="14" selection-end-line="170" selection-end-column="14" />
+            <state relative-caret-position="154">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/tcodtask/responcer/errors/ResponseExceptions.java">
+        <entry file="file://$PROJECT_DIR$/src/tests/ReadFileTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="321">
+              <caret line="96" column="20" lean-forward="true" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,31 +124,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/tcodtask/request/RequestTypeUtils.java">
+        <entry file="file://$PROJECT_DIR$/src/utils/handlers/HandlerSensorsTCOD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/SensorsTCOD.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="38" selection-start-column="33" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/service/Service.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+            <state relative-caret-position="308">
+              <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
               <folding>
-                <element signature="e#269#270#0" expanded="true" />
-                <element signature="e#305#306#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/tcodtask/Factory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="18" column="65" lean-forward="true" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -188,25 +196,25 @@
         <option value="$PROJECT_DIR$/src/controllers/tcodtask/responcer/ResponserTCOD.java" />
         <option value="$PROJECT_DIR$/src/controllers/tcodtask/responcer/ResponseTCOD.java" />
         <option value="$PROJECT_DIR$/src/utils/converter/ConverTasksTCOD.java" />
-        <option value="$PROJECT_DIR$/src/utils/converter/ConvertTasksTCOD.java" />
         <option value="$PROJECT_DIR$/src/main/TCODTask.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/device/Device.java" />
         <option value="$PROJECT_DIR$/src/controllers/tcodtask/responcer/errors/ResponseExeptions.java" />
         <option value="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/utils/time/Timer.java" />
-        <option value="$PROJECT_DIR$/src/utils/handlers/HandlerSensorsTCOD.java" />
         <option value="$PROJECT_DIR$/src/service/Service.java" />
         <option value="$PROJECT_DIR$/src/controllers/tcodtask/request/RequestType.java" />
         <option value="$PROJECT_DIR$/src/controllers/tcodtask/responcer/errors/ResponseExceptions.java" />
         <option value="$PROJECT_DIR$/src/controllers/tcodtask/responcer/errors/ErrorLogs.java" />
-        <option value="$PROJECT_DIR$/src/tests/ReadFileTest.java" />
         <option value="$PROJECT_DIR$/src/utils/files/FileReader.java" />
-        <option value="$PROJECT_DIR$/src/utils/hash/HashCode.java" />
-        <option value="$PROJECT_DIR$/src/controllers/tcodtask/Factory.java" />
-        <option value="$PROJECT_DIR$/src/main/ManagerDevices.java" />
         <option value="$PROJECT_DIR$/src/controllers/tcodtask/request/TypeRequest.java" />
         <option value="$PROJECT_DIR$/src/controllers/tcodtask/request/RequestTypeUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/ManagerDevices.java" />
+        <option value="$PROJECT_DIR$/src/utils/handlers/HandlerSensorsTCOD.java" />
+        <option value="$PROJECT_DIR$/src/utils/hash/HashCode.java" />
+        <option value="$PROJECT_DIR$/src/tests/ReadFileTest.java" />
+        <option value="$PROJECT_DIR$/src/controllers/tcodtask/Factory.java" />
+        <option value="$PROJECT_DIR$/src/utils/converter/ConvertTasksTCOD.java" />
         <option value="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Tasks.json" />
       </list>
     </option>
@@ -231,7 +239,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -301,13 +308,21 @@
               <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="converter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="hash" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
@@ -324,6 +339,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -333,7 +349,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552149138997" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552157656419" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -542,8 +558,17 @@
       <updated>1552069416724</updated>
       <workItem from="1552069421303" duration="2647000" />
       <workItem from="1552076108524" duration="4026000" />
-      <workItem from="1552130325581" duration="15250000" />
+      <workItem from="1552130325581" duration="19506000" />
+      <workItem from="1552231500376" duration="6965000" />
     </task>
+    <task id="LOCAL-00001" summary="Added HashCode">
+      <created>1552149170171</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1552149170171</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -579,23 +604,23 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21923000" />
+    <option name="totallyTimeSpent" value="33144000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7937743" visible="true" weight="0.22734627" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.79027355" visible="true" weight="0.23139158" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.20622568" side_tool="true" visible="true" weight="0.22734627" />
+      <window_info id="Web" order="7" sideWeight="0.20972644" side_tool="true" visible="true" weight="0.23139158" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3281493" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20062208" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24106114" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -604,7 +629,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.23017107" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.2295271" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -622,6 +647,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added HashCode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added HashCode" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ServletTest.java" />
     <entry file="file://$PROJECT_DIR$/SmartHomeServer_2.0.iml">
@@ -638,16 +667,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/files/FileReaderTest.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/task/PortStatusException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/files/FileReaderTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/task/PortStatusException.java" />
     <entry file="file://$PROJECT_DIR$/src/task/TaskExtra.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -720,13 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/tcodtask/iHandlerTCOD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/files/iWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -744,32 +758,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/tcodtask/responcer/ResponseTCOD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#312#313#0" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/converter/ConvertTasksTCOD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/TestFile.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="19" lean-forward="true" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/TestFile.json" />
     <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -784,23 +773,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/handlers/HandlerSensorsTCOD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/device/Device.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -832,13 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/SensorsTCOD.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" selection-start-column="33" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/tcodtask/responcer/errors/ErrorLogs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -857,23 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/ReadFileTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="106" column="62" selection-start-line="106" selection-start-column="61" selection-end-line="106" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/files/FileReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -886,22 +834,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/tcodtask/Factory.java">
+    <entry file="file://$PROJECT_DIR$/src/device/Device.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        <state relative-caret-position="315">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/ManagerDevices.java">
+    <entry file="file://$PROJECT_DIR$/src/device/DeviceUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#688#689#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="264">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -909,13 +852,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/tcodtask/request/RequestTypeUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -929,27 +865,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/device/DeviceUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/controllers/tcodtask/request/RequestTypeUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        <state relative-caret-position="220">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/hash/HashCode.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        <state>
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/tcodtask/iHandlerTCOD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/SensorsTCOD.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="41" selection-start-column="41" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/handlers/HandlerSensorsTCOD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/ManagerDevices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/tcodtask/responcer/ResponseTCOD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/hash/HashCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/ReadFileTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="96" column="20" lean-forward="true" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/tcodtask/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="18" column="65" lean-forward="true" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/converter/ConvertTasksTCOD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Tasks.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="170" column="14" lean-forward="true" selection-start-line="170" selection-start-column="14" selection-end-line="170" selection-end-column="14" />
+        <state relative-caret-position="154">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>

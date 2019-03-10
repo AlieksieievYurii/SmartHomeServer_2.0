@@ -3,7 +3,6 @@ package controllers.tcodtask;
 import controllers.tcodtask.responcer.ResponseTCOD;
 import utils.converter.ConvertTasksTCOD;
 import utils.files.FileReader;
-import utils.files.FileWriter;
 import utils.handlers.HandlerSensorsTCOD;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
@@ -17,18 +16,13 @@ public class Factory
     {
         final FileReader fileReader = new FileReader(
                 servletContext.getRealPath("/WEB-INF/res/Tasks.json"));
-
-        final ConvertTasksTCOD convertTasksTCOD = new ConvertTasksTCOD();
-        final HandlerSensorsTCOD handlerSensorsTCOD =
-                new HandlerSensorsTCOD(
-                        request,
-                        new FileWriter(servletContext.getRealPath("/WEB-INF/res/SensorsTCOD.json")));
+        final ConvertTasksTCOD convertTasksTCOD = new ConvertTasksTCOD(servletContext);
         final ResponseTCOD responseTCOD = new ResponseTCOD(response);
 
         return new ControllerTCODTask(
                 fileReader,
                 convertTasksTCOD,
-                handlerSensorsTCOD,
+                HandlerSensorsTCOD.build(servletContext,request),
                 responseTCOD);
     }
 }
