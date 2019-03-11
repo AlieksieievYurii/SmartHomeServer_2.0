@@ -4,18 +4,27 @@ import com.google.gson.JsonObject;
 
 public class Task
 {
+
     private PortType portType;
     private int port;
-    private int portStatus;
+    private int signalOnPort;
+    private PortStatus portStatus;
 
+    public Task(PortType portType, int port, int signalOnPort) {
+        assert (portType == PortType.ANALOG);
+        assert (port > 0);
+        assert (signalOnPort >= 0 && signalOnPort <= 255);
 
-    public Task(PortType portType, int port, int portStatus) {
         this.portType = portType;
-
-        assert (port >= 0);
         this.port = port;
+        this.signalOnPort = signalOnPort;
+    }
 
-        assert (portStatus > 0 && portStatus <= 255);
+    public Task(PortType portType, int port, PortStatus portStatus) {
+        assert(portType == PortType.DIGITAL);
+        assert (port > 0);
+        this.portType = portType;
+        this.port = port;
         this.portStatus = portStatus;
     }
 
@@ -27,7 +36,13 @@ public class Task
         return port;
     }
 
-    public int getPortStatus() {
+    public int getSignalOnPort() {
+        assert (portType == PortType.ANALOG);
+        return signalOnPort;
+    }
+
+    public PortStatus getPortStatus() {
+        assert(portType == PortType.DIGITAL);
         return portStatus;
     }
 
@@ -36,7 +51,11 @@ public class Task
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty(TaskExtra.TYPE_PORT.getJsonExtra(),portType.getTypePort());
         jsonObject.addProperty(TaskExtra.PORT.getJsonExtra(),port);
-        jsonObject.addProperty(TaskExtra.STATUS_PORT.getJsonExtra(),portStatus);
+
+        if(portType == PortType.ANALOG)
+            jsonObject.addProperty(TaskExtra.SIGNAL_ON_PORT.getJsonExtra(),signalOnPort);
+        else
+            jsonObject.addProperty(TaskExtra.STATUS_PORT.getJsonExtra(),portStatus.getJsonExtra());
 
         return jsonObject;
     }

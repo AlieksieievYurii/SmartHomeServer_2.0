@@ -1,18 +1,18 @@
 [{
   "type_port":"digital",
   "port":23,
-  "status_port":1
+  "status_port":"HIGH"
 },{
   "type_port":"analog",
   "port":7,
-  "status_port":0
+  "signal_on_port":255
 },{
   "type_port":"analog",
   "port":6,
-  "status_port":255
+  "signal_on_port":255
 }
 ,{
-  "type_port":"analog",
+  "type_port":"digital",
   "port":5,
-  "status_port":255
+  "status_port":"LOW"
 }]

@@ -3,6 +3,7 @@ package utils.json;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import task.PortStatus;
 import task.PortType;
 import task.Task;
 import task.TaskExtra;
@@ -24,14 +25,31 @@ public class JsonUtils
         for(int i = 0; i < jsonArray.size(); i++)
         {
             JsonObject jsonObject = jsonArray.get(i).getAsJsonObject();
+
             PortType portType = PortType.getPortType(
                     jsonObject.get(TaskExtra.TYPE_PORT.getJsonExtra()).getAsString()
             );
 
             short port = jsonObject.get(TaskExtra.PORT.getJsonExtra()).getAsShort();
-            short statusPort = jsonObject.get(TaskExtra.STATUS_PORT.getJsonExtra()).getAsShort();
 
-            tasks.add(new Task(portType,port,statusPort));
+            if(portType == PortType.ANALOG)
+                tasks.add(new Task(
+                        portType,
+                        port,
+                        jsonObject.get(
+                                TaskExtra.SIGNAL_ON_PORT
+                                        .getJsonExtra())
+                                        .getAsInt()));
+
+            else if(portType == PortType.DIGITAL)
+                tasks.add(new Task(
+                        portType,
+                        port,
+                        PortStatus.stringToEnum(
+                        jsonObject.get(
+                                TaskExtra.STATUS_PORT
+                                        .getJsonExtra())
+                                .getAsString())));
         }
 
         return tasks;
