@@ -47,7 +47,6 @@ public class ManagerDevices extends HttpServlet
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     {
-        System.err.println("GETTING");
         if(PasswordUtils.passwordIsCorrect(request))
             hashCodeOrTasks(request,response);
         else

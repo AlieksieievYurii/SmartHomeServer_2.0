@@ -8,9 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>SmartHomeServer</title>
   </head>
   <body>
     This is Server for SmartHome
+
   </body>
 </html>

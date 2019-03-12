@@ -1,6 +1,6 @@
 package utils.hash;
 
-import controllers.tcodtask.iReadTasks;
+import main.Manifest;
 import utils.files.FileReader;
 
 import javax.servlet.ServletContext;
@@ -32,7 +32,7 @@ public class HashCode
     public static int hashCodeTasks(ServletContext servletContext)
     {
         final FileReader fileReader =
-                new FileReader(servletContext.getRealPath("/WEB-INF/res/Tasks.json"));
+                new FileReader(servletContext.getRealPath(Manifest.FILE_TASKS_TCOD));
         String s = fileReader.readFile();
 
         return hash(s);

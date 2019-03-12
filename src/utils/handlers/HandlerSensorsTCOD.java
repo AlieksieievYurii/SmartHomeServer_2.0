@@ -2,6 +2,7 @@ package utils.handlers;
 
 import com.google.gson.JsonObject;
 import controllers.tcodtask.iHandlerTCOD;
+import main.Manifest;
 import utils.files.FileWriter;
 import utils.files.iWriter;
 import utils.time.Timer;
@@ -68,6 +69,6 @@ public class HandlerSensorsTCOD implements iHandlerTCOD
     {
         return new HandlerSensorsTCOD(
                 request,
-                new FileWriter(servletContext.getRealPath("/WEB-INF/res/SensorsTCOD.json")));
+                new FileWriter(servletContext.getRealPath(Manifest.FILE_SENSORS_FROM_TCOD)));
     }
 }

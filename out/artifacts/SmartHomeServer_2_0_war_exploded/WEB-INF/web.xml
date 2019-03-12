@@ -7,8 +7,17 @@
         <servlet-name>ManagerDevices</servlet-name>
         <servlet-class>main.ManagerDevices</servlet-class>
     </servlet>
+
+    <servlet>
+        <servlet-name>ListenerTasks</servlet-name>
+        <servlet-class>main.ListenerTasks</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ManagerDevices</servlet-name>
         <url-pattern>/managerTasks</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListenerTasks</servlet-name>
+        <url-pattern>/listenerTasks</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -1,6 +1,7 @@
 package controllers.tcodtask;
 
 import controllers.tcodtask.responcer.ResponseTCOD;
+import main.Manifest;
 import utils.converter.ConvertTasksTCOD;
 import utils.files.FileReader;
 import utils.handlers.HandlerSensorsTCOD;
@@ -15,7 +16,7 @@ public class Factory
                                                              HttpServletResponse response)
     {
         final FileReader fileReader = new FileReader(
-                servletContext.getRealPath("/WEB-INF/res/Tasks.json"));
+                servletContext.getRealPath(Manifest.FILE_TASKS_TCOD));
         final ConvertTasksTCOD convertTasksTCOD = new ConvertTasksTCOD(servletContext);
         final ResponseTCOD responseTCOD = new ResponseTCOD(response);
 

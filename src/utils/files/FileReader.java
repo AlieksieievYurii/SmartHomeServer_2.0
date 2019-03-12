@@ -19,7 +19,7 @@ public class FileReader implements iReadTasks
     }
 
     @Override
-    public List<Task> read()
+    public List<Task> getTasks()
     {
         try {
             final String res = readFileFrom(file);

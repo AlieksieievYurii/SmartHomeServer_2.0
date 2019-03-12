@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface iReadTasks
 {
-    List<Task> read();
+    List<Task> getTasks();
 }

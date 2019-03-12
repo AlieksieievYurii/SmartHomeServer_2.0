@@ -10,7 +10,7 @@ public class ControllerTCODTask
     private iHandlerTCOD iHandlerTCOD;
     private iResponseTCOD iResponseTCOD;
 
-    public ControllerTCODTask(
+    ControllerTCODTask(
             iReadTasks iReadTasks,
             iConverter iConverter,
             iHandlerTCOD iHandlerTCOD,
@@ -24,7 +24,7 @@ public class ControllerTCODTask
 
     public void execute()
     {
-        final List<Task> tasks = iReadTasks.read();
+        final List<Task> tasks = iReadTasks.getTasks();
         final String tasksForTCOD = iConverter.convert(tasks);
         iHandlerTCOD.handleParams();
         iResponseTCOD.response(tasksForTCOD);
