@@ -7,6 +7,7 @@ import action.PortStatus;
 import action.PortType;
 import action.Action;
 import action.ActionExtra;
+import device.Device;
 import request.post.PostExtras;
 
 import java.util.ArrayList;
@@ -32,6 +33,14 @@ public class JsonUtils
         {
             JsonObject jsonObject = jsonArray.get(i).getAsJsonObject();
 
+            final Device forDevice = Device.whatDevice(
+                    jsonObject.get(
+                            ActionExtra
+                                    .FOR_DEVICE
+                                    .getJsonExtra())
+                            .getAsString()
+            );
+
             PortType portType = PortType.getPortType(
                     jsonObject.get(ActionExtra.TYPE_PORT.getJsonExtra()).getAsString()
             );
@@ -40,6 +49,7 @@ public class JsonUtils
 
             if(portType == PortType.ANALOG)
                 actions.add(new Action(
+                        forDevice,
                         portType,
                         port,
                         jsonObject.get(
@@ -49,6 +59,7 @@ public class JsonUtils
 
             else if(portType == PortType.DIGITAL)
                 actions.add(new Action(
+                        forDevice,
                         portType,
                         port,
                         PortStatus.stringToEnum(
@@ -70,6 +81,14 @@ public class JsonUtils
 
     public static Action toExternalAction(JsonObject jsonObject)
     {
+        final Device forDevice = Device.whatDevice(
+                jsonObject.get(
+                        PostExtras
+                                .FOR_DEVICE
+                                .getJsonExtra())
+                        .getAsString()
+        );
+
         final PortType portType =
                 PortType.getPortType(
                               jsonObject.get(
@@ -81,6 +100,7 @@ public class JsonUtils
 
         if(portType == PortType.ANALOG)
             return new Action(
+                    forDevice,
                     PortType.ANALOG,
                     port,
                     jsonObject.get(
@@ -91,6 +111,7 @@ public class JsonUtils
         else if(portType == PortType.DIGITAL)
         {
             return new Action(
+                    forDevice,
                     PortType.DIGITAL,
                     port,
                     PortStatus.stringToEnum(
@@ -110,5 +131,16 @@ public class JsonUtils
             jsonElements.add(a.toJsonObject());
 
         return jsonElements;
+    }
+
+    public static List<Action> selectForDevice(Device device, List<Action> actions)
+    {
+        List<Action> selectedActions = new ArrayList<>();
+
+        for(Action a : actions)
+            if(a.getDevice() == device)
+                selectedActions.add(a);
+
+        return selectedActions;
     }
 }

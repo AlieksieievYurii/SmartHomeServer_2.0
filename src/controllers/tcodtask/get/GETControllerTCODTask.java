@@ -4,6 +4,7 @@ import controllers.tcodtask.get.interfaises.iConverter;
 import controllers.tcodtask.get.interfaises.iHandlerTCOD;
 import controllers.tcodtask.get.interfaises.iReadTasks;
 import controllers.tcodtask.get.interfaises.iResponseTCOD;
+import device.Device;
 
 import java.util.List;
 
@@ -28,7 +29,8 @@ public class GETControllerTCODTask
 
     public void execute()
     {
-        final List<Action> actions = iReadTasks.getActions();
+        final List<Action> actions = iReadTasks.getActions(Device.TCOD);
+
         final String tasksForTCOD = iConverter.convert(actions);
         iHandlerTCOD.handleParams();
         iResponseTCOD.response(tasksForTCOD);

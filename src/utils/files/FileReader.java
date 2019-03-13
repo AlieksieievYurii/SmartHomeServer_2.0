@@ -3,6 +3,7 @@ package utils.files;
 
 import controllers.tcodtask.get.interfaises.iReadTasks;
 import action.Action;
+import device.Device;
 import utils.json.JsonUtils;
 import java.io.BufferedReader;
 import java.io.File;
@@ -19,11 +20,16 @@ public class FileReader implements iReadTasks
     }
 
     @Override
-    public List<Action> getActions()
+    public List<Action> getActions(Device forDevice)
     {
         try {
             final String res = readFileFrom(file);
-            return JsonUtils.toListActions(res);
+            List<Action> actions = JsonUtils.toListActions(res);
+
+            if(forDevice != null)
+                return JsonUtils.selectForDevice(forDevice,actions);
+            else
+                return JsonUtils.toListActions(res);
         } catch (IOException e) {
             e.printStackTrace();
             return null;

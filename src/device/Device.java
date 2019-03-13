@@ -2,7 +2,7 @@ package device;
 
 public enum Device
 {
-    TCOD("tcod");
+    TCOD("tcod"),WCOD("test");
 
     private String device;
 
@@ -21,4 +21,6 @@ public enum Device
         }
         return null;
     }
+
+
 }

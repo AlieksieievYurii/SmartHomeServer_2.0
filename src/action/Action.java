@@ -1,33 +1,39 @@
 package action;
 
 import com.google.gson.JsonObject;
+import device.Device;
 
 import java.util.Objects;
 
 public class Action
 {
-
+    private Device device;
     private PortType portType;
     private int port;
     private int signalOnPort;
     private PortStatus portStatus;
 
-    public Action(PortType portType, int port, int signalOnPort) {
+    public Action(Device device,PortType portType, int port, int signalOnPort) {
         assert (portType == PortType.ANALOG);
         assert (port > 0);
         assert (signalOnPort >= 0 && signalOnPort <= 255);
 
+        this.device = device;
         this.portType = portType;
         this.port = port;
         this.signalOnPort = signalOnPort;
     }
 
-    public Action(PortType portType, int port, PortStatus portStatus) {
+    public Action(Device device,PortType portType, int port, PortStatus portStatus) {
         assert(portType == PortType.DIGITAL);
         assert (port > 0);
+        this.device = device;
         this.portType = portType;
         this.port = port;
         this.portStatus = portStatus;
+    }
+    public Device getDevice() {
+        return device;
     }
 
     public PortType getPortType() {
@@ -48,9 +54,12 @@ public class Action
         return portStatus;
     }
 
+
+
     public JsonObject toJsonObject()
     {
         JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty(ActionExtra.FOR_DEVICE.getJsonExtra(),device.getDevice());
         jsonObject.addProperty(ActionExtra.TYPE_PORT.getJsonExtra(),portType.getTypePort());
         jsonObject.addProperty(ActionExtra.PORT.getJsonExtra(),port);
 
@@ -65,8 +74,10 @@ public class Action
     @Override
     public String toString() {
         return "Action{" +
-                "portType=" + portType +
+                "device=" + device +
+                ", portType=" + portType +
                 ", port=" + port +
+                ", signalOnPort=" + signalOnPort +
                 ", portStatus=" + portStatus +
                 '}';
     }

@@ -2,6 +2,7 @@ package action;
 
 public enum ActionExtra
 {
+    FOR_DEVICE("for_device"),
     TYPE_PORT("type_port"),
     PORT("port"),
     STATUS_PORT("status_port"),

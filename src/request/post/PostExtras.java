@@ -1,6 +1,7 @@
 package request.post;
 
 public enum PostExtras {
+    FOR_DEVICE("for_device"),
     PORT_TYPE("port_type"),
     PORT_ID("port_id"),
     PORT_STATUS("port_status"),
@@ -18,6 +19,8 @@ public enum PostExtras {
 
     public static PostExtras getPostExtra(String jsonExtra) {
         switch (jsonExtra) {
+            case "for_device":
+                return FOR_DEVICE;
             case "port_type":
                 return PORT_TYPE;
             case "port_id":

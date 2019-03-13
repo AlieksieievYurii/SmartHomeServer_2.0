@@ -20,7 +20,7 @@ public class FileEmployer implements FileWorker
 
     @Override
     public List<Action> readFile() {
-        return fileReader.getActions();
+        return fileReader.getActions(null);
     }
 
     @Override
