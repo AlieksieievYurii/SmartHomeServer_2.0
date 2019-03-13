@@ -15,7 +15,7 @@ public class Factory
                                                                  HttpServletResponse response)
     {
         final FileReader fileReader = new FileReader(
-                servletContext.getRealPath(Manifest.FILE_TASKS_TCOD));
+                servletContext.getRealPath(Manifest.FILE_ACTIONS));
         final ConvertTasksTCOD convertTasksTCOD = new ConvertTasksTCOD(servletContext);
         final ResponseTCOD responseTCOD = new ResponseTCOD(response);
 

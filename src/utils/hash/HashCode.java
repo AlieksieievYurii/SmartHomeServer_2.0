@@ -32,7 +32,7 @@ public class HashCode
     public static int hashCodeTasks(ServletContext servletContext)
     {
         final FileReader fileReader =
-                new FileReader(servletContext.getRealPath(Manifest.FILE_TASKS_TCOD));
+                new FileReader(servletContext.getRealPath(Manifest.FILE_ACTIONS));
         String s = fileReader.readFile();
 
         return hash(s);

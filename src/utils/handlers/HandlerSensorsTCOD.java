@@ -69,6 +69,6 @@ public class HandlerSensorsTCOD implements iHandlerTCOD
     {
         return new HandlerSensorsTCOD(
                 request,
-                new FileWriter(servletContext.getRealPath(Manifest.FILE_SENSORS_FROM_TCOD)));
+                new FileWriter(servletContext.getRealPath(Manifest.FILE_SENSORS)));
     }
 }

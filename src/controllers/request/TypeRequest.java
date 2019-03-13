@@ -1,10 +1,11 @@
 package controllers.request;
 
-public enum TypeRequest
-{
-    HASH_CODE("hashCode"),TASKS("tasks"), //It's for ManagerDevices
+public enum TypeRequest {
+    HASH_CODE("hashCode"), TASKS("tasks"), //It's for ManagerDevices
 
-    ACTION("action"),TASK("task");// It's for ListenerTasks
+    ACTION("action"), TASK("task"),// It's for ListenerTasks
+    HASH_CODE_ACTIONS("hashCodeActions"), HASH_CODE_TASKS("hashCodeTasks"),
+    ACTIONS("actions");
 
     private String typeRequest;
 
@@ -16,8 +17,7 @@ public enum TypeRequest
         return typeRequest;
     }
 
-    public static TypeRequest whatTypeRequest(String s)
-    {
+    public static TypeRequest whatTypeRequest(String s) {
         switch (s) {
             case "hashCode":
                 return HASH_CODE;
@@ -27,6 +27,12 @@ public enum TypeRequest
                 return ACTION;
             case "task":
                 return TASK;
+            case "hashCodeActions":
+                return HASH_CODE_ACTIONS;
+            case "hashCodeTasks":
+                return HASH_CODE_TASKS;
+            case "actions":
+                return ACTIONS;
             default:
                 return null;
         }

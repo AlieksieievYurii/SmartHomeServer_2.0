@@ -10,7 +10,7 @@ public class ControllerPOSTAction {
     private final request.post.interfaises.iWriteAction iWriteAction;
     private final request.post.interfaises.iResponse iResponse;
 
-    public ControllerPOSTAction(iRequest iRequest,
+    ControllerPOSTAction(iRequest iRequest,
                                 iWriteAction iWriteAction,
                                 iResponse iResponse) {
         this.iRequest = iRequest;

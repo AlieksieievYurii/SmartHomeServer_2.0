@@ -47,6 +47,20 @@ public class ListenerTasks extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
-        //TODO Implements getting HashCode and getting all tasks
+        switch (RequestTypeUtils.whatTypeRequest(request))
+        {
+            case HASH_CODE_ACTIONS:
+                //TODO Implement hash code of file Actions.txt
+                break;
+            case HASH_CODE_TASKS:
+                //TODO Implement hash code of file Tasks.txt(But it's not realized)
+                break;
+            case TASKS:
+                //TODO Implement getting json file of tasks(But it's not realized)
+                break;
+            case ACTIONS:
+                //TODO Implement getting json file of actions
+                break;
+        }
     }
 }

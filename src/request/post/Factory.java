@@ -15,7 +15,7 @@ public class Factory
     public static ControllerPOSTAction build(ServletContext context, HttpServletRequest request, HttpServletResponse response)
     {
         final iRequest iRequest = new RequestAction(request);
-        final FileWorker fileWorker = new FileEmployer(context.getRealPath(Manifest.FILE_TASKS_TCOD));
+        final FileWorker fileWorker = new FileEmployer(context.getRealPath(Manifest.FILE_ACTIONS));
         final iWriteAction iWriteAction = new ActionRecorder(fileWorker);
         final iResponse iResponse = new Response(response);
 
