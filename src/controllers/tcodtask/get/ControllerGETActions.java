@@ -8,14 +8,14 @@ import device.Device;
 
 import java.util.List;
 
-public class GETControllerTCODTask
+public class ControllerGETActions
 {
     private final controllers.tcodtask.get.interfaises.iReadTasks iReadTasks;
     private final controllers.tcodtask.get.interfaises.iConverter iConverter;
     private final controllers.tcodtask.get.interfaises.iHandlerTCOD iHandlerTCOD;
     private final controllers.tcodtask.get.interfaises.iResponseTCOD iResponseTCOD;
 
-    GETControllerTCODTask(
+    ControllerGETActions(
             iReadTasks iReadTasks,
             iConverter iConverter,
             iHandlerTCOD iHandlerTCOD,
@@ -27,10 +27,9 @@ public class GETControllerTCODTask
         this.iResponseTCOD = iResponseTCOD;
     }
 
-    public void execute()
+    public void execute(Device forDevice)
     {
-        final List<Action> actions = iReadTasks.getActions(Device.TCOD);
-
+        final List<Action> actions = iReadTasks.getActions(forDevice);
         final String tasksForTCOD = iConverter.convert(actions);
         iHandlerTCOD.handleParams();
         iResponseTCOD.response(tasksForTCOD);

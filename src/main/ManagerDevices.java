@@ -12,13 +12,12 @@ package main;
     temperature/humidity/light - value of sensors from TCOD
  */
 
-import controllers.tcodtask.get.GETControllerTCODTask;
+import controllers.tcodtask.get.ControllerGETActions;
 import controllers.tcodtask.get.Factory;
 import controllers.request.RequestTypeUtils;
 import controllers.request.TypeRequest;
 import controllers.errors.ErrorLogs;
 import controllers.errors.ResponseExceptions;
-import device.Device;
 import device.DeviceUtils;
 import service.Service;
 import utils.handlers.HandlerSensorsTCOD;
@@ -30,7 +29,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import static controllers.errors.ResponseExceptions.wrongDeviceType;
 import static controllers.errors.ResponseExceptions.wrongPassword;
 
 @WebServlet(name = "ManagerDevices")
@@ -55,10 +53,9 @@ public class ManagerDevices extends HttpServlet
 
     private void run(HttpServletRequest request,HttpServletResponse response)
     {
-        if (DeviceUtils.whatDevice(request) == Device.TCOD)
-            taskForTCOD(request, response);
-         else
-            wrongDeviceType(response);
+        final ControllerGETActions ControllerGETActions =
+                Factory.buildControllerGETActions(getServletContext(),request,response);
+        ControllerGETActions.execute(DeviceUtils.whatDevice(request));
     }
 
     private void hashCodeOrTasks(HttpServletRequest request,HttpServletResponse response)
@@ -74,12 +71,5 @@ public class ManagerDevices extends HttpServlet
             ErrorLogs.errorOfTypeRequest();
             ResponseExceptions.wrongTypeRequest(response);
         }
-    }
-
-    private void taskForTCOD(HttpServletRequest request,HttpServletResponse response)
-    {
-        final GETControllerTCODTask GETControllerTCODTask =
-                Factory.buildControllerTCODTask(getServletContext(),request,response);
-        GETControllerTCODTask.execute();
     }
 }

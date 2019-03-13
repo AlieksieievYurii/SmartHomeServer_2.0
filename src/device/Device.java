@@ -18,7 +18,8 @@ public enum Device
     {
         if ("tcod".equals(device)) {
             return TCOD;
-        }
+        }else if("test".equals(device))
+            return WCOD;
         return null;
     }
 

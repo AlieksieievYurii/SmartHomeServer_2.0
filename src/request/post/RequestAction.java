@@ -7,13 +7,13 @@ import utils.json.JsonUtils;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class RequestActionTCOD implements iRequest {
+public class RequestAction implements iRequest {
 
     private static final String JSON_ACTION = "data";
 
     private final HttpServletRequest httpServletRequest;
 
-    public RequestActionTCOD(HttpServletRequest httpServletRequest) {
+    public RequestAction(HttpServletRequest httpServletRequest) {
         this.httpServletRequest = httpServletRequest;
     }
 
@@ -26,6 +26,11 @@ public class RequestActionTCOD implements iRequest {
     public Action getAction()
     {
         final JsonObject jsonObject = JsonUtils.getJsonObject(readRequest());
-        return JsonUtils.toExternalAction(jsonObject);
+        try {
+            return JsonUtils.toExternalAction(jsonObject);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

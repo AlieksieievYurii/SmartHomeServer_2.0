@@ -79,15 +79,16 @@ public class JsonUtils
         return getListActions(jsonElements);
     }
 
-    public static Action toExternalAction(JsonObject jsonObject)
-    {
+    public static Action toExternalAction(JsonObject jsonObject) throws Exception {
         final Device forDevice = Device.whatDevice(
                 jsonObject.get(
                         PostExtras
                                 .FOR_DEVICE
                                 .getJsonExtra())
-                        .getAsString()
-        );
+                        .getAsString());
+
+        if(forDevice == null)
+            throw new Exception("Wrong :: Device -> " + jsonObject.get(PostExtras.FOR_DEVICE.getJsonExtra()));
 
         final PortType portType =
                 PortType.getPortType(

@@ -12,13 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Factory
 {
-    public static POSTControllerTCODAction build(ServletContext context, HttpServletRequest request, HttpServletResponse response)
+    public static ControllerPOSTAction build(ServletContext context, HttpServletRequest request, HttpServletResponse response)
     {
-        final iRequest iRequest = new RequestActionTCOD(request);
+        final iRequest iRequest = new RequestAction(request);
         final FileWorker fileWorker = new FileEmployer(context.getRealPath(Manifest.FILE_TASKS_TCOD));
         final iWriteAction iWriteAction = new ActionRecorder(fileWorker);
         final iResponse iResponse = new Response(response);
 
-        return new POSTControllerTCODAction(iRequest,iWriteAction,iResponse);
+        return new ControllerPOSTAction(iRequest,iWriteAction,iResponse);
     }
 }

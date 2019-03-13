@@ -84,7 +84,9 @@ public class Action
 
     public boolean isEquals(Action a)
     {
-        return a.portType == this.portType && a.port == this.port;
+        return  a.device == this.device
+                && a.portType == this.portType
+                && a.port == this.port;
     }
 
     @Override

@@ -5,24 +5,16 @@ import controllers.request.TypeRequest;
 import controllers.errors.ErrorLogs;
 import controllers.errors.ResponseExceptions;
 import request.post.Factory;
-import request.post.POSTControllerTCODAction;
-import device.Device;
-import device.DeviceUtils;
+import request.post.ControllerPOSTAction;
 import utils.password.PasswordUtils;
-
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-
-import static controllers.errors.ResponseExceptions.wrongDeviceType;
 
 @WebServlet(name = "ListenerTasks")
 public class ListenerTasks extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
         System.err.println("POST::");
 
         if (PasswordUtils.passwordIsCorrect(request))
@@ -45,15 +37,7 @@ public class ListenerTasks extends HttpServlet {
     }
 
     private void runAction(HttpServletRequest request, HttpServletResponse response) {
-        if (DeviceUtils.whatDevice(request) == Device.TCOD)
-            actionForTCOD(request, response);
-        else
-            wrongDeviceType(response);
-    }
-
-    private void actionForTCOD(HttpServletRequest request, HttpServletResponse response)
-    {
-        final POSTControllerTCODAction postControllerTCODAction =
+        final ControllerPOSTAction postControllerTCODAction =
                 Factory.build(
                         getServletContext(),
                         request,
@@ -62,7 +46,7 @@ public class ListenerTasks extends HttpServlet {
         postControllerTCODAction.execute();
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
         //TODO Implements getting HashCode and getting all tasks
     }
 }

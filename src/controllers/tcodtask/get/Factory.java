@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Factory
 {
-    public static GETControllerTCODTask buildControllerTCODTask(ServletContext servletContext,
-                                                                HttpServletRequest request,
-                                                                HttpServletResponse response)
+    public static ControllerGETActions buildControllerGETActions(ServletContext servletContext,
+                                                                 HttpServletRequest request,
+                                                                 HttpServletResponse response)
     {
         final FileReader fileReader = new FileReader(
                 servletContext.getRealPath(Manifest.FILE_TASKS_TCOD));
         final ConvertTasksTCOD convertTasksTCOD = new ConvertTasksTCOD(servletContext);
         final ResponseTCOD responseTCOD = new ResponseTCOD(response);
 
-        return new GETControllerTCODTask(
+        return new ControllerGETActions(
                 fileReader,
                 convertTasksTCOD,
                 HandlerSensorsTCOD.build(servletContext,request),
