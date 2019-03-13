@@ -1,8 +1,8 @@
 package utils.files;
 
 
-import controllers.tcodtask.iReadTasks;
-import task.Task;
+import controllers.tcodtask.get.interfaises.iReadTasks;
+import action.Action;
 import utils.json.JsonUtils;
 import java.io.BufferedReader;
 import java.io.File;
@@ -19,11 +19,11 @@ public class FileReader implements iReadTasks
     }
 
     @Override
-    public List<Task> getTasks()
+    public List<Action> getActions()
     {
         try {
             final String res = readFileFrom(file);
-            return JsonUtils.convertTaskToList(res);
+            return JsonUtils.toListActions(res);
         } catch (IOException e) {
             e.printStackTrace();
             return null;

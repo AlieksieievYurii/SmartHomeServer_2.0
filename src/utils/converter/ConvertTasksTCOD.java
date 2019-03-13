@@ -1,10 +1,10 @@
 package utils.converter;
 
+import action.Action;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import controllers.tcodtask.iConverter;
-import task.PortType;
-import task.Task;
+import controllers.tcodtask.get.interfaises.iConverter;
+import action.PortType;
 import utils.hash.HashCode;
 
 import javax.servlet.ServletContext;
@@ -14,6 +14,7 @@ public class ConvertTasksTCOD implements iConverter
 {
     private static final String EXTRA_HASH_CODE = "hash";
     private static final String EXTRA_TASKS = "tasks";
+
     private static final String SHORT_EXTRA_TYPE_PORT = "T";
     private static final String SHORT_TYPE_ANALOG= "A";
     private static final String SHORT_TYPE_DIGITAL= "D";
@@ -29,11 +30,11 @@ public class ConvertTasksTCOD implements iConverter
     }
 
     @Override
-    public String convert(List<Task> tasks) {
+    public String convert(List<Action> actions) {
         JsonObject jsonObject = new JsonObject();
         JsonArray jsonArray = new JsonArray();
 
-        for(Task t : tasks)
+        for(Action t : actions)
             jsonArray.add(getJsonObject(t));
 
         jsonObject.addProperty(EXTRA_HASH_CODE, HashCode.hashCodeTasks(servletContext));
@@ -42,19 +43,19 @@ public class ConvertTasksTCOD implements iConverter
         return jsonObject.toString();
     }
 
-    private JsonObject getJsonObject(Task task)
+    private JsonObject getJsonObject(Action action)
     {
         JsonObject jsonObject = new JsonObject();
 
-        if(task.getPortType() == PortType.ANALOG) {
+        if(action.getPortType() == PortType.ANALOG) {
             jsonObject.addProperty(SHORT_EXTRA_TYPE_PORT, SHORT_TYPE_ANALOG);
-            jsonObject.addProperty(SHORT_VALUE,task.getSignalOnPort());
+            jsonObject.addProperty(SHORT_VALUE, action.getSignalOnPort());
         }
-        else if (task.getPortType() == PortType.DIGITAL) {
+        else if (action.getPortType() == PortType.DIGITAL) {
             jsonObject.addProperty(SHORT_EXTRA_TYPE_PORT, SHORT_TYPE_DIGITAL);
-            jsonObject.addProperty(SHORT_PORT_STATUS,task.getPortStatus().getShortJsonExtra());
+            jsonObject.addProperty(SHORT_PORT_STATUS, action.getPortStatus().getShortJsonExtra());
         }
-        jsonObject.addProperty(SHORT_ID_PORT,task.getPort());
+        jsonObject.addProperty(SHORT_ID_PORT, action.getPort());
 
         return jsonObject;
     }

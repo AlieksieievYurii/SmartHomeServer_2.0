@@ -1,7 +1,7 @@
 package utils.handlers;
 
 import com.google.gson.JsonObject;
-import controllers.tcodtask.iHandlerTCOD;
+import controllers.tcodtask.get.interfaises.iHandlerTCOD;
 import main.Manifest;
 import utils.files.FileWriter;
 import utils.files.iWriter;
