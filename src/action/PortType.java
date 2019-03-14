@@ -11,7 +11,7 @@ public enum PortType
         this.typePort = typePort;
     }
 
-    public String getTypePort() {
+    public String toString() {
         return typePort;
     }
 

@@ -65,7 +65,7 @@ public class ManagerDevices extends HttpServlet
             run(request, response);
         } else if (i == TypeRequest.HASH_CODE)
         {
-            HashCode.sendHashCodeTasks(getServletContext(), response);
+            HashCode.sendHashCodeActions(getServletContext(), response);
             HandlerSensorsTCOD.build(getServletContext(),request).handleParams();
         } else {
             ErrorLogs.errorOfTypeRequest();

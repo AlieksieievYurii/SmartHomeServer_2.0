@@ -1,37 +1,37 @@
 package controllers.tcodtask.get;
 import action.Action;
 import controllers.tcodtask.get.interfaises.iConverter;
-import controllers.tcodtask.get.interfaises.iHandlerTCOD;
-import controllers.tcodtask.get.interfaises.iReadTasks;
-import controllers.tcodtask.get.interfaises.iResponseTCOD;
+import controllers.tcodtask.get.interfaises.iHandlerSensors;
+import controllers.tcodtask.get.interfaises.iReadActionsTasks;
+import controllers.tcodtask.get.interfaises.iResponse;
 import device.Device;
 
 import java.util.List;
 
 public class ControllerGETActions
 {
-    private final controllers.tcodtask.get.interfaises.iReadTasks iReadTasks;
+    private final iReadActionsTasks iReadActions;
     private final controllers.tcodtask.get.interfaises.iConverter iConverter;
-    private final controllers.tcodtask.get.interfaises.iHandlerTCOD iHandlerTCOD;
-    private final controllers.tcodtask.get.interfaises.iResponseTCOD iResponseTCOD;
+    private final iHandlerSensors iHandlerTCOD;
+    private final iResponse iResponse;
 
     ControllerGETActions(
-            iReadTasks iReadTasks,
+            iReadActionsTasks iReadActions,
             iConverter iConverter,
-            iHandlerTCOD iHandlerTCOD,
-            iResponseTCOD iResponseTCOD) {
+            iHandlerSensors iHandlerTCOD,
+            iResponse iResponse) {
 
-        this.iReadTasks = iReadTasks;
+        this.iReadActions = iReadActions;
         this.iConverter = iConverter;
         this.iHandlerTCOD = iHandlerTCOD;
-        this.iResponseTCOD = iResponseTCOD;
+        this.iResponse = iResponse;
     }
 
     public void execute(Device forDevice)
     {
-        final List<Action> actions = iReadTasks.getActions(forDevice);
+        final List<Action> actions = iReadActions.getActions(forDevice);
         final String tasksForTCOD = iConverter.convert(actions);
         iHandlerTCOD.handleParams();
-        iResponseTCOD.response(tasksForTCOD);
+        iResponse.response(tasksForTCOD);
     }
 }

@@ -4,7 +4,7 @@ public enum TypeRequest {
     HASH_CODE("hashCode"), TASKS("tasks"), //It's for ManagerDevices
 
     ACTION("action"), TASK("task"),// It's for ListenerTasks
-    HASH_CODE_ACTIONS("hashCodeActions"), HASH_CODE_TASKS("hashCodeTasks"),
+    HASH_CODE_ACTIONS("hashCodeActions"), HASH_CODE_TASKS("hashCodeActions"),
     ACTIONS("actions");
 
     private String typeRequest;

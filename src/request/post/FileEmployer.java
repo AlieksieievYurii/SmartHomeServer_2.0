@@ -1,21 +1,23 @@
 package request.post;
 
 import action.Action;
+import main.Manifest;
 import request.post.interfaises.FileWorker;
-import utils.files.FileReader;
+import utils.files.ActionsTasksReader;
 import utils.files.FileWriter;
 import utils.json.JsonUtils;
 
+import javax.servlet.ServletContext;
 import java.util.List;
 
 public class FileEmployer implements FileWorker
 {
-   private FileReader fileReader;
+   private ActionsTasksReader fileReader;
    private FileWriter fileWriter;
 
-    public FileEmployer(String path) {
-        fileReader = new FileReader(path);
-        fileWriter = new FileWriter(path);
+    public FileEmployer(ServletContext servletContext) {
+        fileReader = new ActionsTasksReader(servletContext);
+        fileWriter = new FileWriter(servletContext.getRealPath(Manifest.FILE_ACTIONS));
     }
 
     @Override

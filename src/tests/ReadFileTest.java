@@ -1,13 +1,11 @@
 package tests;
 
 
-import controllers.tcodtask.get.interfaises.iConverter;
 import device.Device;
 import org.junit.Test;
 import action.PortStatus;
 import action.PortType;
 import action.Action;
-import utils.converter.ConvertTasksTCOD;
 import utils.json.JsonUtils;
 
 import java.util.ArrayList;

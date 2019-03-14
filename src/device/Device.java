@@ -10,7 +10,7 @@ public enum Device
         this.device = device;
     }
 
-    public String getDevice() {
+    public String toString() {
         return device;
     }
 

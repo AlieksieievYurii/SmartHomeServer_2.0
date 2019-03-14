@@ -1,6 +1,6 @@
 package controllers.tcodtask.get.interfaises;
 
-public interface iResponseTCOD
+public interface iResponse
 {
     void response(String responseAPI);
 }

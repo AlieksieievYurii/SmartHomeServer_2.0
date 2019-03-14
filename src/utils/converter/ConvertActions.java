@@ -10,7 +10,7 @@ import utils.hash.HashCode;
 import javax.servlet.ServletContext;
 import java.util.List;
 
-public class ConvertTasksTCOD implements iConverter
+public class ConvertActions implements iConverter
 {
     private static final String EXTRA_HASH_CODE = "hash";
     private static final String EXTRA_TASKS = "tasks";
@@ -25,7 +25,7 @@ public class ConvertTasksTCOD implements iConverter
 
     private ServletContext servletContext;
 
-    public ConvertTasksTCOD(ServletContext servletContext) {
+    public ConvertActions(ServletContext servletContext) {
         this.servletContext = servletContext;
     }
 
@@ -37,7 +37,7 @@ public class ConvertTasksTCOD implements iConverter
         for(Action t : actions)
             jsonArray.add(getJsonObject(t));
 
-        jsonObject.addProperty(EXTRA_HASH_CODE, HashCode.hashCodeTasks(servletContext));
+        jsonObject.addProperty(EXTRA_HASH_CODE, HashCode.hashCodeActions(servletContext));
         jsonObject.add(EXTRA_TASKS,jsonArray);
 
         return jsonObject.toString();

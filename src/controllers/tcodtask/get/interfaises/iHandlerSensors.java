@@ -1,6 +1,6 @@
 package controllers.tcodtask.get.interfaises;
 
-public interface iHandlerTCOD
+public interface iHandlerSensors
 {
     void handleParams();
 }

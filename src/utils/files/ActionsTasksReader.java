@@ -1,33 +1,37 @@
 package utils.files;
 
 
-import controllers.tcodtask.get.interfaises.iReadTasks;
+import controllers.tcodtask.get.interfaises.iReadActionsTasks;
 import action.Action;
 import device.Device;
+import main.Manifest;
 import utils.json.JsonUtils;
+
+import javax.servlet.ServletContext;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-public class FileReader implements iReadTasks
+public class ActionsTasksReader implements iReadActionsTasks
 {
-    private File file;
+    private File fileActions;
 
-    public FileReader(String path)
+    public ActionsTasksReader(ServletContext servletContext)
     {
-        this.file = new File(path);
+        this.fileActions = new File(servletContext.getRealPath(Manifest.FILE_ACTIONS));
     }
 
     @Override
     public List<Action> getActions(Device forDevice)
     {
         try {
-            final String res = readFileFrom(file);
-            List<Action> actions = JsonUtils.toListActions(res);
+            final String res = readFileFrom(fileActions);
 
-            if(forDevice != null)
-                return JsonUtils.selectForDevice(forDevice,actions);
+            if(forDevice != null) {
+                List<Action> actions = JsonUtils.toListActions(res);
+                return JsonUtils.selectForDevice(forDevice, actions);
+            }
             else
                 return JsonUtils.toListActions(res);
         } catch (IOException e) {
@@ -52,7 +56,7 @@ public class FileReader implements iReadTasks
     public String readFile()
     {
         try {
-            return readFileFrom(file);
+            return readFileFrom(fileActions);
         } catch (IOException e) {
             e.printStackTrace();
             return null;

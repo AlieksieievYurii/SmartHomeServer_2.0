@@ -1,15 +1,15 @@
 package controllers.tcodtask.get;
-import controllers.tcodtask.get.interfaises.iResponseTCOD;
+import controllers.tcodtask.get.interfaises.iResponse;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class ResponseTCOD implements iResponseTCOD {
+public class Response implements iResponse {
 
     private HttpServletResponse httpServletResponse;
 
-    public ResponseTCOD(HttpServletResponse httpServletResponse) {
+    public Response(HttpServletResponse httpServletResponse) {
         this.httpServletResponse = httpServletResponse;
     }
 

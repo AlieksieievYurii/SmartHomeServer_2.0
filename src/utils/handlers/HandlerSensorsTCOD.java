@@ -1,7 +1,7 @@
 package utils.handlers;
 
 import com.google.gson.JsonObject;
-import controllers.tcodtask.get.interfaises.iHandlerTCOD;
+import controllers.tcodtask.get.interfaises.iHandlerSensors;
 import main.Manifest;
 import utils.files.FileWriter;
 import utils.files.iWriter;
@@ -10,7 +10,7 @@ import utils.time.Timer;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
-public class HandlerSensorsTCOD implements iHandlerTCOD
+public class HandlerSensorsTCOD implements iHandlerSensors
 {
     private static final String TEMPERATURE_PARAM = "temperature";
     private static final String HUMIDITY_PARAM = "humidity";

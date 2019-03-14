@@ -59,8 +59,8 @@ public class Action
     public JsonObject toJsonObject()
     {
         JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty(ActionExtra.FOR_DEVICE.getJsonExtra(),device.getDevice());
-        jsonObject.addProperty(ActionExtra.TYPE_PORT.getJsonExtra(),portType.getTypePort());
+        jsonObject.addProperty(ActionExtra.FOR_DEVICE.getJsonExtra(),device.toString());
+        jsonObject.addProperty(ActionExtra.TYPE_PORT.getJsonExtra(),portType.toString());
         jsonObject.addProperty(ActionExtra.PORT.getJsonExtra(),port);
 
         if(portType == PortType.ANALOG)

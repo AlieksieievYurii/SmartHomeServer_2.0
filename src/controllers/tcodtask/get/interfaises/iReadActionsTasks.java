@@ -5,7 +5,7 @@ import device.Device;
 
 import java.util.List;
 
-public interface iReadTasks
+public interface iReadActionsTasks
 {
     List<Action> getActions(Device forDevice);
 }
