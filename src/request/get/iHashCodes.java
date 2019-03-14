@@ -1,7 +1,9 @@
 package request.get;
 
+import com.google.gson.JsonObject;
+
 public interface iHashCodes
 {
-    void sendHashCodeActions();
-    void sendHashCodeTasks();
+    JsonObject getJsonObjectHashCodeActions();
+    JsonObject getJsonObjectHashCodeTasks();
 }

@@ -28,9 +28,9 @@ public class ListenerTasks extends HttpServlet {
     private void postTaskOrAction(HttpServletRequest request, HttpServletResponse response) {
         TypeRequest i = RequestTypeUtils.whatTypeRequest(request);
 
-        if (i == TypeRequest.TASK) {
+        if (i == TypeRequest.POST_TASK) {
             //TODO Implements Worker and Tasks(Plan for Service)
-        } else if (i == TypeRequest.ACTION) {
+        } else if (i == TypeRequest.POST_ACTION) {
             runAction(request, response);
         } else {
             ErrorLogs.errorOfTypeRequest();

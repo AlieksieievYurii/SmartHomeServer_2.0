@@ -1,6 +1,6 @@
 package utils.files;
 
-public interface iWriter
+public interface iWriteFile
 {
     void write(String text);
 }

@@ -1,11 +1,10 @@
 package controllers.request;
 
 public enum TypeRequest {
-    HASH_CODE("hashCode"), TASKS("tasks"), //It's for ManagerDevices
-
-    ACTION("action"), TASK("task"),// It's for ListenerTasks
-    HASH_CODE_ACTIONS("hashCodeActions"), HASH_CODE_TASKS("hashCodeActions"),
-    ACTIONS("actions");
+    POST_ACTION("postAction"), POST_TASK("postTask"),// It's for ListenerTasks
+    GET_ACTIONS("getActions"),GET_HASH_CODE_ACTIONS("getHashCodeActions"),
+    GET_TASKS("getTasks"),GET_HASH_CODE_TASKS("getHashCodeTasks"),
+    GET_SENSORS("getSensors"),GET_HASH_CODE_SENSORS("getHashCodeSensors");
 
     private String typeRequest;
 
@@ -19,20 +18,22 @@ public enum TypeRequest {
 
     public static TypeRequest whatTypeRequest(String s) {
         switch (s) {
-            case "hashCode":
-                return HASH_CODE;
-            case "tasks":
-                return TASKS;
-            case "action":
-                return ACTION;
-            case "task":
-                return TASK;
-            case "hashCodeActions":
-                return HASH_CODE_ACTIONS;
-            case "hashCodeTasks":
-                return HASH_CODE_TASKS;
-            case "actions":
-                return ACTIONS;
+            case "postAction":
+                return POST_ACTION;
+            case "postTask":
+                return POST_TASK;
+            case "getHashCodeActions":
+                return GET_HASH_CODE_ACTIONS;
+            case "getHashCodeTasks":
+                return GET_HASH_CODE_TASKS;
+            case "getActions":
+                return GET_ACTIONS;
+            case "getTasks":
+                return GET_TASKS;
+            case "getSensors":
+                return GET_SENSORS;
+            case "getHashCodeSensors":
+                return GET_HASH_CODE_SENSORS;
             default:
                 return null;
         }

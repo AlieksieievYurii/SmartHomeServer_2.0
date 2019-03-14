@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class FileWriter implements iWriter
+public class FileWriter implements iWriteFile
 {
     private File file;
 

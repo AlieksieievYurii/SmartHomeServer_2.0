@@ -16,12 +16,14 @@ public class FactoryControllerGetting
         final ActionsTasksReader fileReader = new ActionsTasksReader(servletContext);
         final Converter converter = new Converter(servletContext);
         final Response response = new Response(httpServletResponse);
-        final SenderHashCode hashCode = new SenderHashCode(httpServletResponse,servletContext);
+        final HashCode hashCode = new HashCode(servletContext);
+        final SenderSensors senderSensors = new SenderSensors(servletContext);
 
        return new ControllerGetting(
                fileReader,
                converter,
                response,
+               senderSensors,
                hashCode);
     }
 }

@@ -1,6 +1,8 @@
 package request.get;
 
 import action.Action;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import controllers.request.TypeRequest;
 import controllers.tcodtask.get.interfaises.iConverter;
 import controllers.tcodtask.get.interfaises.iReadActionsTasks;
@@ -13,17 +15,20 @@ public class ControllerGetting
     private iReadActionsTasks readerActionsTasks;
     private iConverter iConverter;
     private iResponse iResponse;
+    private iReaderSensors iReaderSensors;
     private iHashCodes iHashCodes;
 
-    public ControllerGetting(
+    ControllerGetting(
             iReadActionsTasks readerActionsTasks,
             iConverter iConverter,
             iResponse iResponse,
+            iReaderSensors iSendSensors,
             iHashCodes iHashCodes) {
 
         this.readerActionsTasks = readerActionsTasks;
         this.iConverter = iConverter;
         this.iResponse = iResponse;
+        this.iReaderSensors = iSendSensors;
         this.iHashCodes = iHashCodes;
     }
 
@@ -31,19 +36,36 @@ public class ControllerGetting
     {
         switch (typeRequest)
         {
-            case HASH_CODE_ACTIONS:
-                iHashCodes.sendHashCodeActions();
+            case GET_HASH_CODE_ACTIONS:
+                sendHashCodeActions();
                 break;
-            case HASH_CODE_TASKS:
-                iHashCodes.sendHashCodeTasks();
+            case GET_HASH_CODE_TASKS:
+                sendHashCodeTasks();
                 break;
-            case TASKS:
+            case GET_TASKS:
                 sendJsonTasks();
                 break;
-            case ACTIONS:
+            case GET_ACTIONS:
                 sendJsonActions();
                 break;
+            case GET_SENSORS:
+                sendSensors();
+                break;
+            case GET_HASH_CODE_SENSORS:
+                sendHashCodeSensors();
+                break;
         }
+    }
+
+    private void sendHashCodeSensors() {
+
+    }
+
+    private void sendSensors()
+    {
+        JsonArray sensors = iReaderSensors.getSensors();
+        if(sensors != null)
+            iResponse.response(sensors.toString());
     }
 
     private void sendJsonTasks() {
@@ -55,5 +77,18 @@ public class ControllerGetting
         List<Action> actions = readerActionsTasks.getActions(null);
         String res = iConverter.convert(actions);
         iResponse.response(res);
+    }
+
+    private void sendHashCodeActions()
+    {
+        final JsonObject jsonObject = iHashCodes.getJsonObjectHashCodeActions();
+
+        if(jsonObject != null)
+            iResponse.response(jsonObject.toString());
+    }
+
+    private void sendHashCodeTasks()
+    {
+
     }
 }

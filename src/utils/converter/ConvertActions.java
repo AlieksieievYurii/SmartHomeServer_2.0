@@ -37,7 +37,7 @@ public class ConvertActions implements iConverter
         for(Action t : actions)
             jsonArray.add(getJsonObject(t));
 
-        jsonObject.addProperty(EXTRA_HASH_CODE, HashCode.hashCodeActions(servletContext));
+        jsonObject.addProperty(EXTRA_HASH_CODE, HashCode.getHashCodeActions(servletContext));
         jsonObject.add(EXTRA_TASKS,jsonArray);
 
         return jsonObject.toString();

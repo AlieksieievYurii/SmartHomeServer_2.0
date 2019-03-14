@@ -22,7 +22,7 @@ public class Converter implements iConverter {
     public String convert(List<Action> actions)
     {
         JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty(HashCode.EXTRA_HASH_CODE,HashCode.hashCodeActions(context));
+        jsonObject.addProperty(HashCode.EXTRA_HASH_CODE,HashCode.getHashCodeActions(context));
         jsonObject.add("actions",getJsonArrayActions(actions));
         return jsonObject.toString();
     }

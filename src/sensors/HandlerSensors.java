@@ -5,7 +5,7 @@ import com.google.gson.JsonObject;
 import controllers.tcodtask.get.interfaises.iHandlerSensors;
 import main.Manifest;
 import utils.files.FileWriter;
-import utils.files.iWriter;
+import utils.files.iWriteFile;
 import utils.time.Timer;
 
 import javax.servlet.ServletContext;
@@ -18,9 +18,9 @@ import static sensors.Temperature.TEMPERATURE_PARAM;
 public class HandlerSensors implements iHandlerSensors
 {
     private HttpServletRequest request;
-    private iWriter iWriter;
+    private iWriteFile iWriter;
 
-    private HandlerSensors(HttpServletRequest request, utils.files.iWriter iWriter)
+    private HandlerSensors(HttpServletRequest request, iWriteFile iWriter)
     {
         this.request = request;
         this.iWriter = iWriter;
