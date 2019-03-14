@@ -20,7 +20,7 @@ import controllers.errors.ErrorLogs;
 import controllers.errors.ResponseExceptions;
 import device.DeviceUtils;
 import service.Service;
-import utils.handlers.HandlerSensorsTCOD;
+import sensors.HandlerSensors;
 import utils.hash.HashCode;
 import utils.password.PasswordUtils;
 
@@ -66,7 +66,7 @@ public class ManagerDevices extends HttpServlet
         } else if (i == TypeRequest.HASH_CODE)
         {
             HashCode.sendHashCodeActions(getServletContext(), response);
-            HandlerSensorsTCOD.build(getServletContext(),request).handleParams();
+            HandlerSensors.build(getServletContext(),request).handleSensors();
         } else {
             ErrorLogs.errorOfTypeRequest();
             ResponseExceptions.wrongTypeRequest(response);

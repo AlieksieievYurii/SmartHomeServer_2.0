@@ -8,7 +8,6 @@ import request.get.ControllerGetting;
 import request.get.FactoryControllerGetting;
 import request.post.Factory;
 import request.post.ControllerPOSTAction;
-import utils.hash.HashCode;
 import utils.password.PasswordUtils;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

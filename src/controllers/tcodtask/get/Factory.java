@@ -2,7 +2,7 @@ package controllers.tcodtask.get;
 
 import utils.converter.ConvertActions;
 import utils.files.ActionsTasksReader;
-import utils.handlers.HandlerSensorsTCOD;
+import sensors.HandlerSensors;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,7 +21,7 @@ public class Factory
         return new ControllerGETActions(
                 fileReader,
                 convertTasksTCOD,
-                HandlerSensorsTCOD.build(servletContext,request),
+                HandlerSensors.build(servletContext,request),
                 responseTCOD);
     }
 }

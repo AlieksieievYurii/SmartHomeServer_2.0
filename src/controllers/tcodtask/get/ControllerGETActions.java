@@ -12,7 +12,7 @@ public class ControllerGETActions
 {
     private final iReadActionsTasks iReadActions;
     private final controllers.tcodtask.get.interfaises.iConverter iConverter;
-    private final iHandlerSensors iHandlerTCOD;
+    private final iHandlerSensors iHandlerSensors;
     private final iResponse iResponse;
 
     ControllerGETActions(
@@ -23,7 +23,7 @@ public class ControllerGETActions
 
         this.iReadActions = iReadActions;
         this.iConverter = iConverter;
-        this.iHandlerTCOD = iHandlerTCOD;
+        this.iHandlerSensors = iHandlerTCOD;
         this.iResponse = iResponse;
     }
 
@@ -31,7 +31,7 @@ public class ControllerGETActions
     {
         final List<Action> actions = iReadActions.getActions(forDevice);
         final String tasksForTCOD = iConverter.convert(actions);
-        iHandlerTCOD.handleParams();
+        iHandlerSensors.handleSensors();
         iResponse.response(tasksForTCOD);
     }
 }
