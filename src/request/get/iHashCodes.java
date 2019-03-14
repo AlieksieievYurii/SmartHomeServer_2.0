@@ -6,4 +6,5 @@ public interface iHashCodes
 {
     JsonObject getJsonObjectHashCodeActions();
     JsonObject getJsonObjectHashCodeTasks();
+    JsonObject getJsonObjectHashCodeSensors();
 }

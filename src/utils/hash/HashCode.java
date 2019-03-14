@@ -1,6 +1,8 @@
 package utils.hash;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import sensors.SensorUtils;
 import utils.files.ActionsTasksReader;
 
 import javax.servlet.ServletContext;
@@ -21,6 +23,13 @@ public class HashCode {
         }
     }
 
+    public static JsonObject getJsonOfHashCodeSensors(ServletContext servletContext)
+    {
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty(EXTRA_HASH_CODE, getHashCodeSensors(servletContext));
+        return jsonObject;
+    }
+
     public static JsonObject getJsonOfHashCodeActions(ServletContext servletContext) {
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty(EXTRA_HASH_CODE, getHashCodeActions(servletContext));
@@ -33,6 +42,15 @@ public class HashCode {
         for (int i = 0; i < len; i++)
             h = 31 * h + s.charAt(i);
         return h;
+    }
+
+    public static long getHashCodeSensors(ServletContext servletContext)
+    {
+        final JsonArray jsonElements = SensorUtils.readSensors(servletContext);
+        if(jsonElements != null)
+            return hash(jsonElements.toString());
+        else
+            return 0;
     }
 
     public static long getHashCodeActions(ServletContext servletContext) {

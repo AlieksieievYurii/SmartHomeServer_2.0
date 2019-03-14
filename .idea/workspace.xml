@@ -7,34 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7fdb13b-a54b-4217-a4fc-adff1663355c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/request/get/SenderSensors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/request/get/iReaderSensors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sensors/SensorUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/files/FileReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/files/iReadFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/main/ManagerDevices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/main/ManagerDevices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/utils/files/FileWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/utils/files/FileWriter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/utils/files/iWriter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/ManagerDevices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/ManagerDevices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/FileWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/FileWriter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/iWriter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/request/TypeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/request/TypeRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ListenerTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ListenerTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ManagerDevices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ManagerDevices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/request/get/ControllerGetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/get/ControllerGetting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/get/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/get/Converter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/get/FactoryControllerGetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/get/FactoryControllerGetting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/get/ReaderSensors.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/get/SenderHashCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/get/HashCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/request/get/HashCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/get/HashCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/request/get/iHashCodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/get/iHashCodes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sensors/HandlerSensors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sensors/HandlerSensors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/converter/ConvertActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/converter/ConvertActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/files/ActionsTasksReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/files/ActionsTasksReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/files/FileWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/files/FileWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/files/SensorReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/files/iReadSensors.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/files/iWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/files/iWriteFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/hash/HashCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/hash/HashCode.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -72,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/request/get/ControllerGetting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="86" column="52" selection-start-line="86" selection-start-column="52" selection-end-line="86" selection-end-column="52" />
+            <state relative-caret-position="591">
+              <caret line="62" column="48" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,22 +58,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/hash/HashCode.java">
+        <entry file="file://$PROJECT_DIR$/src/request/get/HashCode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controllers/tcodtask/get/ControllerGETActions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+            <state relative-caret-position="94">
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,10 +70,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/request/get/HashCode.java">
+        <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Sensors.json">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="20" selection-start-column="20" selection-end-column="20" />
+              <caret column="34" selection-start-column="34" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/request/get/iHashCodes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/hash/HashCode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="28" column="67" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,10 +100,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/request/get/FactoryControllerGetting.java">
+        <entry file="file://$PROJECT_DIR$/src/sensors/SensorUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="19" column="76" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
+            <state relative-caret-position="366">
+              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -147,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/tests/ReadFileTest.java" />
         <option value="$PROJECT_DIR$/src/controllers/tcodtask/get/GETControllerTCODTask.java" />
         <option value="$PROJECT_DIR$/src/request/post/POSTControllerTCODAction.java" />
         <option value="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/TasksTCOD.json" />
@@ -190,14 +171,15 @@
         <option value="$PROJECT_DIR$/src/main/ManagerDevices.java" />
         <option value="$PROJECT_DIR$/src/controllers/request/TypeRequest.java" />
         <option value="$PROJECT_DIR$/src/request/get/iReaderSensors.java" />
-        <option value="$PROJECT_DIR$/src/sensors/SensorUtils.java" />
-        <option value="$PROJECT_DIR$/src/request/get/iHashCodes.java" />
         <option value="$PROJECT_DIR$/src/request/get/SenderHashCode.java" />
         <option value="$PROJECT_DIR$/src/request/get/SenderSensors.java" />
         <option value="$PROJECT_DIR$/src/request/get/FactoryControllerGetting.java" />
-        <option value="$PROJECT_DIR$/src/request/get/HashCode.java" />
-        <option value="$PROJECT_DIR$/src/request/get/ControllerGetting.java" />
+        <option value="$PROJECT_DIR$/src/sensors/SensorUtils.java" />
         <option value="$PROJECT_DIR$/src/utils/hash/HashCode.java" />
+        <option value="$PROJECT_DIR$/src/request/get/iHashCodes.java" />
+        <option value="$PROJECT_DIR$/src/request/get/ControllerGetting.java" />
+        <option value="$PROJECT_DIR$/src/request/get/HashCode.java" />
+        <option value="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Sensors.json" />
       </list>
     </option>
   </component>
@@ -327,6 +309,13 @@
             <path>
               <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="hash" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -350,7 +339,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552579371422" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552579998410" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -577,7 +566,7 @@
       <workItem from="1552386103048" duration="10252000" />
       <workItem from="1552462006277" duration="10041000" />
       <workItem from="1552502422305" duration="7131000" />
-      <workItem from="1552564292733" duration="13329000" />
+      <workItem from="1552564292733" duration="13891000" />
     </task>
     <task id="LOCAL-00001" summary="Added HashCode">
       <created>1552149170171</created>
@@ -649,7 +638,14 @@
       <option name="project" value="LOCAL" />
       <updated>1552573575811</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Implemented GetSensors">
+      <created>1552579407437</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1552579407437</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -685,23 +681,23 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83850000" />
+    <option name="totallyTimeSpent" value="84412000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7788845" visible="true" weight="0.23462783" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.777439" visible="true" weight="0.23462783" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.22111554" side_tool="true" visible="true" weight="0.23462783" />
+      <window_info id="Web" order="7" sideWeight="0.22256097" side_tool="true" visible="true" weight="0.23462783" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3281493" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.21928461" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.48989114" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39968896" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -739,7 +735,8 @@
     <MESSAGE value="Changed file names and also something" />
     <MESSAGE value="Implemented ListenerActionsTasks" />
     <MESSAGE value="good day" />
-    <option name="LAST_COMMIT_MESSAGE" value="good day" />
+    <MESSAGE value="Implemented GetSensors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented GetSensors" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/Manifest.java">
@@ -1008,13 +1005,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/files/ActionsTasksReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-550">
-          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/action/ActionExtra.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -1091,27 +1081,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Sensors.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sensors/SensorUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/request/get/iHashCodes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/request/get/iReaderSensors.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -1138,46 +1107,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/request/get/FactoryControllerGetting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="19" column="76" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/request/get/ControllerGetting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="86" column="52" selection-start-line="86" selection-start-column="52" selection-end-line="86" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/hash/HashCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/tcodtask/get/ControllerGETActions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/ManagerDevices.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1452">
@@ -1188,13 +1117,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/request/get/HashCode.java">
+    <entry file="file://$PROJECT_DIR$/src/request/get/FactoryControllerGetting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
+        <state relative-caret-position="191">
+          <caret line="19" column="76" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/tcodtask/get/ControllerGETActions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensors/SensorUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/files/ActionsTasksReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/hash/HashCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="28" column="67" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/request/get/iHashCodes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/request/get/ControllerGetting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="62" column="48" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/request/get/HashCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Sensors.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="34" selection-start-column="34" selection-end-column="34" />
         </state>
       </provider>
     </entry>

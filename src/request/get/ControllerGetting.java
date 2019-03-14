@@ -58,7 +58,9 @@ public class ControllerGetting
     }
 
     private void sendHashCodeSensors() {
+        final JsonObject jsonObject = iHashCodes.getJsonObjectHashCodeSensors();
 
+        iResponse.response(jsonObject.toString());
     }
 
     private void sendSensors()

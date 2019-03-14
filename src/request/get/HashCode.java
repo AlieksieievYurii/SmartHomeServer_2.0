@@ -20,4 +20,10 @@ public class HashCode implements iHashCodes {
     public JsonObject getJsonObjectHashCodeTasks() {
         return null;
     }
+
+    @Override
+    public JsonObject getJsonObjectHashCodeSensors()
+    {
+        return utils.hash.HashCode.getJsonOfHashCodeSensors(servletContext);
+    }
 }
