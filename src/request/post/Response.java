@@ -1,5 +1,6 @@
 package request.post;
 
+import com.google.gson.JsonObject;
 import request.post.interfaises.iResponse;
 
 import javax.servlet.http.HttpServletResponse;
@@ -16,12 +17,17 @@ public class Response implements iResponse {
 
     @Override
     public void responseOk() {
-       print("OK");
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty("Response","OK");
+        print(jsonObject.toString());
     }
 
     @Override
-    public void responseWRONG() {
-        print("WRONG");
+    public void responseWRONG(String description) {
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty("Response","WRONG");
+        jsonObject.addProperty("description",description);
+        print(jsonObject.toString());
     }
 
     private void print(String s)

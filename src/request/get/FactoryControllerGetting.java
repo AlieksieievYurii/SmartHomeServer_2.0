@@ -16,8 +16,8 @@ public class FactoryControllerGetting
         final ActionsTasksReader fileReader = new ActionsTasksReader(servletContext);
         final Converter converter = new Converter(servletContext);
         final Response response = new Response(httpServletResponse);
-        final HashCode hashCode = new HashCode(servletContext);
-        final SenderSensors senderSensors = new SenderSensors(servletContext);
+        final ReaderHashCode hashCode = new ReaderHashCode(servletContext);
+        final ReaderSensors senderSensors = new ReaderSensors(servletContext);
 
        return new ControllerGetting(
                fileReader,

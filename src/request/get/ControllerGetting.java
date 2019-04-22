@@ -7,7 +7,6 @@ import controllers.request.TypeRequest;
 import controllers.tcodtask.get.interfaises.iConverter;
 import controllers.tcodtask.get.interfaises.iReadActionsTasks;
 import controllers.tcodtask.get.interfaises.iResponse;
-
 import java.util.List;
 
 public class ControllerGetting
@@ -59,12 +58,10 @@ public class ControllerGetting
 
     private void sendHashCodeSensors() {
         final JsonObject jsonObject = iHashCodes.getJsonObjectHashCodeSensors();
-
         iResponse.response(jsonObject.toString());
     }
 
-    private void sendSensors()
-    {
+    private void sendSensors() {
         JsonArray sensors = iReaderSensors.getSensors();
         if(sensors != null)
             iResponse.response(sensors.toString());

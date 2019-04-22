@@ -4,8 +4,6 @@ import request.post.interfaises.FileWorker;
 import request.post.interfaises.iRequest;
 import request.post.interfaises.iResponse;
 import request.post.interfaises.iWriteAction;
-import main.Manifest;
-
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

@@ -15,7 +15,6 @@ package main;
 import controllers.tcodtask.get.ControllerGETActions;
 import controllers.tcodtask.get.Factory;
 import controllers.request.RequestTypeUtils;
-import controllers.request.TypeRequest;
 import controllers.errors.ErrorLogs;
 import controllers.errors.ResponseExceptions;
 import device.DeviceUtils;
@@ -23,53 +22,53 @@ import service.Service;
 import sensors.HandlerSensors;
 import utils.hash.HashCode;
 import utils.password.PasswordUtils;
-
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import static controllers.errors.ResponseExceptions.wrongPassword;
 
 @WebServlet(name = "ManagerDevices")
-public class ManagerDevices extends HttpServlet
-{
+public class ManagerDevices extends HttpServlet {
 
     public ManagerDevices() {
         new Service().startService();
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
-        //nothing
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-    {
-        if(PasswordUtils.passwordIsCorrect(request))
-            hashCodeOrTasks(request,response);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+        if (PasswordUtils.passwordIsCorrect(request))
+            start(request, response);
         else
-            wrongPassword(response);
+            ResponseExceptions.wrongPassword(response);
     }
 
-    private void run(HttpServletRequest request,HttpServletResponse response)
-    {
+    private void actions(HttpServletRequest request, HttpServletResponse response) {
         final ControllerGETActions ControllerGETActions =
-                Factory.buildControllerGETActions(getServletContext(),request,response);
+                Factory.buildControllerGETActions(getServletContext(), request, response);
         ControllerGETActions.execute(DeviceUtils.whatDevice(request));
     }
 
-    private void hashCodeOrTasks(HttpServletRequest request,HttpServletResponse response)
-    {
-        TypeRequest i = RequestTypeUtils.whatTypeRequest(request);
-        if (i == TypeRequest.GET_ACTIONS) {
-            run(request, response);
-        } else if (i == TypeRequest.GET_HASH_CODE_ACTIONS)
-        {
-            HashCode.sendHashCodeActions(getServletContext(), response);
-            HandlerSensors.build(getServletContext(),request).handleSensors();
-        } else {
-            ErrorLogs.errorOfTypeRequest();
-            ResponseExceptions.wrongTypeRequest(response);
+    private void hashCode(HttpServletRequest request, HttpServletResponse response) {
+        HashCode.sendHashCodeActions(getServletContext(), response);
+        HandlerSensors.build(getServletContext(), request).handleSensors();
+    }
+
+    private void wrongRequest(HttpServletResponse response) {
+        ErrorLogs.errorOfTypeRequest();
+        ResponseExceptions.wrongTypeRequest(response);
+    }
+
+    private void start(HttpServletRequest request, HttpServletResponse response) {
+        switch (RequestTypeUtils.whatTypeRequest(request)) {
+            case GET_ACTIONS:
+                actions(request, response);
+                break;
+            case GET_HASH_CODE_ACTIONS:
+                hashCode(request, response);
+                break;
+            default:
+                wrongRequest(response);
+                break;
         }
     }
 }

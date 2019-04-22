@@ -9,6 +9,14 @@ public class FileReader implements iReadFile {
 
     public FileReader(String path) {
         this.file = new File(path);
+
+        if(!file.isFile())
+            createNewFile(path);
+    }
+
+    private static void createNewFile(String path) {
+        FileWriter fileWriter = new FileWriter(path);
+        fileWriter.write("[]");
     }
 
     @Override

@@ -1,7 +1,6 @@
 package main;
 
 import controllers.request.RequestTypeUtils;
-import controllers.request.TypeRequest;
 import controllers.errors.ErrorLogs;
 import controllers.errors.ResponseExceptions;
 import request.get.ControllerGetting;
@@ -17,29 +16,36 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "ListenerTasks")
 public class ListenerTasks extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
-        System.err.println("POST::");
-
         if (PasswordUtils.passwordIsCorrect(request))
-            postTaskOrAction(request, response);
+            whatPost(request, response);
         else
             ResponseExceptions.wrongPassword(response);
     }
 
-    private void postTaskOrAction(HttpServletRequest request, HttpServletResponse response) {
-        TypeRequest i = RequestTypeUtils.whatTypeRequest(request);
-
-        if (i == TypeRequest.POST_TASK) {
-            //TODO Implements Worker and Tasks(Plan for Service)
-        } else if (i == TypeRequest.POST_ACTION) {
-            runAction(request, response);
-        } else {
-            ErrorLogs.errorOfTypeRequest();
-            ResponseExceptions.wrongTypeRequest(response);
+    private void whatPost(HttpServletRequest request, HttpServletResponse response) {
+        switch (RequestTypeUtils.whatTypeRequest(request)) {
+            case POST_TASK:
+                postTask(request, response);
+                break;
+            case POST_ACTION:
+                postAction(request, response);
+                break;
+            default:
+                wrongRequest(response);
+                break;
         }
-
     }
 
-    private void runAction(HttpServletRequest request, HttpServletResponse response) {
+    private void wrongRequest(HttpServletResponse response) {
+        ErrorLogs.errorOfTypeRequest();
+        ResponseExceptions.wrongTypeRequest(response);
+    }
+
+    private void postTask(HttpServletRequest request, HttpServletResponse response) {
+        //TODO tasks
+    }
+
+    private void postAction(HttpServletRequest request, HttpServletResponse response) {
         final ControllerPOSTAction postControllerTCODAction =
                 Factory.build(
                         getServletContext(),
@@ -51,7 +57,7 @@ public class ListenerTasks extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
 
-        final ControllerGetting controllerGetting = FactoryControllerGetting.build(getServletContext(),response);
+        final ControllerGetting controllerGetting = FactoryControllerGetting.build(getServletContext(), response);
         controllerGetting.executeFor(RequestTypeUtils.whatTypeRequest(request));
     }
 }

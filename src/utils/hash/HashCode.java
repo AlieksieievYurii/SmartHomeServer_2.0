@@ -12,7 +12,6 @@ import java.io.PrintWriter;
 
 public class HashCode {
     public static final String EXTRA_HASH_CODE = "hashCode";
-    public static final String EXTRA_SENSORS = "sensors";
 
     public static void sendHashCodeActions(ServletContext servletContext, HttpServletResponse response) {
         try {
@@ -44,7 +43,7 @@ public class HashCode {
         return h;
     }
 
-    public static long getHashCodeSensors(ServletContext servletContext)
+    private static long getHashCodeSensors(ServletContext servletContext)
     {
         final JsonArray jsonElements = SensorUtils.readSensors(servletContext);
         if(jsonElements != null)

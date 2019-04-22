@@ -2,7 +2,7 @@ package device;
 
 public enum Device
 {
-    TCOD("tcod"),WCOD("test");
+    TCOD("tcod"),WCOD("twcod");
 
     private String device;
 
@@ -18,7 +18,7 @@ public enum Device
     {
         if ("tcod".equals(device)) {
             return TCOD;
-        }else if("test".equals(device))
+        }else if("twcod".equals(device))
             return WCOD;
         return null;
     }

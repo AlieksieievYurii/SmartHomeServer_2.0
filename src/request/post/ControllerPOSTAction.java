@@ -21,15 +21,17 @@ public class ControllerPOSTAction {
     public void execute() {
         final Action action = iRequest.getAction();
 
-        if (action == null) {
-            iResponse.responseWRONG();
+        try {
+            Action.isCorrect(action);
+        } catch (Exception e) {
+            iResponse.responseWRONG(e.getMessage());
             return;
         }
 
         if (iWriteAction.write(action))
             iResponse.responseOk();
         else
-            iResponse.responseWRONG();
+            iResponse.responseWRONG("Error with writing Action");
 
     }
 }

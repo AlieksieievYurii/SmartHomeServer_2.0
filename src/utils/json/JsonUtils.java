@@ -79,7 +79,7 @@ public class JsonUtils
         return getListActions(jsonElements);
     }
 
-    public static Action toExternalAction(JsonObject jsonObject) throws Exception {
+    public static Action toExternalAction(JsonObject jsonObject) {
         final Device forDevice = Device.whatDevice(
                 jsonObject.get(
                         PostExtras
@@ -87,15 +87,13 @@ public class JsonUtils
                                 .getJsonExtra())
                         .getAsString());
 
-        if(forDevice == null)
-            throw new Exception("Wrong :: Device -> " + jsonObject.get(PostExtras.FOR_DEVICE.getJsonExtra()));
 
         final PortType portType =
                 PortType.getPortType(
                               jsonObject.get(
                                       PostExtras.PORT_TYPE.getJsonExtra()
-                              ).getAsString()
-                );
+                              ).getAsString());
+
         final int port = jsonObject.get(PostExtras.PORT_ID.getJsonExtra()).getAsInt();
 
 
@@ -121,7 +119,8 @@ public class JsonUtils
                                             .PORT_STATUS
                                             .getJsonExtra())
                                     .getAsString()));
-        }else return null;
+        }else
+            return null;
     }
 
     public static JsonArray toJsonArray(List<Action> actions)

@@ -13,6 +13,7 @@ public class FileWriter implements iWriteFile
         this.file = new File(path);
     }
 
+
     @Override
     public void write(String text) {
         try {

@@ -1,19 +1,20 @@
 package request.get;
 import com.google.gson.JsonObject;
+import utils.hash.HashCode;
 
 import javax.servlet.ServletContext;
 
-public class HashCode implements iHashCodes {
+public class ReaderHashCode implements iHashCodes {
 
     private ServletContext servletContext;
 
-    public HashCode(ServletContext servletContext) {
+    ReaderHashCode(ServletContext servletContext) {
         this.servletContext = servletContext;
     }
 
     @Override
     public JsonObject getJsonObjectHashCodeActions() {
-        return utils.hash.HashCode.getJsonOfHashCodeActions(servletContext);
+        return HashCode.getJsonOfHashCodeActions(servletContext);
     }
 
     @Override
@@ -24,6 +25,6 @@ public class HashCode implements iHashCodes {
     @Override
     public JsonObject getJsonObjectHashCodeSensors()
     {
-        return utils.hash.HashCode.getJsonOfHashCodeSensors(servletContext);
+        return HashCode.getJsonOfHashCodeSensors(servletContext);
     }
 }

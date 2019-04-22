@@ -4,11 +4,11 @@ import com.google.gson.JsonArray;
 import sensors.SensorUtils;
 import javax.servlet.ServletContext;
 
-public class SenderSensors implements iReaderSensors {
+public class ReaderSensors implements iReaderSensors {
 
     private ServletContext servletContext;
 
-    public SenderSensors(ServletContext servletContext) {
+    ReaderSensors(ServletContext servletContext) {
         this.servletContext = servletContext;
 
     }
