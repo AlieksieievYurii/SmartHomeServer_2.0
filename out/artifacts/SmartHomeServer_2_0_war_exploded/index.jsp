@@ -12,6 +12,5 @@
   </head>
   <body>
     This is Server for SmartHome
-
   </body>
 </html>
