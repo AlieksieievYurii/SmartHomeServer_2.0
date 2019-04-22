@@ -15,7 +15,7 @@ import java.util.List;
 
 public class JsonUtils
 {
-    public static JsonArray getJsonArray(String tasks)
+    private static JsonArray getJsonArray(String tasks)
     {
         return new JsonParser().parse(tasks).getAsJsonArray();
     }

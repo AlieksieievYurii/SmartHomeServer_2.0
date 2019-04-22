@@ -16,16 +16,6 @@ public class ResponseExceptions
         }
     }
 
-    public static void wrongDeviceType(HttpServletResponse response)
-    {
-        try {
-            final PrintWriter printWriter = response.getWriter();
-            printWriter.print(" CODE_RESPONSE: 16\n Message: Wrong device type!");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     public static void wrongTypeRequest(HttpServletResponse response)
     {
         try {
