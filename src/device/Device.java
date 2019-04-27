@@ -1,5 +1,7 @@
 package device;
 
+import exceptions.DeviceException;
+
 public enum Device
 {
     TCOD("tcod"),WCOD("twcod");
@@ -14,13 +16,13 @@ public enum Device
         return device;
     }
 
-    public static Device whatDevice(String device)
-    {
+    public static Device whatDevice(String device) throws DeviceException {
         if ("tcod".equals(device)) {
             return TCOD;
         }else if("twcod".equals(device))
             return WCOD;
-        return null;
+        else
+            throw new DeviceException(device);
     }
 
 

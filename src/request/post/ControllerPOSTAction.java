@@ -1,6 +1,7 @@
 package request.post;
 
 import action.Action;
+import exceptions.ActionException;
 import request.post.interfaises.iRequest;
 import request.post.interfaises.iResponse;
 import request.post.interfaises.iWriteAction;
@@ -19,11 +20,10 @@ public class ControllerPOSTAction {
     }
 
     public void execute() {
-        final Action action = iRequest.getAction();
-
+        final Action action;
         try {
-            Action.isCorrect(action);
-        } catch (Exception e) {
+             action = iRequest.getAction();
+        } catch (ActionException e) {
             iResponse.responseWRONG(e.getMessage());
             return;
         }

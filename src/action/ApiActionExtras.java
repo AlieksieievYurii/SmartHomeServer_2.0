@@ -1,6 +1,6 @@
-package request.post;
+package action;
 
-public enum PostExtras {
+public enum ApiActionExtras {
     FOR_DEVICE("for_device"),
     PORT_TYPE("port_type"),
     PORT_ID("port_id"),
@@ -9,7 +9,7 @@ public enum PostExtras {
 
     private String jsonExtra;
 
-    PostExtras(String jsonExtra) {
+    ApiActionExtras(String jsonExtra) {
         this.jsonExtra = jsonExtra;
     }
 
@@ -17,7 +17,7 @@ public enum PostExtras {
         return jsonExtra;
     }
 
-    public static PostExtras getPostExtra(String jsonExtra) {
+    public static ApiActionExtras getPostExtra(String jsonExtra) {
         switch (jsonExtra) {
             case "for_device":
                 return FOR_DEVICE;

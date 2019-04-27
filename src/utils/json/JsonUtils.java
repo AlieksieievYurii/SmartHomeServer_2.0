@@ -8,7 +8,8 @@ import action.PortType;
 import action.Action;
 import action.ActionExtra;
 import device.Device;
-import request.post.PostExtras;
+import action.ApiActionExtras;
+import exceptions.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,100 +26,145 @@ public class JsonUtils
         return new JsonParser().parse(json).getAsJsonObject();
     }
 
-    public static List<Action> getListActions(JsonArray jsonArray)
-    {
+    private static List<Action> getListActions(JsonArray jsonArray) throws ActionException {
         List<Action> actions = new ArrayList<>();
 
         for(int i = 0; i < jsonArray.size(); i++)
         {
             JsonObject jsonObject = jsonArray.get(i).getAsJsonObject();
 
-            final Device forDevice = Device.whatDevice(
-                    jsonObject.get(
-                            ActionExtra
-                                    .FOR_DEVICE
-                                    .getJsonExtra())
-                            .getAsString()
-            );
+            final Device forDevice;
+            try {
+                forDevice = Device.whatDevice(
+                        jsonObject.get(
+                                ActionExtra
+                                        .FOR_DEVICE
+                                        .getJsonExtra())
+                                .getAsString()
+                );
+            } catch (DeviceException e) {
+                throw new ActionException(e.getMessage());
+            }
 
-            PortType portType = PortType.getPortType(
-                    jsonObject.get(ActionExtra.TYPE_PORT.getJsonExtra()).getAsString()
-            );
+            final PortType portType;
+            try {
+                portType = PortType.getPortType(
+                        jsonObject.get(ActionExtra.TYPE_PORT.getJsonExtra()).getAsString()
+                );
+            } catch (PortTypeException e) {
+                throw new ActionException(e.getMessage());
+            }
 
             short port = jsonObject.get(ActionExtra.PORT.getJsonExtra()).getAsShort();
 
-            if(portType == PortType.ANALOG)
-                actions.add(new Action(
-                        forDevice,
-                        portType,
-                        port,
-                        jsonObject.get(
-                                ActionExtra.SIGNAL_ON_PORT
-                                        .getJsonExtra())
-                                        .getAsInt()));
+            if(portType == PortType.ANALOG) {
+                try {
+                    actions.add(new Action(
+                            forDevice,
+                            portType,
+                            port,
+                            jsonObject.get(
+                                    ActionExtra.SIGNAL_ON_PORT
+                                            .getJsonExtra())
+                                            .getAsInt()));
+                } catch (SignalException e) {
+                    throw new ActionException(e.getMessage());
+                }
+            }
 
-            else if(portType == PortType.DIGITAL)
-                actions.add(new Action(
-                        forDevice,
-                        portType,
-                        port,
-                        PortStatus.stringToEnum(
-                        jsonObject.get(
-                                ActionExtra.STATUS_PORT
-                                        .getJsonExtra())
-                                .getAsString())));
+            else if(portType == PortType.DIGITAL) {
+                try {
+                    actions.add(new Action(
+                            forDevice,
+                            portType,
+                            port,
+                            PortStatus.getByName(
+                            jsonObject.get(
+                                    ActionExtra.STATUS_PORT
+                                            .getJsonExtra())
+                                    .getAsString())));
+                } catch (PortStatusException e) {
+                    throw new ActionException(e.getMessage());
+                }
+            }
         }
 
         return actions;
     }
 
-    public static List<Action> toListActions(String tasks)
-    {
+    public static List<Action> toListActions(String tasks) throws ActionException {
         JsonArray jsonElements = getJsonArray(tasks);
 
         return getListActions(jsonElements);
     }
 
-    public static Action toExternalAction(JsonObject jsonObject) {
-        final Device forDevice = Device.whatDevice(
-                jsonObject.get(
-                        PostExtras
-                                .FOR_DEVICE
-                                .getJsonExtra())
-                        .getAsString());
+    public static List<Action> toListApiActions(JsonArray jsonArray) throws ActionException {
+        List<Action> list = new ArrayList<>();
 
+        for(int i = 0; i < jsonArray.size(); i++)
+            list.add(toApiAction(jsonArray.get(i).getAsJsonObject()));
+        return list;
+    }
 
-        final PortType portType =
-                PortType.getPortType(
-                              jsonObject.get(
-                                      PostExtras.PORT_TYPE.getJsonExtra()
-                              ).getAsString());
+    public static Action toApiAction(JsonObject jsonObject) throws ActionException {
+        final Device forDevice;
 
-        final int port = jsonObject.get(PostExtras.PORT_ID.getJsonExtra()).getAsInt();
-
-
-        if(portType == PortType.ANALOG)
-            return new Action(
-                    forDevice,
-                    PortType.ANALOG,
-                    port,
+        try {
+            forDevice = Device.whatDevice(
                     jsonObject.get(
-                            PostExtras
-                                    .PORT_VALUE
+                            ApiActionExtras
+                                    .FOR_DEVICE
                                     .getJsonExtra())
-                            .getAsInt());
+                            .getAsString());
+        } catch (DeviceException e) {
+            throw new ActionException(e.getMessage());
+        }
+
+
+        final PortType portType;
+        try {
+            portType = PortType.getPortType(
+                          jsonObject.get(
+                                  ApiActionExtras.PORT_TYPE.getJsonExtra()
+                          ).getAsString());
+        } catch (PortTypeException e) {
+            throw new ActionException(e.getMessage());
+        }
+
+        final int port = jsonObject.get(ApiActionExtras.PORT_ID.getJsonExtra()).getAsInt();
+
+
+        if(portType == PortType.ANALOG) {
+            try {
+                return new Action(
+                        forDevice,
+                        PortType.ANALOG,
+                        port,
+                        jsonObject.get(
+                                ApiActionExtras
+                                        .PORT_VALUE
+                                        .getJsonExtra())
+                                .getAsInt());
+            } catch (SignalException e) {
+                throw new ActionException(e.getMessage());
+            }
+        }
         else if(portType == PortType.DIGITAL)
         {
-            return new Action(
-                    forDevice,
-                    PortType.DIGITAL,
-                    port,
-                    PortStatus.stringToEnum(
-                            jsonObject.get(
-                                    PostExtras
-                                            .PORT_STATUS
-                                            .getJsonExtra())
-                                    .getAsString()));
+            try {
+                return new Action(
+                        forDevice,
+                        PortType.DIGITAL,
+                        port,
+                        PortStatus.getByName(
+                                jsonObject.get(
+                                        ApiActionExtras
+                                                .PORT_STATUS
+                                                .getJsonExtra())
+                                        .getAsString()));
+            } catch (PortStatusException e) {
+                throw new ActionException(e.getMessage());
+            }
         }else
             return null;
     }

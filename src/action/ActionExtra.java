@@ -2,6 +2,13 @@ package action;
 
 public enum ActionExtra
 {
+    /*
+
+        Action extras are fro Action which is written in file: Actions.json for parsing
+
+     */
+
+
     FOR_DEVICE("for_device"),
     TYPE_PORT("type_port"),
     PORT("port"),

@@ -4,6 +4,7 @@ package utils.files;
 import controllers.tcodtask.get.interfaises.iReadActionsTasks;
 import action.Action;
 import device.Device;
+import exceptions.*;
 import main.Manifest;
 import utils.json.JsonUtils;
 import javax.servlet.ServletContext;
@@ -29,7 +30,7 @@ public class ActionsTasksReader implements iReadActionsTasks {
             } else
                 return JsonUtils.toListActions(res);
 
-        } catch (IOException e) {
+        }  catch (ActionException | IOException e) {
             e.printStackTrace();
             return null;
         }

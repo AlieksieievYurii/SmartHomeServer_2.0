@@ -2,6 +2,7 @@ package request.post;
 
 import action.Action;
 import com.google.gson.JsonObject;
+import exceptions.*;
 import request.post.interfaises.iRequest;
 import utils.json.JsonUtils;
 
@@ -23,14 +24,9 @@ public class RequestAction implements iRequest {
     }
 
     @Override
-    public Action getAction()
-    {
+    public Action getAction() throws ActionException {
         final JsonObject jsonObject = JsonUtils.getJsonObject(readRequest());
-        try {
-            return JsonUtils.toExternalAction(jsonObject);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
+
+        return JsonUtils.toApiAction(jsonObject);
     }
 }

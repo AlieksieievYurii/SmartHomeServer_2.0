@@ -4,7 +4,7 @@ import action.Action;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import controllers.tcodtask.get.interfaises.iConverter;
-import request.post.PostExtras;
+import action.ApiActionExtras;
 import utils.hash.HashCode;
 
 import javax.servlet.ServletContext;
@@ -42,23 +42,23 @@ public class Converter implements iConverter {
         final JsonObject jsonObject = new JsonObject();
 
         jsonObject.addProperty(
-                PostExtras.FOR_DEVICE.getJsonExtra(),
+                ApiActionExtras.FOR_DEVICE.getJsonExtra(),
                 action.getDevice().toString());
 
-        jsonObject.addProperty(PostExtras.PORT_TYPE.getJsonExtra(),
+        jsonObject.addProperty(ApiActionExtras.PORT_TYPE.getJsonExtra(),
                 action.getPortType().toString());
 
-        jsonObject.addProperty(PostExtras.PORT_ID.getJsonExtra(),
+        jsonObject.addProperty(ApiActionExtras.PORT_ID.getJsonExtra(),
                 action.getPort());
 
         switch (action.getPortType())
         {
             case ANALOG:
-                jsonObject.addProperty(PostExtras.PORT_VALUE.getJsonExtra(),
+                jsonObject.addProperty(ApiActionExtras.PORT_VALUE.getJsonExtra(),
                         action.getSignalOnPort());
                 break;
             case DIGITAL:
-                jsonObject.addProperty(PostExtras.PORT_STATUS.getJsonExtra(),
+                jsonObject.addProperty(ApiActionExtras.PORT_STATUS.getJsonExtra(),
                         action.getPortStatus().getJsonExtra());
                 break;
         }

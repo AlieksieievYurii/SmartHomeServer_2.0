@@ -13,11 +13,14 @@ public class Action {
     private int signalOnPort;
     private PortStatus portStatus;
 
-    public Action(Device device, PortType portType, int port, int signalOnPort) {
+    public Action(Device device, PortType portType, int port, int signalOnPort) throws SignalException {
         this.device = device;
         this.portType = portType;
         this.port = port;
-        this.signalOnPort = signalOnPort;
+        if(signalOnPort >= 0 && signalOnPort <= 255)
+            this.signalOnPort = signalOnPort;
+        else
+            throw new SignalException(signalOnPort);
     }
 
     public Action(Device device, PortType portType, int port, PortStatus portStatus) {
@@ -122,4 +125,5 @@ public class Action {
                 throw new PortTypeException();
         }
     }
+
 }

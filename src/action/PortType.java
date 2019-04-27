@@ -1,5 +1,7 @@
 package action;
 
+import exceptions.PortTypeException;
+
 public enum PortType
 {
     DIGITAL("digital"),ANALOG("analog");
@@ -15,13 +17,12 @@ public enum PortType
         return typePort;
     }
 
-    public static PortType getPortType(String portType)
-    {
+    public static PortType getPortType(String portType) throws PortTypeException {
         if(portType.equals("digital"))
             return DIGITAL;
         else if(portType.equals("analog"))
             return ANALOG;
         else
-            return null;
+            throw new PortTypeException(portType);
     }
 }

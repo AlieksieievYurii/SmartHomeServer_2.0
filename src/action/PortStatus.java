@@ -1,5 +1,8 @@
 package action;
 
+import exceptions.PortStatusException;
+import exceptions.PortTypeException;
+
 public enum PortStatus
 {
     HIGH("HIGH"),LOW("LOW");
@@ -23,8 +26,7 @@ public enum PortStatus
         else return null;
     }
 
-    public static PortStatus stringToEnum(String s)
-    {
+    public static PortStatus getByName(String s) throws PortStatusException {
         if(s == null)
             return null;
 
@@ -33,6 +35,6 @@ public enum PortStatus
         else if(s.equals("LOW"))
             return PortStatus.LOW;
         else
-            return null;
+            throw new PortStatusException(s);
     }
 }

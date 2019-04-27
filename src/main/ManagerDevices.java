@@ -18,6 +18,7 @@ import controllers.request.RequestTypeUtils;
 import controllers.errors.ErrorLogs;
 import controllers.errors.ResponseExceptions;
 import device.DeviceUtils;
+import exceptions.DeviceException;
 import service.Service;
 import sensors.HandlerSensors;
 import utils.hash.HashCode;
@@ -43,9 +44,13 @@ public class ManagerDevices extends HttpServlet {
     }
 
     private void actions(HttpServletRequest request, HttpServletResponse response) {
-        final ControllerGETActions ControllerGETActions =
+        final ControllerGETActions controllerGETActions =
                 Factory.buildControllerGETActions(getServletContext(), request, response);
-        ControllerGETActions.execute(DeviceUtils.whatDevice(request));
+        try {
+            controllerGETActions.execute(DeviceUtils.whatDevice(request));
+        } catch (DeviceException e) {
+            e.printStackTrace();
+        }
     }
 
     private void hashCode(HttpServletRequest request, HttpServletResponse response) {
