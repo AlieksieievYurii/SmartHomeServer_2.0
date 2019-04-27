@@ -1,16 +1,20 @@
 package service;
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
 public class Service implements Runnable
 {
-    private Thread thread;
+    private ScheduledExecutorService exec;
 
     public Service(){
-        thread = new Thread(this);
+        exec = Executors.newSingleThreadScheduledExecutor();
     }
 
     public void startService()
     {
-        thread.start();
+        exec.scheduleAtFixedRate(this,0,1, TimeUnit.MINUTES);
     }
 
     @Override
