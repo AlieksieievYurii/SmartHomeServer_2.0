@@ -3,7 +3,7 @@ package sensors;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 import main.Manifest;
-import utils.files.FileReader;
+import utils.files.tools.FileReader;
 import javax.servlet.ServletContext;
 import java.io.IOException;
 

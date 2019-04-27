@@ -1,7 +1,7 @@
 package controllers.tcodtask.get;
 
 import utils.converter.ConvertActions;
-import utils.files.ActionsTasksReader;
+import utils.files.FileReaderActions;
 import sensors.HandlerSensors;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +13,7 @@ public class Factory
                                                                  HttpServletRequest request,
                                                                  HttpServletResponse response)
     {
-        final ActionsTasksReader fileReader = new ActionsTasksReader(
+        final FileReaderActions fileReader = new FileReaderActions(
                 servletContext);
         final ConvertActions convertTasksTCOD = new ConvertActions(servletContext);
         final Response responseTCOD = new Response(response);

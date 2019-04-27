@@ -19,7 +19,7 @@ public class ReaderHashCode implements iHashCodes {
 
     @Override
     public JsonObject getJsonObjectHashCodeTasks() {
-        return null;
+        return HashCode.getJSonHashCodeTasks(servletContext);
     }
 
     @Override

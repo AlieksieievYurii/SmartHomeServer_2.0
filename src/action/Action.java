@@ -1,7 +1,6 @@
 package action;
 
 import com.google.gson.JsonObject;
-import device.Device;
 import exceptions.*;
 
 import java.util.Objects;

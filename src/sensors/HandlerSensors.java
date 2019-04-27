@@ -4,8 +4,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import controllers.tcodtask.get.interfaises.iHandlerSensors;
 import main.Manifest;
-import utils.files.FileWriter;
-import utils.files.iWriteFile;
+import utils.files.tools.FileWriter;
+import utils.files.tools.iWriteFile;
 import utils.time.Timer;
 
 import javax.servlet.ServletContext;

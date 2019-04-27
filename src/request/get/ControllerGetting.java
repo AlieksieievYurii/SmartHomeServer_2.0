@@ -5,30 +5,37 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import controllers.request.TypeRequest;
 import controllers.tcodtask.get.interfaises.iConverter;
-import controllers.tcodtask.get.interfaises.iReadActionsTasks;
+import controllers.tcodtask.get.interfaises.iFileReaderActions;
 import controllers.tcodtask.get.interfaises.iResponse;
+import task.Task;
+import utils.files.tools.iReaderTasks;
+import utils.json.JsonUtils;
+
 import java.util.List;
 
 public class ControllerGetting
 {
-    private iReadActionsTasks readerActionsTasks;
+    private iFileReaderActions readerActionsTasks;
     private iConverter iConverter;
     private iResponse iResponse;
     private iReaderSensors iReaderSensors;
     private iHashCodes iHashCodes;
+    private iReaderTasks readerTasks;
 
     ControllerGetting(
-            iReadActionsTasks readerActionsTasks,
+            iFileReaderActions readerActionsTasks,
             iConverter iConverter,
             iResponse iResponse,
             iReaderSensors iSendSensors,
-            iHashCodes iHashCodes) {
+            iHashCodes iHashCodes,
+            iReaderTasks iReaderTasks) {
 
         this.readerActionsTasks = readerActionsTasks;
         this.iConverter = iConverter;
         this.iResponse = iResponse;
         this.iReaderSensors = iSendSensors;
         this.iHashCodes = iHashCodes;
+        this.readerTasks = iReaderTasks;
     }
 
     public void executeFor(TypeRequest typeRequest)
@@ -67,8 +74,11 @@ public class ControllerGetting
             iResponse.response(sensors.toString());
     }
 
-    private void sendJsonTasks() {
-
+    private void sendJsonTasks()
+    {
+        final List<Task> tasks = readerTasks.getTasks();
+        final JsonArray jsonElements = JsonUtils.tasksToJsonArray(tasks);
+        iResponse.response(jsonElements.toString());
     }
 
     private void sendJsonActions()
@@ -88,6 +98,9 @@ public class ControllerGetting
 
     private void sendHashCodeTasks()
     {
+        final JsonObject jsonObject = iHashCodes.getJsonObjectHashCodeTasks();
 
+        if(jsonObject != null)
+            iResponse.response(jsonObject.toString());
     }
 }

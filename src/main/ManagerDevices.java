@@ -17,7 +17,7 @@ import controllers.tcodtask.get.Factory;
 import controllers.request.RequestTypeUtils;
 import controllers.errors.ErrorLogs;
 import controllers.errors.ResponseExceptions;
-import device.DeviceUtils;
+import action.DeviceUtils;
 import exceptions.DeviceException;
 import service.Service;
 import sensors.HandlerSensors;

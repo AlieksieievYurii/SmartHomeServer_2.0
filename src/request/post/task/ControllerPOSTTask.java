@@ -1,10 +1,8 @@
 package request.post.task;
 import exceptions.TaskException;
-import main.Manifest;
 import request.post.Response;
 import request.post.interfaises.iResponse;
 import task.Task;
-
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -40,7 +38,7 @@ public class ControllerPOSTTask {
     public static ControllerPOSTTask build(ServletContext context, HttpServletResponse r)
     {
         final iRequestTask requestTask = new RequestTask();
-        final iWriteTask writeTask = new WriteTask(context.getRealPath(Manifest.FILE_TASKS));
+        final iWriteTask writeTask = new WriteTask(context);
         final iResponse response = new Response(r);
 
         return new ControllerPOSTTask(requestTask,writeTask,response);

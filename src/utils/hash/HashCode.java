@@ -3,7 +3,8 @@ package utils.hash;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import sensors.SensorUtils;
-import utils.files.ActionsTasksReader;
+import utils.files.FileReaderActions;
+import utils.files.FileReaderTasks;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletResponse;
@@ -35,6 +36,13 @@ public class HashCode {
         return jsonObject;
     }
 
+    public static JsonObject getJSonHashCodeTasks(ServletContext context)
+    {
+        final JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty(EXTRA_HASH_CODE,getHashCodeTasks(context));
+        return jsonObject;
+    }
+
     private static long hash(String s) {
         int h = 0;
         int len = s.length();
@@ -53,10 +61,19 @@ public class HashCode {
     }
 
     public static long getHashCodeActions(ServletContext servletContext) {
-        final ActionsTasksReader fileReader =
-                new ActionsTasksReader(servletContext);
+        final FileReaderActions fileReader =
+                new FileReaderActions(servletContext);
         String s = fileReader.getActionsAsString();
 
         return hash(s);
     }
+
+    private static long getHashCodeTasks(ServletContext servletContext)
+    {
+        final FileReaderTasks fileReaderTasks = new FileReaderTasks(servletContext);
+        String s = fileReaderTasks.getAsString();
+
+        return hash(s);
+    }
+
 }

@@ -1,7 +1,8 @@
 package request.get;
 
 import controllers.tcodtask.get.Response;
-import utils.files.ActionsTasksReader;
+import utils.files.FileReaderActions;
+import utils.files.FileReaderTasks;
 
 
 import javax.servlet.ServletContext;
@@ -13,17 +14,19 @@ public class FactoryControllerGetting
     public static ControllerGetting build(ServletContext servletContext,
                                    HttpServletResponse httpServletResponse)
     {
-        final ActionsTasksReader fileReader = new ActionsTasksReader(servletContext);
+        final FileReaderActions fileReader = new FileReaderActions(servletContext);
         final Converter converter = new Converter(servletContext);
         final Response response = new Response(httpServletResponse);
         final ReaderHashCode hashCode = new ReaderHashCode(servletContext);
         final ReaderSensors senderSensors = new ReaderSensors(servletContext);
+        final FileReaderTasks fileReaderTasks = new FileReaderTasks(servletContext);
 
        return new ControllerGetting(
                fileReader,
                converter,
                response,
                senderSensors,
-               hashCode);
+               hashCode,
+               fileReaderTasks);
     }
 }

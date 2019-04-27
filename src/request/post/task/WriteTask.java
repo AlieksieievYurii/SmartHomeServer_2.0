@@ -1,11 +1,12 @@
 package request.post.task;
 
 import task.Task;
-import utils.files.ReaderTasks;
-import utils.files.WriteTasksToFile;
-import utils.files.iFileWriteTasks;
-import utils.files.iReaderTasks;
+import utils.files.FileReaderTasks;
+import utils.files.FileWriterTasks;
+import utils.files.tools.iFileWriteTasks;
+import utils.files.tools.iReaderTasks;
 
+import javax.servlet.ServletContext;
 import java.util.List;
 
 public class WriteTask implements iWriteTask {
@@ -13,10 +14,10 @@ public class WriteTask implements iWriteTask {
     private iReaderTasks readerTasks;
     private iFileWriteTasks writeTasks;
 
-    public WriteTask(String path)
+    public WriteTask(ServletContext servletContext)
     {
-        readerTasks = new ReaderTasks(path);
-        writeTasks = new WriteTasksToFile(path);
+        readerTasks = new FileReaderTasks(servletContext);
+        writeTasks = new FileWriterTasks(servletContext);
     }
 
     @Override

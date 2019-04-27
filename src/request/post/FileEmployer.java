@@ -3,8 +3,8 @@ package request.post;
 import action.Action;
 import main.Manifest;
 import request.post.interfaises.FileWorker;
-import utils.files.ActionsTasksReader;
-import utils.files.FileWriter;
+import utils.files.FileReaderActions;
+import utils.files.tools.FileWriter;
 import utils.json.JsonUtils;
 
 import javax.servlet.ServletContext;
@@ -12,11 +12,11 @@ import java.util.List;
 
 public class FileEmployer implements FileWorker
 {
-   private ActionsTasksReader fileReader;
+   private FileReaderActions fileReader;
    private FileWriter fileWriter;
 
     public FileEmployer(ServletContext servletContext) {
-        fileReader = new ActionsTasksReader(servletContext);
+        fileReader = new FileReaderActions(servletContext);
         fileWriter = new FileWriter(servletContext.getRealPath(Manifest.FILE_ACTIONS));
     }
 
