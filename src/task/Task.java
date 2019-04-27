@@ -2,6 +2,7 @@ package task;
 
 import com.google.gson.JsonObject;
 import exceptions.*;
+import utils.json.JsonUtils;
 
 public class Task {
     private static final String API_EXTRA_ID = "id";
@@ -21,12 +22,12 @@ public class Task {
     private Object task;
 
     private Task(int id,
-                TypeTask typeTask,
-                String name,
-                String description,
-                StatusTask statusTask,
-                TaskMode taskMode,
-                Object task) {
+                 TypeTask typeTask,
+                 String name,
+                 String description,
+                 StatusTask statusTask,
+                 TaskMode taskMode,
+                 Object task) {
         this.id = id;
         this.typeTask = typeTask;
         this.name = name;
@@ -34,6 +35,38 @@ public class Task {
         this.statusTask = statusTask;
         this.taskMode = taskMode;
         this.task = task;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public TypeTask getTypeTask() {
+        return typeTask;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public StatusTask getStatusTask() {
+        return statusTask;
+    }
+
+    public TaskMode getTaskMode() {
+        return taskMode;
+    }
+
+    public Object getTask() {
+        return task;
+    }
+
+    public boolean equals(Task task) {
+        return this.id == task.getId();
     }
 
     @Override
@@ -49,34 +82,53 @@ public class Task {
                 '}';
     }
 
-    public static Task getTaskByJson(JsonObject jsonObject) throws
-            TypeTaskException,
-            StatusTaskException,
-            TaskModeException,
-            DateException,
-            TimerException,
-            ActionException {
-        int id = jsonObject.get(API_EXTRA_ID).getAsInt();
-        TypeTask typeTask =
-                TypeTask.getTypeTasksByName(jsonObject.get(API_EXTRA_TYPE_TASK).getAsString());
-        String name = jsonObject.get(API_EXTRA_NAME).getAsString();
-        String description = jsonObject.get(API_EXTRA_DESCRIPTION).getAsString();
-        StatusTask statusTask =
-                StatusTask.getStatusTasksByName(jsonObject.get(API_EXTRA_STATUS).getAsString());
-        TaskMode taskMode = TaskMode.getTaskModeByName(jsonObject.get(API_EXTRA_MODE).getAsString());
+    public static Task getTaskByJson(JsonObject jsonObject) throws TaskException {
 
-        Object task = getJob(typeTask,jsonObject.get(API_EXTRA_JOB).getAsJsonObject());
 
-        return new Task(id,typeTask,name,description,statusTask,taskMode,task);
+        int id;
+        final TypeTask typeTask;
+        final StatusTask statusTask;
+        final TaskMode taskMode;
+        final Object task;
+        final String name;
+        final String description;
+        try
+        {
+            id = jsonObject.get(API_EXTRA_ID).getAsInt();
+            typeTask = TypeTask.getTypeTasksByName(jsonObject.get(API_EXTRA_TYPE_TASK).getAsString());
+            name = jsonObject.get(API_EXTRA_NAME).getAsString();
+            description = jsonObject.get(API_EXTRA_DESCRIPTION).getAsString();
+            statusTask = StatusTask.getStatusTasksByName(jsonObject.get(API_EXTRA_STATUS).getAsString());
+            taskMode = TaskMode.getTaskModeByName(jsonObject.get(API_EXTRA_MODE).getAsString());
+            task = getJob(typeTask, jsonObject.get(API_EXTRA_JOB).getAsJsonObject());
+
+
+        }catch (NullPointerException | ActionException | DateException | StatusTaskException | TimerException | TaskModeException | TypeTaskException e) {
+            throw new TaskException(e.getMessage());
+        }
+        return new Task(id, typeTask, name, description, statusTask, taskMode, task);
+    }
+
+    public static JsonObject toJsonObject(Task task) {
+        final JsonObject jsonObject = new JsonObject();
+
+        jsonObject.addProperty(API_EXTRA_ID, task.getId());
+        jsonObject.addProperty(API_EXTRA_TYPE_TASK, task.getTypeTask().getInJson());
+        jsonObject.addProperty(API_EXTRA_NAME, task.getName());
+        jsonObject.addProperty(API_EXTRA_DESCRIPTION, task.getDescription());
+        jsonObject.addProperty(API_EXTRA_STATUS, task.getStatusTask().getInJson());
+        jsonObject.addProperty(API_EXTRA_MODE, task.getTaskMode().getInJson());
+        jsonObject.add(API_EXTRA_JOB, JsonUtils.getJobJson(task));
+
+        return jsonObject;
     }
 
     private static Object getJob(TypeTask typeTask, JsonObject job) throws ActionException, DateException, TimerException {
-        switch (typeTask)
-        {
+        switch (typeTask) {
             case Timer:
                 return TimerJob.getTimerJobByJson(job);
-                default:
-                    return null;
+            default:
+                return null;
         }
     }
 }

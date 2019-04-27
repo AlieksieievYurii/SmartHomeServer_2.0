@@ -14,17 +14,19 @@ public class Date
         this.yy = yy;
     }
 
-    public byte getDd() {
+    public byte getDD() {
         return dd;
     }
 
-    public byte getMm() {
+    public byte getMM() {
         return mm;
     }
 
-    public short getYy() {
+    public short getYY() {
         return yy;
     }
+
+
 
     @Override
     public String toString() {
@@ -48,5 +50,10 @@ public class Date
         {
             throw new DateException(json);
         }
+    }
+
+    public static String getAsJon(Date date)
+    {
+        return date.getDD()+"."+date.getMM()+"."+date.getYY();
     }
 }

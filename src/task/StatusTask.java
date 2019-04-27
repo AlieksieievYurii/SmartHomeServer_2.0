@@ -12,6 +12,10 @@ public enum StatusTask
         this.inJson = inJson;
     }
 
+    public String getInJson() {
+        return inJson;
+    }
+
     public static StatusTask getStatusTasksByName(String name) throws StatusTaskException {
         if(enable.inJson.equals(name))
             return enable;

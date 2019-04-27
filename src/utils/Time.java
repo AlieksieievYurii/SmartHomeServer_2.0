@@ -12,11 +12,11 @@ public class Time
         this.mm = mm;
     }
 
-    public byte getHh() {
+    public byte getHH() {
         return hh;
     }
 
-    public byte getMm() {
+    public byte getMM() {
         return mm;
     }
 
@@ -39,5 +39,10 @@ public class Time
         {
             throw new TimerException(json);
         }
+    }
+
+    public static String getTimeAsJSon(Time time)
+    {
+        return time.getHH()+":"+time.getMM();
     }
 }

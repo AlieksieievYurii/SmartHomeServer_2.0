@@ -15,11 +15,13 @@ public class FileWriter implements iWriteFile
 
 
     @Override
-    public void write(String text) {
+    public boolean write(String text) {
         try {
             writeFile(text,file);
+            return true;
         } catch (IOException e) {
             e.printStackTrace();
+            return false;
         }
     }
 
@@ -28,5 +30,6 @@ public class FileWriter implements iWriteFile
         final PrintWriter printWriter = new PrintWriter(fileWriter);
         printWriter.print(text);
         printWriter.close();
+        fileWriter.close();
     }
 }

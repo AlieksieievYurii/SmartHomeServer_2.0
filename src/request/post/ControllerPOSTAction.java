@@ -32,6 +32,5 @@ public class ControllerPOSTAction {
             iResponse.responseOk();
         else
             iResponse.responseWRONG("Error with writing Action");
-
     }
 }

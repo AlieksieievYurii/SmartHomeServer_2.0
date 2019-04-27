@@ -7,6 +7,7 @@ import request.get.ControllerGetting;
 import request.get.FactoryControllerGetting;
 import request.post.Factory;
 import request.post.ControllerPOSTAction;
+import request.post.task.ControllerPOSTTask;
 import utils.password.PasswordUtils;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -42,7 +43,8 @@ public class ListenerTasks extends HttpServlet {
     }
 
     private void postTask(HttpServletRequest request, HttpServletResponse response) {
-        //TODO tasks
+        final ControllerPOSTTask controllerPOSTTask = ControllerPOSTTask.build(getServletContext(),response);
+        controllerPOSTTask.execute(request);
     }
 
     private void postAction(HttpServletRequest request, HttpServletResponse response) {

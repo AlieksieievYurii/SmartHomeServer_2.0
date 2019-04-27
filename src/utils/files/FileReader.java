@@ -30,6 +30,8 @@ public class FileReader implements iReadFile {
         while ((str = bufferedReader.readLine()) != null)
             textFromFile.append(str);
 
+        bufferedReader.close();
+
         return textFromFile.toString();
 
     }

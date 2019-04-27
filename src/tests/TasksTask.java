@@ -90,8 +90,8 @@ public class TasksTask
                 "  \"status\": \"enable\",\n" +
                 "  \"mode\": \"always\",\n" +
                 "  \"job\": {\n" +
-                "    \"data\":\"27.04.2019\",\n" +
-                "    \"time\": \"12:00\",\n" +
+                "    \"data\":\"27.4.2019\",\n" +
+                "    \"time\": \"12:0\",\n" +
                 "    \"actions\":[\n" +
                 "      {\n" +
                 "        \"port_id\": 24,\n" +
@@ -109,21 +109,17 @@ public class TasksTask
                 "  }\n" +
                 "}";
 
+        JsonObject jsonObject = new JsonParser().parse(t).getAsJsonObject();
+        final Task task;
         try {
-            Task task = Task.getTaskByJson(new JsonParser().parse(t).getAsJsonObject());
+            task = Task.getTaskByJson(jsonObject);
             System.out.println(task.toString());
-        }  catch (ActionException e) {
-            e.printStackTrace();
-        } catch (DateException e) {
-            e.printStackTrace();
-        } catch (StatusTaskException e) {
-            e.printStackTrace();
-        } catch (TimerException e) {
-            e.printStackTrace();
-        } catch (TaskModeException e) {
-            e.printStackTrace();
-        } catch (TypeTaskException e) {
+            System.out.println(Task.toJsonObject(task).equals(jsonObject));
+            System.out.println(Task.toJsonObject(task).toString());
+        } catch (TaskException e) {
             e.printStackTrace();
         }
+
+
     }
 }

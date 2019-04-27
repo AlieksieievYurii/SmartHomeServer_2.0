@@ -11,6 +11,10 @@ public enum TypeTask {
         this.inJson = inJson;
     }
 
+    public String getInJson() {
+        return inJson;
+    }
+
     public static TypeTask getTypeTasksByName(String name) throws TypeTaskException {
         switch (name) {
             case "timer":

@@ -10,6 +10,8 @@ import action.ActionExtra;
 import device.Device;
 import action.ApiActionExtras;
 import exceptions.*;
+import task.Task;
+import task.TimerJob;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -179,6 +181,16 @@ public class JsonUtils
         return jsonElements;
     }
 
+    public static JsonArray toJsonArrayApi(List<Action> actions)
+    {
+        JsonArray jsonElements = new JsonArray();
+
+        for(Action a : actions)
+            jsonElements.add(Action.getApiActionAsJsonObject(a));
+
+        return jsonElements;
+    }
+
     public static List<Action> selectForDevice(Device device, List<Action> actions)
     {
         List<Action> selectedActions = new ArrayList<>();
@@ -188,5 +200,27 @@ public class JsonUtils
                 selectedActions.add(a);
 
         return selectedActions;
+    }
+
+    public static List<Task> getListTasks(JsonArray jsonArray) throws TaskException {
+        List<Task> tasks = new ArrayList<>();
+
+        for(int i = 0; i < jsonArray.size(); i++)
+            tasks.add(Task.getTaskByJson(jsonArray.get(i).getAsJsonObject()));
+
+        return tasks;
+    }
+
+    public static JsonObject getJobJson(Task task)
+    {
+        switch (task.getTypeTask())
+        {
+            case Timer:
+                TimerJob timerJob = (TimerJob) task.getTask();
+                return TimerJob.getTimerJobJsonObject(timerJob);
+
+                default:
+                    return null;
+        }
     }
 }

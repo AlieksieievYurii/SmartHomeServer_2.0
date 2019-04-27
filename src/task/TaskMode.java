@@ -20,4 +20,8 @@ public enum TaskMode
         else
             throw new TaskModeException(name);
     }
+
+    public String getInJson() {
+        return inJson;
+    }
 }

@@ -100,30 +100,19 @@ public class Action {
         return Objects.hash(portType, port, signalOnPort, portStatus);
     }
 
-    public static void isCorrect(Action action) throws Exception
+    public static JsonObject getApiActionAsJsonObject(Action action)
     {
-        if(action == null)
-            throw new NullPointerException("Action is null, Wrong TypePort!");
+        final JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty(ApiActionExtras.PORT_ID.getJsonExtra(),action.getPort());
+        jsonObject.addProperty(ApiActionExtras.PORT_TYPE.getJsonExtra(),action.getPortType().toString());
+        jsonObject.addProperty(ApiActionExtras.FOR_DEVICE.getJsonExtra(),action.getDevice().toString());
 
-        if (action.getPort() < 0)
-            throw new PortException(action.getPort());
+        if(action.getPortType() == PortType.DIGITAL)
+            jsonObject.addProperty(ApiActionExtras.PORT_STATUS.getJsonExtra(),action.getPortStatus().getJsonExtra());
+        else if(action.getPortType() == PortType.ANALOG)
+            jsonObject.addProperty(ApiActionExtras.PORT_VALUE.getJsonExtra(),action.getSignalOnPort());
 
-        if(action.getDevice() == null)
-            throw new DeviceException();
-
-        switch (action.getPortType())
-        {
-            case DIGITAL:
-                if(action.getPortStatus() == null)
-                    throw new PortStatusException();
-                break;
-            case ANALOG:
-                if(action.getSignalOnPort() < 0 || action.getSignalOnPort() > 255)
-                    throw new SignalException(action.getSignalOnPort());
-                break;
-            default:
-                throw new PortTypeException();
-        }
+        return jsonObject;
     }
 
 }

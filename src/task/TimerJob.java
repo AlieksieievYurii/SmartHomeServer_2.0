@@ -19,7 +19,7 @@ public class TimerJob
     private Time time;
     private List<Action> actions;
 
-    public TimerJob(Date date, Time time, List<Action> actions) {
+    private TimerJob(Date date, Time time, List<Action> actions) {
         this.date = date;
         this.time = time;
         this.actions = actions;
@@ -52,5 +52,15 @@ public class TimerJob
         List<Action> actions = JsonUtils.toListApiActions(jsonObject.getAsJsonArray(API_EXTRA_TIMER_JOB_ACTIONS));
 
         return new TimerJob(date,time,actions);
+    }
+
+    public static JsonObject getTimerJobJsonObject(TimerJob timerJob)
+    {
+        final JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty(API_EXTRA_TIMER_JOB_DATA,Date.getAsJon(timerJob.getDate()));
+        jsonObject.addProperty(API_EXTRA_TIMER_JOB_TIME,Time.getTimeAsJSon(timerJob.getTime()));
+        jsonObject.add(API_EXTRA_TIMER_JOB_ACTIONS,JsonUtils.toJsonArrayApi(timerJob.getActions()));
+
+        return jsonObject;
     }
 }
