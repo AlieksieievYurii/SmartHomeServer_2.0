@@ -2,6 +2,9 @@ package utils.time;
 
 import exceptions.TimerException;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class Time
 {
     private byte hh;
@@ -21,6 +24,16 @@ public class Time
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Time time = (Time) o;
+        return hh == time.hh &&
+                mm == time.mm;
+    }
+
+
+    @Override
     public String toString() {
         return "Time{" +
                 "hh=" + hh +
@@ -29,6 +42,10 @@ public class Time
     }
 
     public static Time getTimeByJson(String json) throws TimerException {
+
+        if(json.equals("none"))
+            return null;
+
         try {
             String[] sp = json.split(":");
             byte hh = Byte.parseByte(sp[0]);
@@ -44,5 +61,16 @@ public class Time
     public static String getTimeAsJSon(Time time)
     {
         return time.getHH()+":"+time.getMM();
+    }
+
+    public static Time getTimeNow()
+    {
+        final String time = new SimpleDateFormat("HH:mm").format(Calendar.getInstance().getTime());
+        try {
+            return getTimeByJson(time);
+        } catch (TimerException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

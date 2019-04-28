@@ -12,9 +12,11 @@ public class PasswordUtils
         return passwordRequest.equals(PASSWORD_REQUEST);
     }
 
-    public static boolean passwordIsCorrect(HttpServletRequest request)
-    {
+    public static boolean passwordIsCorrect(HttpServletRequest request) {
         String password = request.getParameter(PASSWORD_PARAM);
+        if(password == null)
+            return false;
+
         return passwordIsCorrect(password);
     }
 }

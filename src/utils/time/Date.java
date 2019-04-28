@@ -2,8 +2,12 @@ package utils.time;
 
 import exceptions.DateException;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class Date
 {
+    private static final String NONE = "none";
     private byte dd;
     private byte mm;
     private short yy;
@@ -26,7 +30,15 @@ public class Date
         return yy;
     }
 
-
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Date date = (Date) o;
+        return dd == date.dd &&
+                mm == date.mm &&
+                yy == date.yy;
+    }
 
     @Override
     public String toString() {
@@ -38,22 +50,37 @@ public class Date
     }
 
     public static Date getDateByJson(String json) throws DateException {
+
+        if (json.equals(NONE))
+            return null;
+
         String[] sp = json.split("\\.");
 
-        try{
+        try {
             byte dd = Byte.parseByte(sp[0]);
             byte mm = Byte.parseByte(sp[1]);
             short yy = Short.parseShort(sp[2]);
 
-            return new Date(dd,mm,yy);
-        }catch (Exception e)
-        {
+            return new Date(dd, mm, yy);
+        } catch (Exception e) {
             throw new DateException(json);
         }
     }
 
-    public static String getAsJon(Date date)
-    {
-        return date.getDD()+"."+date.getMM()+"."+date.getYY();
+    public static String getAsJon(Date date) {
+        if (date == null)
+            return NONE;
+        else
+            return date.getDD() + "." + date.getMM() + "." + date.getYY();
+    }
+
+    public static Date getDateNow() {
+        final String time = new SimpleDateFormat("dd.MM.yyyy").format(Calendar.getInstance().getTime());
+        try {
+            return getDateByJson(time);
+        } catch (DateException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

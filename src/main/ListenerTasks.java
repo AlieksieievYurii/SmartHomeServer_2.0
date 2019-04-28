@@ -2,11 +2,13 @@ package main;
 
 import controllers.request.RequestTypeUtils;
 import controllers.errors.ErrorLogs;
-import controllers.errors.ResponseExceptions;
+import exceptions.TypeRequestException;
 import request.get.ControllerGetting;
 import request.get.FactoryControllerGetting;
 import request.post.Factory;
 import request.post.ControllerPOSTAction;
+import request.post.Response;
+import request.post.interfaises.iResponse;
 import request.post.task.ControllerPOSTTask;
 import utils.password.PasswordUtils;
 import javax.servlet.annotation.WebServlet;
@@ -17,13 +19,22 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "ListenerTasks")
 public class ListenerTasks extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
-        if (PasswordUtils.passwordIsCorrect(request))
-            whatPost(request, response);
+        if (PasswordUtils.passwordIsCorrect(request)) {
+            try {
+                whatPost(request, response);
+            } catch (TypeRequestException e) {
+                e.printStackTrace();
+                wrongRequest(response);
+            }
+        }
         else
-            ResponseExceptions.wrongPassword(response);
+        {
+            final iResponse resp = new Response(response);
+            resp.responseWRONG("wrong password");
+        }
     }
 
-    private void whatPost(HttpServletRequest request, HttpServletResponse response) {
+    private void whatPost(HttpServletRequest request, HttpServletResponse response) throws TypeRequestException {
         switch (RequestTypeUtils.whatTypeRequest(request)) {
             case POST_TASK:
                 postTask(request, response);
@@ -31,15 +42,13 @@ public class ListenerTasks extends HttpServlet {
             case POST_ACTION:
                 postAction(request, response);
                 break;
-            default:
-                wrongRequest(response);
-                break;
         }
     }
 
     private void wrongRequest(HttpServletResponse response) {
         ErrorLogs.errorOfTypeRequest();
-        ResponseExceptions.wrongTypeRequest(response);
+        final iResponse resp = new Response(response);
+        resp.responseWRONG("wrong request");
     }
 
     private void postTask(HttpServletRequest request, HttpServletResponse response) {
@@ -60,6 +69,11 @@ public class ListenerTasks extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
 
         final ControllerGetting controllerGetting = FactoryControllerGetting.build(getServletContext(), response);
-        controllerGetting.executeFor(RequestTypeUtils.whatTypeRequest(request));
+        try {
+            controllerGetting.executeFor(RequestTypeUtils.whatTypeRequest(request));
+        } catch (TypeRequestException e) {
+            e.printStackTrace();
+            wrongRequest(response);
+        }
     }
 }

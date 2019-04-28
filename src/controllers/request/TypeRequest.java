@@ -1,5 +1,7 @@
 package controllers.request;
 
+import exceptions.TypeRequestException;
+
 public enum TypeRequest {
     POST_ACTION("postAction"), POST_TASK("postTask"),// It's for ListenerTasks
     GET_ACTIONS("getActions"),GET_HASH_CODE_ACTIONS("getHashCodeActions"),
@@ -16,7 +18,7 @@ public enum TypeRequest {
         return typeRequest;
     }
 
-    public static TypeRequest whatTypeRequest(String s) {
+    public static TypeRequest whatTypeRequest(String s) throws TypeRequestException {
         switch (s) {
             case "postAction":
                 return POST_ACTION;
@@ -35,7 +37,7 @@ public enum TypeRequest {
             case "getHashCodeSensors":
                 return GET_HASH_CODE_SENSORS;
             default:
-                return null;
+                throw new TypeRequestException(s);
         }
     }
 }

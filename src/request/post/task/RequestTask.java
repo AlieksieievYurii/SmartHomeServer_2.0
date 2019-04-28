@@ -17,9 +17,12 @@ public class RequestTask implements iRequestTask
         try
         {
             return Task.getTaskByJson(new JsonParser().parse(data).getAsJsonObject());
-        }catch (JsonSyntaxException e)
+        }catch (JsonSyntaxException | IllegalStateException  e)
         {
             throw new TaskException(e.getMessage());
+        }catch (NullPointerException e)
+        {
+            throw new TaskException("data<Task> is empty!");
         }
 
     }

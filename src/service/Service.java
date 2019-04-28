@@ -1,5 +1,6 @@
 package service;
 
+import javax.servlet.ServletContext;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -7,9 +8,11 @@ import java.util.concurrent.TimeUnit;
 public class Service implements Runnable
 {
     private ScheduledExecutorService exec;
+    private Worker worker;
 
-    public Service(){
+    public Service(ServletContext context){
         exec = Executors.newSingleThreadScheduledExecutor();
+        worker = Worker.build(context);
     }
 
     public void startService()
@@ -20,5 +23,6 @@ public class Service implements Runnable
     @Override
     public void run() {
         System.err.println("Service is started!");
+        worker.execute();
     }
 }

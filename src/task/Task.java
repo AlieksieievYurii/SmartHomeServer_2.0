@@ -65,6 +65,10 @@ public class Task {
         return task;
     }
 
+    public void setStatusTask(StatusTask statusTask) {
+        this.statusTask = statusTask;
+    }
+
     public boolean equals(Task task) {
         return this.id == task.getId();
     }

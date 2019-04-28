@@ -16,9 +16,11 @@ import controllers.tcodtask.get.ControllerGETActions;
 import controllers.tcodtask.get.Factory;
 import controllers.request.RequestTypeUtils;
 import controllers.errors.ErrorLogs;
-import controllers.errors.ResponseExceptions;
 import action.DeviceUtils;
 import exceptions.DeviceException;
+import exceptions.TypeRequestException;
+import request.post.Response;
+import request.post.interfaises.iResponse;
 import service.Service;
 import sensors.HandlerSensors;
 import utils.hash.HashCode;
@@ -32,15 +34,29 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "ManagerDevices")
 public class ManagerDevices extends HttpServlet {
 
-    public ManagerDevices() {
-        new Service().startService();
-    }
+    private boolean isServiceStart = false;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
-        if (PasswordUtils.passwordIsCorrect(request))
-            start(request, response);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    {
+        if(!isServiceStart)
+        {
+            new Service(getServletContext()).startService();
+            isServiceStart = true;
+        }
+
+        if (PasswordUtils.passwordIsCorrect(request)) {
+            try {
+                start(request, response);
+            } catch (TypeRequestException e) {
+                e.printStackTrace();
+                wrongRequest(response);
+            }
+        }
         else
-            ResponseExceptions.wrongPassword(response);
+        {
+            final iResponse resp = new Response(response);
+            resp.responseWRONG("wrong password");
+        }
     }
 
     private void actions(HttpServletRequest request, HttpServletResponse response) {
@@ -50,6 +66,8 @@ public class ManagerDevices extends HttpServlet {
             controllerGETActions.execute(DeviceUtils.whatDevice(request));
         } catch (DeviceException e) {
             e.printStackTrace();
+            final iResponse resp = new Response(response);
+            resp.responseWRONG("wrong device");
         }
     }
 
@@ -60,19 +78,17 @@ public class ManagerDevices extends HttpServlet {
 
     private void wrongRequest(HttpServletResponse response) {
         ErrorLogs.errorOfTypeRequest();
-        ResponseExceptions.wrongTypeRequest(response);
+        final iResponse resp = new Response(response);
+        resp.responseWRONG("wrong request");
     }
 
-    private void start(HttpServletRequest request, HttpServletResponse response) {
+    private void start(HttpServletRequest request, HttpServletResponse response) throws TypeRequestException {
         switch (RequestTypeUtils.whatTypeRequest(request)) {
             case GET_ACTIONS:
                 actions(request, response);
                 break;
             case GET_HASH_CODE_ACTIONS:
                 hashCode(request, response);
-                break;
-            default:
-                wrongRequest(response);
                 break;
         }
     }

@@ -20,7 +20,7 @@ public class JsonUtils {
         return new JsonParser().parse(tasks).getAsJsonArray();
     }
 
-    public static JsonObject getJsonObject(String json) {
+    public static JsonObject getJsonObject(String json) throws IllegalStateException {
         return new JsonParser().parse(json).getAsJsonObject();
     }
 

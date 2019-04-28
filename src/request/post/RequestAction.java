@@ -18,15 +18,22 @@ public class RequestAction implements iRequest {
         this.httpServletRequest = httpServletRequest;
     }
 
-    private String readRequest()
+    private String readRequest() throws NullPointerException
     {
         return httpServletRequest.getParameter(JSON_ACTION);
     }
 
     @Override
     public Action getAction() throws ActionException {
-        final JsonObject jsonObject = JsonUtils.getJsonObject(readRequest());
-
-        return JsonUtils.toApiAction(jsonObject);
+        try {
+            final JsonObject jsonObject = JsonUtils.getJsonObject(readRequest());
+            return JsonUtils.toApiAction(jsonObject);
+        }catch (IllegalStateException  e)
+        {
+            throw new ActionException(e.getMessage());
+        }catch ( NullPointerException e)
+        {
+            throw new ActionException("data is none");
+        }
     }
 }
