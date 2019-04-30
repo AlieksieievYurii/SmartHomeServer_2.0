@@ -59,8 +59,23 @@ public class ControllerGetting
                 break;
             case GET_HASH_CODE_SENSORS:
                 sendHashCodeSensors();
+            case GET_FREE_ID:
+                sendFreeTaskId();
                 break;
         }
+    }
+
+    private void sendFreeTaskId() {
+        final List<Task> tasks = readerTasks.getTasks();
+        final JsonObject jsonObject = new JsonObject();
+        int max = 0;
+        for(Task t : tasks)
+            if(t.getId() > max)
+                max = t.getId();
+
+        jsonObject.addProperty("id",++max);
+        iResponse.response(jsonObject.toString());
+
     }
 
     private void sendHashCodeSensors() {

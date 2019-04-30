@@ -108,6 +108,7 @@ public class Task {
 
 
         }catch (NullPointerException | ActionException | DateException | StatusTaskException | TimerException | TaskModeException | TypeTaskException e) {
+            e.printStackTrace();
             throw new TaskException(e.getMessage());
         }
         return new Task(id, typeTask, name, description, statusTask, taskMode, task);

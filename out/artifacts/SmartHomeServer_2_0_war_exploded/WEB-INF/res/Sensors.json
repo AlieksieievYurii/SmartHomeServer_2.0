@@ -1,1 +1,1 @@
-[{"sensor":"humidity","value":1233},{"sensor":"light","value":1234}]
+[{"sensor":"temperature","value":23},{"sensor":"humidity","value":41},{"sensor":"light","value":0}]

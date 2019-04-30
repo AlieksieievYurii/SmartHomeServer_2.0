@@ -11,7 +11,7 @@ import java.util.List;
 
 public class TimerJob
 {
-    private static final String API_EXTRA_TIMER_JOB_DATA = "data";
+    private static final String API_EXTRA_TIMER_JOB_DATE = "date";
     private static final String API_EXTRA_TIMER_JOB_TIME = "time";
     private static final String API_EXTRA_TIMER_JOB_ACTIONS = "actions";
 
@@ -49,7 +49,7 @@ public class TimerJob
     }
 
     public static TimerJob getTimerJobByJson(JsonObject jsonObject) throws DateException, TimerException, ActionException {
-        Date date = Date.getDateByJson(jsonObject.get(API_EXTRA_TIMER_JOB_DATA).getAsString());
+        Date date = Date.getDateByJson(jsonObject.get(API_EXTRA_TIMER_JOB_DATE).getAsString());
         Time time = Time.getTimeByJson(jsonObject.get(API_EXTRA_TIMER_JOB_TIME).getAsString());
         List<Action> actions = JsonUtils.toListApiActions(jsonObject.getAsJsonArray(API_EXTRA_TIMER_JOB_ACTIONS));
 
@@ -59,7 +59,7 @@ public class TimerJob
     public static JsonObject getTimerJobJsonObject(TimerJob timerJob)
     {
         final JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty(API_EXTRA_TIMER_JOB_DATA,Date.getAsJon(timerJob.getDate()));
+        jsonObject.addProperty(API_EXTRA_TIMER_JOB_DATE,Date.getAsJon(timerJob.getDate()));
         jsonObject.addProperty(API_EXTRA_TIMER_JOB_TIME,Time.getTimeAsJSon(timerJob.getTime()));
         jsonObject.add(API_EXTRA_TIMER_JOB_ACTIONS,JsonUtils.toJsonArrayApi(timerJob.getActions()));
 
