@@ -10,6 +10,7 @@ import request.post.ControllerPOSTAction;
 import request.post.Response;
 import request.post.interfaises.iResponse;
 import request.post.task.ControllerPOSTTask;
+import request.post.task.ControllerRemovingTask;
 import utils.password.PasswordUtils;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,9 +27,7 @@ public class ListenerTasks extends HttpServlet {
                 e.printStackTrace();
                 wrongRequest(response);
             }
-        }
-        else
-        {
+        } else {
             final iResponse resp = new Response(response);
             resp.responseWRONG("wrong password");
         }
@@ -42,7 +41,18 @@ public class ListenerTasks extends HttpServlet {
             case POST_ACTION:
                 postAction(request, response);
                 break;
+            case DELETE_REMOVE_TASK:
+                removeTask(request,response);
+                break;
+            default:
+                throw new TypeRequestException("Wrong type request for POST");
         }
+    }
+
+    private void removeTask(HttpServletRequest request, HttpServletResponse response) {
+        final ControllerRemovingTask controllerRemovingTask =
+                ControllerRemovingTask.build(getServletContext(), response);
+        controllerRemovingTask.execute(request);
     }
 
     private void wrongRequest(HttpServletResponse response) {
@@ -52,7 +62,7 @@ public class ListenerTasks extends HttpServlet {
     }
 
     private void postTask(HttpServletRequest request, HttpServletResponse response) {
-        final ControllerPOSTTask controllerPOSTTask = ControllerPOSTTask.build(getServletContext(),response);
+        final ControllerPOSTTask controllerPOSTTask = ControllerPOSTTask.build(getServletContext(), response);
         controllerPOSTTask.execute(request);
     }
 

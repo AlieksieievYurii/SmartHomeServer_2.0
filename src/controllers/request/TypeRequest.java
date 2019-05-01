@@ -3,10 +3,19 @@ package controllers.request;
 import exceptions.TypeRequestException;
 
 public enum TypeRequest {
-    POST_ACTION("postAction"), POST_TASK("postTask"),// It's for ListenerTasks
-    GET_ACTIONS("getActions"),GET_HASH_CODE_ACTIONS("getHashCodeActions"),
-    GET_TASKS("getTasks"),GET_HASH_CODE_TASKS("getHashCodeTasks"), GET_FREE_ID("getFreeTaskId"),
-    GET_SENSORS("getSensors"),GET_HASH_CODE_SENSORS("getHashCodeSensors");
+
+    //--------ListenerTasks[POST]------------
+    POST_ACTION("postAction"),
+    POST_TASK("postTask"),
+    DELETE_REMOVE_TASK("removeTask"),
+    //--------ListenerTasks[GET]------------
+    GET_ACTIONS("getActions"),
+    GET_HASH_CODE_ACTIONS("getHashCodeActions"),
+    GET_TASKS("getTasks"),
+    GET_HASH_CODE_TASKS("getHashCodeTasks"),
+    GET_FREE_ID("getFreeTaskId"),
+    GET_SENSORS("getSensors"),
+    GET_HASH_CODE_SENSORS("getHashCodeSensors");
 
     private String typeRequest;
 
@@ -24,6 +33,8 @@ public enum TypeRequest {
                 return POST_ACTION;
             case "postTask":
                 return POST_TASK;
+            case "removeTask":
+                return DELETE_REMOVE_TASK;
             case "getHashCodeActions":
                 return GET_HASH_CODE_ACTIONS;
             case "getHashCodeTasks":

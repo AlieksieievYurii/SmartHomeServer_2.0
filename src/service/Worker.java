@@ -70,9 +70,7 @@ public class Worker
 
     private void executeActions(final TimerJob timerJob)
     {
-        System.err.println("Execute!");
         final List<Action> actions = timerJob.getActions();
-
         for(final Action a : actions)
             writeAction.write(a);
     }

@@ -45,11 +45,11 @@ public class Task {
         return typeTask;
     }
 
-    public String getName() {
+    private String getName() {
         return name;
     }
 
-    public String getDescription() {
+    private String getDescription() {
         return description;
     }
 
