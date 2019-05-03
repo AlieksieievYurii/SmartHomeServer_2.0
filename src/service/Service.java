@@ -1,5 +1,7 @@
 package service;
 
+import main.Manifest;
+
 import javax.servlet.ServletContext;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -17,7 +19,7 @@ public class Service implements Runnable
 
     public void startService()
     {
-        exec.scheduleAtFixedRate(this,0,1, TimeUnit.MINUTES);
+        exec.scheduleAtFixedRate(this,0, Manifest.TIME_WORKER, TimeUnit.SECONDS);
     }
 
     @Override

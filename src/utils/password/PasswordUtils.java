@@ -1,22 +1,38 @@
 package utils.password;
 
+import main.Manifest;
+
 import javax.servlet.http.HttpServletRequest;
 
 public class PasswordUtils
 {
     private static final String PASSWORD_PARAM = "p";
-    private static final String PASSWORD_REQUEST = "123456789";
 
-    private static boolean passwordIsCorrect(String passwordRequest)
+    public static boolean isPasswordPostActionCorrect(HttpServletRequest request)
     {
-        return passwordRequest.equals(PASSWORD_REQUEST);
-    }
-
-    public static boolean passwordIsCorrect(HttpServletRequest request) {
         String password = request.getParameter(PASSWORD_PARAM);
         if(password == null)
             return false;
+        else
+            return password.equals(Manifest.PASSWORD_POST_ACTION);
+    }
 
-        return passwordIsCorrect(password);
+
+    public static boolean isPasswordPostTaskCorrect(HttpServletRequest request)
+    {
+        String password = request.getParameter(PASSWORD_PARAM);
+        if(password == null)
+            return false;
+        else
+            return password.equals(Manifest.PASSWORD_POST_TASK);
+    }
+
+    public static boolean isPasswordManagerDevicesCorrect(HttpServletRequest request)
+    {
+        String password = request.getParameter(PASSWORD_PARAM);
+        if(password == null)
+            return false;
+        else
+            return password.equals(Manifest.PASSWORD_MANAGER_DEVICE);
     }
 }

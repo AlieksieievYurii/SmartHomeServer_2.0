@@ -3,6 +3,7 @@ package main;
 import controllers.request.RequestTypeUtils;
 import controllers.errors.ErrorLogs;
 import exceptions.TypeRequestException;
+import org.xml.sax.SAXException;
 import request.get.ControllerGetting;
 import request.get.FactoryControllerGetting;
 import request.post.Factory;
@@ -12,41 +13,73 @@ import request.post.interfaises.iResponse;
 import request.post.task.ControllerPOSTTask;
 import request.post.task.ControllerRemovingTask;
 import utils.password.PasswordUtils;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 
 @WebServlet(name = "ListenerTasks")
 public class ListenerTasks extends HttpServlet {
+
+    @Override
+    public void init() throws ServletException {
+        super.init();
+        try {
+            Manifest.parseForListenerTask(getServletContext());
+        } catch (ParserConfigurationException | IOException | SAXException e) {
+            e.printStackTrace();
+            destroy();
+        }
+    }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
-        if (PasswordUtils.passwordIsCorrect(request)) {
-            try {
-                whatPost(request, response);
-            } catch (TypeRequestException e) {
-                e.printStackTrace();
-                wrongRequest(response);
-            }
-        } else {
-            final iResponse resp = new Response(response);
-            resp.responseWRONG("wrong password");
+       /* try {
+            Runtime.getRuntime().exec("cmd.exe /c start kek.bat",null,new File("C:\\"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+        try {
+            whatPost(request, response);
+        } catch (TypeRequestException e) {
+            e.printStackTrace();
+            wrongRequest(response);
         }
     }
 
     private void whatPost(HttpServletRequest request, HttpServletResponse response) throws TypeRequestException {
         switch (RequestTypeUtils.whatTypeRequest(request)) {
             case POST_TASK:
-                postTask(request, response);
+                if(PasswordUtils.isPasswordPostTaskCorrect(request))
+                    postTask(request, response);
+                else
+                    wrongPassword(response);
                 break;
+
             case POST_ACTION:
-                postAction(request, response);
+                if(PasswordUtils.isPasswordPostActionCorrect(request))
+                    postAction(request, response);
+                else
+                    wrongPassword(response);
                 break;
+
             case DELETE_REMOVE_TASK:
-                removeTask(request,response);
+                if(PasswordUtils.isPasswordPostTaskCorrect(request))
+                    removeTask(request, response);
+                else
+                    wrongPassword(response);
                 break;
+
             default:
                 throw new TypeRequestException("Wrong type request for POST");
         }
+    }
+
+    private static void wrongPassword(HttpServletResponse response) {
+        final iResponse res = new Response(response);
+        res.responseWRONG("Wrong password!");
     }
 
     private void removeTask(HttpServletRequest request, HttpServletResponse response) {

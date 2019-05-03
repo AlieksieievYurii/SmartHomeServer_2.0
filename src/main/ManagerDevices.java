@@ -19,32 +19,41 @@ import controllers.errors.ErrorLogs;
 import action.DeviceUtils;
 import exceptions.DeviceException;
 import exceptions.TypeRequestException;
+import org.xml.sax.SAXException;
 import request.post.Response;
 import request.post.interfaises.iResponse;
 import service.Service;
 import sensors.HandlerSensors;
 import utils.hash.HashCode;
 import utils.password.PasswordUtils;
+
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 
 
 @WebServlet(name = "ManagerDevices")
 public class ManagerDevices extends HttpServlet {
 
-    private boolean isServiceStart = false;
+    @Override
+    public void init() throws ServletException {
+        super.init();
+        try {
+            Manifest.configForManagerDevices(getServletContext());
+            if(Manifest.START_WORKER)
+                new Service(getServletContext()).startService();
+        } catch (ParserConfigurationException | SAXException | IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     {
-        if(!isServiceStart)
-        {
-            new Service(getServletContext()).startService();
-            isServiceStart = true;
-        }
-
-        if (PasswordUtils.passwordIsCorrect(request)) {
+        if (PasswordUtils.isPasswordManagerDevicesCorrect(request)) {
             try {
                 start(request, response);
             } catch (TypeRequestException e) {

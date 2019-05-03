@@ -7,16 +7,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7fdb13b-a54b-4217-a4fc-adff1663355c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/request/post/task/ControllerRemovingTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/ParserConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/task/TimerJob.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/task/TimerJob.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/main/ListenerTasks$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/main/ListenerTasks$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/main/ListenerTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/main/ListenerTasks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/main/ManagerDevices$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/main/ManagerDevices$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/main/ManagerDevices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/main/ManagerDevices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/main/Manifest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/main/Manifest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/request/post/FileEmployer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/request/post/FileEmployer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/request/post/task/ControllerPOSTTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/request/post/task/ControllerPOSTTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/request/post/task/ControllerRemovingTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/request/post/task/ControllerRemovingTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/sensors/HandlerSensors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/sensors/HandlerSensors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/sensors/SensorUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/sensors/SensorUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/service/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/service/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/task/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/task/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/utils/files/FileReaderActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/utils/files/FileReaderActions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/utils/files/FileReaderTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/utils/files/FileReaderTasks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/utils/files/FileWriterTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/classes/utils/files/FileWriterTasks.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Actions.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Actions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Sensors.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Sensors.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Tasks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/task/TimerJob.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/task/TimerJob.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/request/TypeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/request/TypeRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/ListenerTasks$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/ListenerTasks$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/ListenerTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/ListenerTasks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/ManagerDevices$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/ManagerDevices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/Manifest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/Manifest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/FileEmployer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/FileEmployer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/task/ControllerPOSTTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/task/ControllerPOSTTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/task/ControllerRemovingTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/task/ControllerRemovingTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/sensors/HandlerSensors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/sensors/HandlerSensors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/sensors/SensorUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/sensors/SensorUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/service/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/service/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/task/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/task/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/FileReaderActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/FileReaderActions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/FileReaderTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/FileReaderTasks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/FileWriterTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/FileWriterTasks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/password/PasswordUtils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ListenerTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ListenerTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ManagerDevices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ManagerDevices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Manifest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Manifest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/request/get/ControllerGetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/get/ControllerGetting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/request/post/task/ControllerRemovingTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/post/task/ControllerRemovingTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/password/PasswordUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/password/PasswordUtils.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,24 +73,72 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/request/post/task/RequestTask.java">
+        <entry file="file://$PROJECT_DIR$/src/main/Manifest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <caret line="49" column="50" lean-forward="true" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/files/tools/FileReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/ListenerTasks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1081">
+              <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/request/get/ControllerGetting.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-110">
+              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/utils/password/PasswordUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/ManagerDevices.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/service/Worker.java">
+        <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/ConfigurationSHS.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="573">
-              <caret line="72" column="59" lean-forward="true" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="108">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -87,18 +168,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/utils/files/iWriteTasks.java" />
-        <option value="$PROJECT_DIR$/src/utils/files/iFileWriteTask.java" />
-        <option value="$PROJECT_DIR$/src/utils/files/iFileWriteTasks.java" />
-        <option value="$PROJECT_DIR$/src/task/TypeTask.java" />
-        <option value="$PROJECT_DIR$/src/task/StatusTask.java" />
-        <option value="$PROJECT_DIR$/src/task/TaskMode.java" />
-        <option value="$PROJECT_DIR$/src/utils/Date.java" />
-        <option value="$PROJECT_DIR$/src/action/Action.java" />
-        <option value="$PROJECT_DIR$/src/utils/Time.java" />
-        <option value="$PROJECT_DIR$/src/utils/files/WriteTaksToFile.java" />
         <option value="$PROJECT_DIR$/src/utils/files/iWriteFile.java" />
-        <option value="$PROJECT_DIR$/src/main/Manifest.java" />
         <option value="$PROJECT_DIR$/src/request/post/ControllerPOSTAction.java" />
         <option value="$PROJECT_DIR$/src/utils/files/FileWriter.java" />
         <option value="$PROJECT_DIR$/src/utils/files/FileReader.java" />
@@ -111,12 +181,10 @@
         <option value="$PROJECT_DIR$/src/utils/hash/HashCode.java" />
         <option value="$PROJECT_DIR$/src/utils/files/ActionsTasksReader.java" />
         <option value="$PROJECT_DIR$/src/utils/files/iFileReaderActions.java" />
-        <option value="$PROJECT_DIR$/src/utils/files/FileReaderActions.java" />
         <option value="$PROJECT_DIR$/src/utils/files/tools/FileReader.java" />
         <option value="$PROJECT_DIR$/src/utils/files/tools/FileWriter.java" />
         <option value="$PROJECT_DIR$/src/utils/time/Time.java" />
         <option value="$PROJECT_DIR$/src/tests/TasksTask.java" />
-        <option value="$PROJECT_DIR$/src/service/Service.java" />
         <option value="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Actions.json" />
         <option value="$PROJECT_DIR$/src/utils/files/WriteTask.java" />
         <option value="$PROJECT_DIR$/src/request/post/task/RequestTask.java" />
@@ -125,19 +193,32 @@
         <option value="$PROJECT_DIR$/src/controllers/errors/ResponseExceptions.java" />
         <option value="$PROJECT_DIR$/src/utils/time/Date.java" />
         <option value="$PROJECT_DIR$/src/exceptions/PasswordException.java" />
-        <option value="$PROJECT_DIR$/src/utils/password/PasswordUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/ManagerDevices.java" />
         <option value="$PROJECT_DIR$/src/utils/json/JsonUtils.java" />
         <option value="$PROJECT_DIR$/src/request/post/RequestAction.java" />
-        <option value="$PROJECT_DIR$/src/request/get/ControllerGetting.java" />
         <option value="$PROJECT_DIR$/src/task/TimerJob.java" />
         <option value="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Tasks.json" />
         <option value="$PROJECT_DIR$/src/service/Worker.java" />
         <option value="$PROJECT_DIR$/src/controllers/request/TypeRequest.java" />
-        <option value="$PROJECT_DIR$/src/request/post/task/ControllerRemovingTask.java" />
         <option value="$PROJECT_DIR$/src/request/post/task/ControllerPOSTTask.java" />
-        <option value="$PROJECT_DIR$/src/main/ListenerTasks.java" />
         <option value="$PROJECT_DIR$/src/task/Task.java" />
+        <option value="$PROJECT_DIR$/src/request/post/task/ControllerRemovingTask.java" />
+        <option value="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Configuration.json" />
+        <option value="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Configuration.xml" />
+        <option value="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/ConfigurationSHS.xml" />
+        <option value="$PROJECT_DIR$/src/manifest/Manifest.java" />
+        <option value="$PROJECT_DIR$/src/utils/files/FileWriterTasks.java" />
+        <option value="$PROJECT_DIR$/src/utils/files/FileReaderActions.java" />
+        <option value="$PROJECT_DIR$/src/sensors/HandlerSensors.java" />
+        <option value="$PROJECT_DIR$/src/request/post/FileEmployer.java" />
+        <option value="$PROJECT_DIR$/src/sensors/SensorUtils.java" />
+        <option value="$PROJECT_DIR$/src/utils/files/FileReaderTasks.java" />
+        <option value="$PROJECT_DIR$/src/service/Service.java" />
+        <option value="$PROJECT_DIR$/src/request/get/ControllerGetting.java" />
+        <option value="$PROJECT_DIR$/src/main/Manifest.java" />
+        <option value="$PROJECT_DIR$/src/main/ListenerTasks.java" />
+        <option value="$PROJECT_DIR$/src/utils/password/PasswordUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/ManagerDevices.java" />
+        <option value="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/ConfigurationSHS.xml" />
       </list>
     </option>
   </component>
@@ -155,8 +236,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-73" />
+    <option name="y" value="200" />
     <option name="width" value="1296" />
     <option name="height" value="776" />
   </component>
@@ -166,6 +247,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -197,112 +279,18 @@
               <item name="out" type="462c0819:PsiDirectoryNode" />
               <item name="artifacts" type="462c0819:PsiDirectoryNode" />
               <item name="SmartHomeServer_2_0_war_exploded" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="SmartHomeServer_2_0_war_exploded" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="SmartHomeServer_2_0_war_exploded" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="action" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="errors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="request" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="request" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="request" type="462c0819:PsiDirectoryNode" />
-              <item name="post" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="request" type="462c0819:PsiDirectoryNode" />
-              <item name="post" type="462c0819:PsiDirectoryNode" />
-              <item name="task" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="task" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
@@ -332,35 +320,10 @@
               <item name="utils" type="462c0819:PsiDirectoryNode" />
               <item name="password" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="time" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -371,7 +334,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556730273669" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556892836976" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -387,6 +350,10 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="utils.json" />
       <recent name="utils.files" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\JavaEE_Projects\SmartHomeServer_2.0\out\artifacts\SmartHomeServer_2_0_war_exploded\WEB-INF" />
+      <recent name="E:\JavaEE_Projects\SmartHomeServer_2.0\src\manifest" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -614,7 +581,9 @@
       <workItem from="1556442650755" duration="5863000" />
       <workItem from="1556640732925" duration="171000" />
       <workItem from="1556649218550" duration="5767000" />
-      <workItem from="1556707629378" duration="10440000" />
+      <workItem from="1556707629378" duration="12721000" />
+      <workItem from="1556821387459" duration="5340000" />
+      <workItem from="1556872444489" duration="11305000" />
     </task>
     <task id="LOCAL-00001" summary="Added HashCode">
       <created>1552149170171</created>
@@ -764,7 +733,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159658000" />
+    <option name="totallyTimeSpent" value="178584000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -779,7 +748,7 @@
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7806563" visible="true" weight="0.2920712" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7806563" visible="true" weight="0.30987054" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -789,7 +758,7 @@
       <window_info id="Web" order="7" sideWeight="0.22068965" side_tool="true" weight="0.23462783" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49919093" weight="0.32756633" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49514562" weight="0.55709344" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49514562" visible="true" weight="0.6320646" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39968896" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -798,8 +767,8 @@
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49676377" weight="0.1787774" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5048544" side_tool="true" weight="0.33217993" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4975728" weight="0.17070358" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4975728" weight="0.31026527" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3298731" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32970452" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -873,167 +842,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/request/get/iHashCodes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/files/tools/iWriteFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/files/tools/iReadFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/files/tools/iFileWriteTasks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/time/Timer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/converter/ConvertActions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/errors/ErrorLogs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/request/post/task/iWriteTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/files/tools/FileWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding>
-            <element signature="e#217#218#0" expanded="true" />
-            <element signature="e#259#260#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="147" column="19" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
-          <folding>
-            <element signature="e#5748#5749#0" expanded="true" />
-            <element signature="e#5784#5785#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/files/FileReaderActions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/request/post/interfaises/FileWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/request/post/FileEmployer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Sensors.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="35" selection-start-column="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/Service.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/request/post/Factory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/request/post/task/WriteTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/request/post/ActionRecorder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-          <folding>
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#343#344#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exceptions/TypeRequestException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding>
-            <element signature="e#124#125#0" expanded="true" />
-            <element signature="e#154#155#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/request/post/interfaises/iResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -1098,13 +906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/ManagerDevices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="68" column="55" lean-forward="true" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/json/JsonUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -1146,13 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/request/get/ControllerGetting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="111" column="5" lean-forward="true" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/task/TimerJob.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1162,23 +956,6 @@
             <element signature="e#725#726#0" expanded="true" />
             <element signature="e#752#753#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/request/RequestTypeUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/password/PasswordUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1196,68 +973,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/files/tools/FileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/files/FileReaderTasks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Tasks.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="42" lean-forward="true" selection-start-column="42" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/request/post/task/ControllerRemovingTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/request/TypeRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="34" column="27" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/request/post/task/ControllerPOSTTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/ListenerTasks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/files/FileWriterTasks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="53" lean-forward="true" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1276,20 +995,256 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/request/post/task/RequestTask.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/ProcessBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="266" column="24" selection-start-line="266" selection-start-column="24" selection-end-line="266" selection-end-column="24" />
+          <folding>
+            <element signature="e#9780#9781#0" expanded="true" />
+            <element signature="e#9810#9811#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Runnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="747" column="21" selection-start-line="747" selection-start-column="21" selection-end-line="747" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Programs/apache-tomcat-8.5.34/lib/servlet-api.jar!/javax/servlet/ServletConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Programs/apache-tomcat-8.5.34/lib/servlet-api.jar!/javax/servlet/GenericServlet.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+          <folding>
+            <element signature="e#850#851#0" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/standardSchemas/XMLSchema-instance.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="27" column="72" lean-forward="true" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaEE/lib/javaee-impl.jar!/standardSchemas/web-app_4_0.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5971">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/service/Worker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="72" column="59" lean-forward="true" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="59" />
+        <state relative-caret-position="1224">
+          <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/ParserConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Tasks.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="67" selection-start-column="67" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/request/TypeRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/request/post/task/RequestTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/request/post/task/ControllerRemovingTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/manifest/Configuration.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="11" lean-forward="true" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Manifest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="53" column="50" lean-forward="true" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/files/FileReaderActions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensors/HandlerSensors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="72" column="79" selection-start-line="72" selection-start-column="79" selection-end-line="72" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/files/FileWriterTasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="89" selection-start-line="18" selection-start-column="89" selection-end-line="18" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensors/SensorUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/files/FileReaderTasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="26" column="50" lean-forward="true" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/request/post/FileEmployer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/request/RequestTypeUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="43" lean-forward="true" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/request/get/ControllerGetting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-110">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/ManagerDevices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/ListenerTasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1081">
+          <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/password/PasswordUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/files/tools/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Manifest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="49" column="50" lean-forward="true" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/ConfigurationSHS.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
