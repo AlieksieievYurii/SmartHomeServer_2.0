@@ -5,8 +5,8 @@
         <runEvery>60</runEvery>
     </worker>
     <blink>
-        <file>tezt.bat</file>
-        <path>C:\Users\WhiteDeveloper\Desktop\</path>
+        <file>blink.py</file>
+        <path>~/Desktop/apache-tomcat-8.5.35/tools/</path>
     </blink>
     <files>
         <actions>/WEB-INF/res/Actions.json</actions>
