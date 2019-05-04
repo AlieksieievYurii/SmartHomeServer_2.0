@@ -59,7 +59,7 @@ public class ListenerTasks extends HttpServlet {
         if(os.contains("win"))
             executor = "cmd.exe /c start";
         else if(os.contains("nix") || os.contains("nux") || os.contains("aix"))
-            executor = "python /c start python";
+            executor = "/usr/bin/python ";
         else
             return;
         try {
