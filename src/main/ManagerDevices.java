@@ -39,30 +39,40 @@ import java.io.IOException;
 @WebServlet(name = "ManagerDevices")
 public class ManagerDevices extends HttpServlet {
 
+    private Service service;
+
     @Override
     public void init() throws ServletException {
         super.init();
-        try {
-            Manifest.configForManagerDevices(getServletContext());
-            if(Manifest.START_WORKER)
-                new Service(getServletContext()).startService();
+        if (!Manifest.isParsed) try {
+            Manifest.parseDefaultConfiguration(getServletContext());
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
         }
+
+        if(Manifest.START_WORKER)
+        {
+            service = new Service(getServletContext());
+            service.startService();
+        }
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-    {
-        if (PasswordUtils.isPasswordManagerDevicesCorrect(request)) {
+    @Override
+    public void destroy() {
+        super.destroy();
+        if(service != null)
+            service.cancel();
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+        if (PasswordUtils.isApiPasswordCorrect(request)) {
             try {
                 start(request, response);
             } catch (TypeRequestException e) {
                 e.printStackTrace();
                 wrongRequest(response);
             }
-        }
-        else
-        {
+        } else {
             final iResponse resp = new Response(response);
             resp.responseWRONG("wrong password");
         }

@@ -13,12 +13,14 @@ import request.post.interfaises.iResponse;
 import request.post.task.ControllerPOSTTask;
 import request.post.task.ControllerRemovingTask;
 import utils.password.PasswordUtils;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.parsers.ParserConfigurationException;
+import java.io.File;
 import java.io.IOException;
 
 @WebServlet(name = "ListenerTasks")
@@ -27,51 +29,57 @@ public class ListenerTasks extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
-        try {
-            Manifest.parseForListenerTask(getServletContext());
-        } catch (ParserConfigurationException | IOException | SAXException e) {
-            e.printStackTrace();
-            destroy();
+        if(!Manifest.isParsed) {
+            try {
+                Manifest.parseDefaultConfiguration(getServletContext());
+            } catch (ParserConfigurationException | SAXException | IOException e) {
+                e.printStackTrace();
+                destroy();
+            }
         }
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
-       /* try {
-            Runtime.getRuntime().exec("cmd.exe /c start kek.bat",null,new File("C:\\"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
+        executeBlinkBash();
         try {
-            whatPost(request, response);
+            if(PasswordUtils.isApiPasswordCorrect(request))
+                whatPost(request, response);
+            else
+                wrongPassword(response);
         } catch (TypeRequestException e) {
             e.printStackTrace();
             wrongRequest(response);
         }
     }
 
+    private void executeBlinkBash()
+    {
+        String os = System.getProperty("os.name").toLowerCase();
+        String executor;
+        if(os.contains("win"))
+            executor = "cmd.exe /c start";
+        else if(os.contains("nix") || os.contains("nux") || os.contains("aix"))
+            executor = "python";
+        else
+            return;
+        try {
+            Runtime.getRuntime().exec(executor+" "+Manifest.FILE_BLINK,null,new File(Manifest.PATH_BLINK));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private void whatPost(HttpServletRequest request, HttpServletResponse response) throws TypeRequestException {
         switch (RequestTypeUtils.whatTypeRequest(request)) {
             case POST_TASK:
-                if(PasswordUtils.isPasswordPostTaskCorrect(request))
-                    postTask(request, response);
-                else
-                    wrongPassword(response);
+                postTask(request, response);
                 break;
-
             case POST_ACTION:
-                if(PasswordUtils.isPasswordPostActionCorrect(request))
-                    postAction(request, response);
-                else
-                    wrongPassword(response);
+                postAction(request, response);
                 break;
-
             case DELETE_REMOVE_TASK:
-                if(PasswordUtils.isPasswordPostTaskCorrect(request))
-                    removeTask(request, response);
-                else
-                    wrongPassword(response);
+                removeTask(request, response);
                 break;
-
             default:
                 throw new TypeRequestException("Wrong type request for POST");
         }

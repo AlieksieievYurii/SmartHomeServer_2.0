@@ -1,15 +1,13 @@
 <manifest>
-    <apiKeys>
-        <ManagerDevices>123456789</ManagerDevices>
-        <ListenerTaskPostAction>123456789</ListenerTaskPostAction>
-        <ListenerTaskPostTask>123456789</ListenerTaskPostTask>
-    </apiKeys>
-
+    <apiPassword>123456789</apiPassword>
     <worker>
         <start>true</start>
         <runEvery>60</runEvery>
     </worker>
-    <blink>c:///frefeferfer</blink>
+    <blink>
+        <file>tezt.bat</file>
+        <path>C:\Users\WhiteDeveloper\Desktop\</path>
+    </blink>
     <files>
         <actions>/WEB-INF/res/Actions.json</actions>
         <tasks>/WEB-INF/res/Tasks.json</tasks>

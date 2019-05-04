@@ -12,53 +12,35 @@ import java.io.IOException;
 public class Manifest
 {
     private static final String FILE_CONFIGURATION = "/WEB-INF/ConfigurationSHS.xml";
+    public static String FILE_BLINK;
 
+    static String PATH_BLINK;
     public static int TIME_WORKER;
-    public static boolean START_WORKER = false;
-    public static String PASSWORD_MANAGER_DEVICE;
-
-    public static String PASSWORD_POST_ACTION;
-    public static String PASSWORD_POST_TASK;
-    public static String PATH_BLINK;
+    static boolean START_WORKER = false;
+    public static String API_PASSWORD;
     public static String FILE_ACTIONS;
     public static String FILE_SENSORS;
     public static String FILE_TASKS;
 
-    public static void parseForListenerTask(ServletContext context) throws ParserConfigurationException, IOException, SAXException {
+    static boolean isParsed = false;
+
+    static void parseDefaultConfiguration(ServletContext context) throws ParserConfigurationException, SAXException, IOException {
         final Document document = getDefaultDocument(context);
 
-        Element apiKeys = (Element) document.getElementsByTagName("apiKeys").item(0);
-        PASSWORD_POST_ACTION= apiKeys.getElementsByTagName("ListenerTaskPostAction").item(0).getTextContent();
-        PASSWORD_POST_TASK= apiKeys.getElementsByTagName("ListenerTaskPostTask").item(0).getTextContent();
+        API_PASSWORD = document.getElementsByTagName("apiPassword").item(0).getTextContent();
+        Element blink = (Element) document.getElementsByTagName("blink").item(0);
+        PATH_BLINK = blink.getElementsByTagName("path").item(0).getTextContent();
+        FILE_BLINK = blink.getElementsByTagName("file").item(0).getTextContent();
 
-
-        PATH_BLINK = document.getElementsByTagName("blink").item(0).getTextContent();
-
+        Element worker = (Element) document.getElementsByTagName("worker").item(0);
+        TIME_WORKER = Integer.parseInt(worker.getElementsByTagName("runEvery").item(0).getTextContent());
+        START_WORKER = worker.getElementsByTagName("start").item(0).getTextContent().equals("true");
         Element filePaths = (Element) document.getElementsByTagName("files").item(0);
         FILE_ACTIONS = filePaths.getElementsByTagName("actions").item(0).getTextContent();
         FILE_SENSORS = filePaths.getElementsByTagName("sensors").item(0).getTextContent();
         FILE_TASKS = filePaths.getElementsByTagName("tasks").item(0).getTextContent();
 
-    }
-
-    public static void configForManagerDevices(ServletContext context) throws ParserConfigurationException, SAXException, IOException {
-        final Document document = getDefaultDocument(context);
-
-        Element worker = (Element) document.getElementsByTagName("worker").item(0);
-        TIME_WORKER = Integer.parseInt(worker.getElementsByTagName("runEvery").item(0).getTextContent());
-        String startWorker = worker.getElementsByTagName("start").item(0).getTextContent();
-        START_WORKER = startWorker.equals("true");
-
-        Element apiKeys = (Element) document.getElementsByTagName("apiKeys").item(0);
-        PASSWORD_MANAGER_DEVICE = apiKeys.getElementsByTagName("ManagerDevices").item(0).getTextContent();
-
-        Element filePaths = (Element) document.getElementsByTagName("files").item(0);
-
-
-        if(FILE_ACTIONS == null)
-            FILE_ACTIONS = filePaths.getElementsByTagName("actions").item(0).getTextContent();
-        if(FILE_SENSORS == null)
-            FILE_SENSORS = filePaths.getElementsByTagName("sensors").item(0).getTextContent();
+        isParsed = true;
     }
 
     private static Document getDefaultDocument(ServletContext context) throws IOException, SAXException, ParserConfigurationException {
