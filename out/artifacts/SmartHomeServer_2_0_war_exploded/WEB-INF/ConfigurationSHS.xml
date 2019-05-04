@@ -2,7 +2,7 @@
     <apiPassword>123456789</apiPassword>
     <worker>
         <start>true</start>
-        <runEvery>60</runEvery>
+        <runEvery>61</runEvery>
     </worker>
     <blink>
         <file>blink.py</file>
