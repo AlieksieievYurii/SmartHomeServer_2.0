@@ -6,7 +6,7 @@
     </worker>
     <blink>
         <file>blink.py</file>
-        <path>~/Desktop/apache-tomcat-8.5.35/tools/</path>
+        <path>/home/pi/Desktop/apache-tomcat-8.5.35/tools/</path>
     </blink>
     <files>
         <actions>/WEB-INF/res/Actions.json</actions>
