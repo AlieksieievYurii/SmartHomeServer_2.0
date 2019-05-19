@@ -22,11 +22,13 @@ public class Service implements Runnable
     public void startService()
     {
         scheduledFuture = exec.scheduleAtFixedRate(this,0, Manifest.TIME_WORKER, TimeUnit.SECONDS);
+        System.err.println("Service have started!");
     }
 
     @Override
     public void run() {
         worker.execute();
+        System.err.println("Run..");
     }
 
     public void cancel()

@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="SmartHomeServer_2.0:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded</output-path>
+  <artifact type="exploded-war" name="SmartHomeServer">
+    <output-path>$PROJECT_DIR$/out/artifacts/SmartHomeServer</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="SmartHomeServer_2.0/web/Web" />
       <element id="directory" name="WEB-INF">

@@ -13,7 +13,6 @@ import request.post.interfaises.iResponse;
 import request.post.task.ControllerPOSTTask;
 import request.post.task.ControllerRemovingTask;
 import utils.password.PasswordUtils;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,7 +39,7 @@ public class ListenerTasks extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
-        executeBlinkBash();
+        //executeBlinkBash();
         try {
             if(PasswordUtils.isApiPasswordCorrect(request))
                 whatPost(request, response);
@@ -62,6 +61,7 @@ public class ListenerTasks extends HttpServlet {
             executor = "/usr/bin/python";
         else
             return;
+
         try {
             Runtime.getRuntime().exec(executor+" "+Manifest.FILE_BLINK,null,new File(Manifest.PATH_BLINK));
         } catch (IOException e) {

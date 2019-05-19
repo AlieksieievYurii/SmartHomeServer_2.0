@@ -14,7 +14,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>ManagerDevices</servlet-name>
-        <url-pattern>/managerTasks</url-pattern>
+        <url-pattern>/managerDevices</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ListenerTasks</servlet-name>
