@@ -44,6 +44,7 @@ public class ManagerDevices extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
+        System.err.println("<---Init-->");
         if (!Manifest.isParsed) try {
             Manifest.parseDefaultConfiguration(getServletContext());
         } catch (ParserConfigurationException | SAXException | IOException e) {
@@ -60,6 +61,7 @@ public class ManagerDevices extends HttpServlet {
     @Override
     public void destroy() {
         super.destroy();
+        System.err.println("<---Destroy-->");
         if(service != null)
             service.cancel();
     }
