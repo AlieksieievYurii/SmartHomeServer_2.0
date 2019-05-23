@@ -12,5 +12,6 @@
         <actions>/WEB-INF/res/Actions.json</actions>
         <tasks>/WEB-INF/res/Tasks.json</tasks>
         <sensors>/WEB-INF/res/Sensors.json</sensors>
+        <registeredPins>/WEB-INF/res/RegisteredPins.json</registeredPins>
     </files>
 </manifest>

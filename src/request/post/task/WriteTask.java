@@ -1,6 +1,7 @@
 package request.post.task;
 
-import task.Task;
+import interfaces.iWriteTask;
+import components.task.Task;
 import utils.files.FileReaderTasks;
 import utils.files.FileWriterTasks;
 import utils.files.tools.iFileWriteTasks;

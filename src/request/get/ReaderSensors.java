@@ -1,14 +1,15 @@
 package request.get;
 
 import com.google.gson.JsonArray;
-import sensors.SensorUtils;
+import interfaces.iReaderSensors;
+import components.sensors.SensorUtils;
 import javax.servlet.ServletContext;
 
 public class ReaderSensors implements iReaderSensors {
 
     private ServletContext servletContext;
 
-    ReaderSensors(ServletContext servletContext) {
+    public ReaderSensors(ServletContext servletContext) {
         this.servletContext = servletContext;
 
     }

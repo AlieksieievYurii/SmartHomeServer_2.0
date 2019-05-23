@@ -1,8 +1,8 @@
 package request.post;
 
-import action.Action;
-import request.post.interfaises.FileWorker;
-import request.post.interfaises.iWriteAction;
+import components.action.Action;
+import interfaces.FileWorker;
+import interfaces.iWriteAction;
 
 import java.util.List;
 

@@ -1,11 +1,11 @@
 package request.get;
 
-import action.Action;
+import components.action.Action;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import controllers.tcodtask.get.interfaises.iConverter;
-import action.ApiActionExtras;
-import utils.hash.HashCode;
+import interfaces.iConverter;
+import components.action.ApiActionExtras;
+import utils.HashCode;
 
 import javax.servlet.ServletContext;
 import java.util.List;
@@ -46,12 +46,12 @@ public class Converter implements iConverter {
                 action.getDevice().toString());
 
         jsonObject.addProperty(ApiActionExtras.PORT_TYPE.getJsonExtra(),
-                action.getPortType().toString());
+                action.getTypePort().toString());
 
         jsonObject.addProperty(ApiActionExtras.PORT_ID.getJsonExtra(),
                 action.getPort());
 
-        switch (action.getPortType())
+        switch (action.getTypePort())
         {
             case ANALOG:
                 jsonObject.addProperty(ApiActionExtras.PORT_VALUE.getJsonExtra(),

@@ -1,10 +1,10 @@
 package request.post;
 
-import action.Action;
+import components.action.Action;
 import com.google.gson.JsonObject;
 import exceptions.*;
-import request.post.interfaises.iRequest;
-import utils.json.JsonUtils;
+import interfaces.iRequest;
+import utils.JsonUtils;
 
 import javax.servlet.http.HttpServletRequest;
 

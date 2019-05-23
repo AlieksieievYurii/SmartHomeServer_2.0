@@ -4,28 +4,27 @@ package main;
     [*] ManagerDevices - This is mechanism which controls HardWare part of smart Home
 
     Example of URL:
-    ../SmartHomeServer_2_0_war_exploded/managerTasks?p=123456789&type=action&device=tcod&temperature=14&humidity=23&light=12
+    ../SmartHomeServer_2_0_war_exploded/managerTasks?p=123456789&type=components.action&device=tcod&temperature=14&humidity=23&light=12
     where:
     p - password
-    type - request type(hash - for getting hash code of tasks, action - for getting json file of tasks)
+    type - request type(hash - for getting hash code of tasks, components.action - for getting json file of tasks)
     device - type of device: only TCOD at the moment
-    temperature/humidity/light - value of sensors from TCOD
+    temperature/humidity/light - value of components.sensors from TCOD
  */
 
-import controllers.tcodtask.get.ControllerGETActions;
-import controllers.tcodtask.get.Factory;
-import controllers.request.RequestTypeUtils;
-import controllers.errors.ErrorLogs;
-import action.DeviceUtils;
+import controllers.DeviceManager.ControllerGETActions;
+import request.RequestTypeUtils;
+import utils.errors.ErrorLogs;
+import components.action.DeviceUtils;
 import exceptions.DeviceException;
 import exceptions.TypeRequestException;
 import org.xml.sax.SAXException;
-import request.post.Response;
-import request.post.interfaises.iResponse;
+import request.post.ResponseStatus;
+import interfaces.iResponseStatus;
 import service.Service;
-import sensors.HandlerSensors;
-import utils.hash.HashCode;
-import utils.password.PasswordUtils;
+import components.sensors.HandlerSensors;
+import utils.HashCode;
+import utils.PasswordUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -44,7 +43,6 @@ public class ManagerDevices extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
-        System.err.println("<---Init-->");
         if (!Manifest.isParsed) try {
             Manifest.parseDefaultConfiguration(getServletContext());
         } catch (ParserConfigurationException | SAXException | IOException e) {
@@ -61,7 +59,6 @@ public class ManagerDevices extends HttpServlet {
     @Override
     public void destroy() {
         super.destroy();
-        System.err.println("<---Destroy-->");
         if(service != null)
             service.cancel();
     }
@@ -75,19 +72,19 @@ public class ManagerDevices extends HttpServlet {
                 wrongRequest(response);
             }
         } else {
-            final iResponse resp = new Response(response);
+            final iResponseStatus resp = new ResponseStatus(response);
             resp.responseWRONG("wrong password");
         }
     }
 
     private void actions(HttpServletRequest request, HttpServletResponse response) {
         final ControllerGETActions controllerGETActions =
-                Factory.buildControllerGETActions(getServletContext(), request, response);
+                ControllerGETActions.build(getServletContext(),request,response);
         try {
             controllerGETActions.execute(DeviceUtils.whatDevice(request));
         } catch (DeviceException e) {
             e.printStackTrace();
-            final iResponse resp = new Response(response);
+            final iResponseStatus resp = new ResponseStatus(response);
             resp.responseWRONG("wrong device");
         }
     }
@@ -99,7 +96,7 @@ public class ManagerDevices extends HttpServlet {
 
     private void wrongRequest(HttpServletResponse response) {
         ErrorLogs.errorOfTypeRequest();
-        final iResponse resp = new Response(response);
+        final iResponseStatus resp = new ResponseStatus(response);
         resp.responseWRONG("wrong request");
     }
 

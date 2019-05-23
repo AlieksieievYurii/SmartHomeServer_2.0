@@ -2,9 +2,9 @@ package request.post.task;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import request.post.Response;
-import request.post.interfaises.iResponse;
-import task.Task;
+import request.post.ResponseStatus;
+import interfaces.iResponseStatus;
+import components.task.Task;
 import utils.files.FileReaderTasks;
 import utils.files.FileWriterTasks;
 import utils.files.tools.iFileWriteTasks;
@@ -18,11 +18,11 @@ public class ControllerRemovingTask
 {
     private iReaderTasks readerTasks;
     private iFileWriteTasks fileWriteTasks;
-    private iResponse response;
+    private iResponseStatus response;
 
     private ControllerRemovingTask(iReaderTasks readerTasks,
                                   iFileWriteTasks fileWriteTasks,
-                                  iResponse response) {
+                                  iResponseStatus response) {
         this.readerTasks = readerTasks;
         this.fileWriteTasks = fileWriteTasks;
         this.response = response;
@@ -38,7 +38,7 @@ public class ControllerRemovingTask
             if(isTaskWithId(id))
                 removeTask(id);
             else
-                response.responseWRONG("Not found task[id:"+id+"]");
+                response.responseWRONG("Not found components.task[id:"+id+"]");
         }else
             response.responseWRONG("Data is null");
 
@@ -71,7 +71,7 @@ public class ControllerRemovingTask
     {
         final iReaderTasks readerTasks = new FileReaderTasks(context);
         final iFileWriteTasks fileWriteTasks = new FileWriterTasks(context);
-        final iResponse response = new Response(r);
+        final iResponseStatus response = new ResponseStatus(r);
 
         return new ControllerRemovingTask(readerTasks,fileWriteTasks,response);
     }

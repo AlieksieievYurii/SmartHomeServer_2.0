@@ -1,14 +1,14 @@
 package service;
 
-import action.Action;
+import components.action.Action;
 import request.post.ActionRecorder;
 import request.post.FileEmployer;
-import request.post.interfaises.FileWorker;
-import request.post.interfaises.iWriteAction;
-import task.StatusTask;
-import task.Task;
-import task.TaskMode;
-import task.TimerJob;
+import interfaces.FileWorker;
+import interfaces.iWriteAction;
+import components.task.StatusTask;
+import components.task.Task;
+import components.task.TaskMode;
+import components.task.TimerJob;
 import utils.files.FileReaderTasks;
 import utils.files.FileWriterTasks;
 import utils.files.tools.iFileWriteTasks;

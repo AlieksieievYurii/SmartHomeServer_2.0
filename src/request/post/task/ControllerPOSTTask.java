@@ -1,8 +1,10 @@
 package request.post.task;
 import exceptions.TaskException;
-import request.post.Response;
-import request.post.interfaises.iResponse;
-import task.Task;
+import interfaces.iRequestTask;
+import interfaces.iWriteTask;
+import request.post.ResponseStatus;
+import interfaces.iResponseStatus;
+import components.task.Task;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,9 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 public class ControllerPOSTTask {
     private iRequestTask requestTask;
     private iWriteTask writeTask;
-    private iResponse response;
+    private iResponseStatus response;
 
-    private ControllerPOSTTask(iRequestTask requestTask, iWriteTask writeTask, iResponse response) {
+    private ControllerPOSTTask(iRequestTask requestTask, iWriteTask writeTask, iResponseStatus response) {
         this.requestTask = requestTask;
         this.writeTask = writeTask;
         this.response = response;
@@ -39,7 +41,7 @@ public class ControllerPOSTTask {
     {
         final iRequestTask requestTask = new RequestTask();
         final iWriteTask writeTask = new WriteTask(context);
-        final iResponse response = new Response(r);
+        final iResponseStatus response = new ResponseStatus(r);
 
         return new ControllerPOSTTask(requestTask,writeTask,response);
     }

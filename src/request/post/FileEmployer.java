@@ -1,11 +1,11 @@
 package request.post;
 
-import action.Action;
+import components.action.Action;
 import main.Manifest;
-import request.post.interfaises.FileWorker;
+import interfaces.FileWorker;
 import utils.files.FileReaderActions;
 import utils.files.tools.FileWriter;
-import utils.json.JsonUtils;
+import utils.JsonUtils;
 
 import javax.servlet.ServletContext;
 import java.util.List;

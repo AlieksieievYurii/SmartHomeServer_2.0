@@ -3,7 +3,8 @@ package request.post.task;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
 import exceptions.TaskException;
-import task.Task;
+import interfaces.iRequestTask;
+import components.task.Task;
 
 import javax.servlet.http.HttpServletRequest;
 

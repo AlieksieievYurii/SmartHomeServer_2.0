@@ -1,13 +1,13 @@
 package utils.files;
 
 
-import action.Action;
-import controllers.tcodtask.get.interfaises.iFileReaderActions;
-import action.Device;
+import components.action.Action;
+import interfaces.iFileReaderActions;
+import components.action.Device;
 import exceptions.*;
 import main.Manifest;
 import utils.files.tools.FileReader;
-import utils.json.JsonUtils;
+import utils.JsonUtils;
 import javax.servlet.ServletContext;
 import java.io.IOException;
 import java.util.List;

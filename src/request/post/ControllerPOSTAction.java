@@ -1,22 +1,22 @@
 package request.post;
 
-import action.Action;
+import components.action.Action;
 import exceptions.ActionException;
-import request.post.interfaises.iRequest;
-import request.post.interfaises.iResponse;
-import request.post.interfaises.iWriteAction;
+import interfaces.iRequest;
+import interfaces.iResponseStatus;
+import interfaces.iWriteAction;
 
 public class ControllerPOSTAction {
-    private final request.post.interfaises.iRequest iRequest;
-    private final request.post.interfaises.iWriteAction iWriteAction;
-    private final request.post.interfaises.iResponse iResponse;
+    private final interfaces.iRequest iRequest;
+    private final interfaces.iWriteAction iWriteAction;
+    private final iResponseStatus iResponseStatus;
 
     ControllerPOSTAction(iRequest iRequest,
                                 iWriteAction iWriteAction,
-                                iResponse iResponse) {
+                                iResponseStatus iResponseStatus) {
         this.iRequest = iRequest;
         this.iWriteAction = iWriteAction;
-        this.iResponse = iResponse;
+        this.iResponseStatus = iResponseStatus;
     }
 
     public void execute() {
@@ -24,13 +24,13 @@ public class ControllerPOSTAction {
         try {
              action = iRequest.getAction();
         } catch (ActionException e) {
-            iResponse.responseWRONG(e.getMessage());
+            iResponseStatus.responseWRONG(e.getMessage());
             return;
         }
 
         if (iWriteAction.write(action))
-            iResponse.responseOk();
+            iResponseStatus.responseOk();
         else
-            iResponse.responseWRONG("Error with writing Action");
+            iResponseStatus.responseWRONG("Error with writing Action");
     }
 }

@@ -1,6 +1,7 @@
 package request.get;
 import com.google.gson.JsonObject;
-import utils.hash.HashCode;
+import interfaces.iHashCodes;
+import utils.HashCode;
 
 import javax.servlet.ServletContext;
 
@@ -8,7 +9,7 @@ public class ReaderHashCode implements iHashCodes {
 
     private ServletContext servletContext;
 
-    ReaderHashCode(ServletContext servletContext) {
+    public ReaderHashCode(ServletContext servletContext) {
         this.servletContext = servletContext;
     }
 
