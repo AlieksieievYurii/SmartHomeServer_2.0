@@ -38,7 +38,7 @@ public class Manifest
         START_WORKER = worker.getElementsByTagName("start").item(0).getTextContent().equals("true");
         Element filePaths = (Element) document.getElementsByTagName("files").item(0);
         FILE_ACTIONS = filePaths.getElementsByTagName("actions").item(0).getTextContent();
-        FILE_SENSORS = filePaths.getElementsByTagName("components/sensors").item(0).getTextContent();
+        FILE_SENSORS = filePaths.getElementsByTagName("sensors").item(0).getTextContent();
         FILE_TASKS = filePaths.getElementsByTagName("tasks").item(0).getTextContent();
         FILE_REGISTERED_PINS = filePaths.getElementsByTagName("registeredPins").item(0).getTextContent();
 

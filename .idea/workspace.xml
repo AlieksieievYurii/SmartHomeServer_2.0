@@ -6,212 +6,126 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7fdb13b-a54b-4217-a4fc-adff1663355c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/pin/FileReaderRegisteredPins.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pin/RegisteredPin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pin/RegisteredPinsUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/ListenerTasks/ControllerPosting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/iReaderRegisteredPins.java" afterDir="false" />
+    <list default="true" id="b7fdb13b-a54b-4217-a4fc-adff1663355c" name="Default Changelist" comment="implementation Task and Worker. Change code more better">
+      <change afterPath="$PROJECT_DIR$/src/components/action/ActionAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/ConfigurationSHS.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/ConfigurationSHS.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/action/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/action/Action.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/action/PortType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/controllers/errors/ErrorLogs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/controllers/request/RequestTypeUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/controllers/request/TypeRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/controllers/tcodtask/get/ControllerGETActions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/controllers/tcodtask/get/Factory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/controllers/tcodtask/get/Response.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/controllers/tcodtask/get/interfaises/iConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/controllers/tcodtask/get/interfaises/iFileReaderActions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/controllers/tcodtask/get/interfaises/iHandlerSensors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/controllers/tcodtask/get/interfaises/iResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/main/ListenerTasks$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/action/Action.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/action/ActionExtra.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/action/ApiActionExtras.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/action/Device.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/action/DeviceUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/action/PortStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/action/TypePort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/controllers/DeviceManager/ControllerGETActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/controllers/DeviceManager/ControllerGETActions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/controllers/ListenerTasks/ControllerGetting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/controllers/ListenerTasks/ControllerGetting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/controllers/ListenerTasks/ControllerPosting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/controllers/ListenerTasks/ControllerPosting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/errors/ErrorLogs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/exceptions/StatusTaskException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/exceptions/StatusTaskException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/exceptions/TaskModeException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/exceptions/TaskModeException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/interfaces/FileWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/interfaces/FileWorker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/interfaces/iConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/interfaces/iConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/interfaces/iFileReaderActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/interfaces/iFileReaderActions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/interfaces/iRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/interfaces/iRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/interfaces/iRequestTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/interfaces/iRequestTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/interfaces/iWriteAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/interfaces/iWriteAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/interfaces/iWriteTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/interfaces/iWriteTask.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/main/ListenerTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/main/ListenerTasks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/main/ManagerDevices$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/main/ManagerDevices$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/main/ManagerDevices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/main/ManagerDevices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/main/Manifest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/main/Manifest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/get/ControllerGetting$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/get/ControllerGetting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/pin/FileReaderRegisteredPins.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/pin/RegisteredPin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/pin/RegisteredPinsUtils$RegisteredPinException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/pin/RegisteredPinsUtils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/get/Converter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/get/Converter$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/get/Converter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/get/Converter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/get/FactoryControllerGetting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/get/ReaderHashCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/get/ReaderHashCode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/get/ReaderSensors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/get/ReaderSensors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/get/iHashCodes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/get/iReaderSensors.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/ActionRecorder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/ActionRecorder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/ControllerPOSTAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/ControllerPOSTAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/Factory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/FileEmployer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/FileEmployer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/RequestAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/RequestAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/Response.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/interfaises/FileWorker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/interfaises/iRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/interfaises/iResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/interfaises/iWriteAction.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/task/ControllerPOSTTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/task/ControllerPOSTTask.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/task/ControllerRemovingTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/task/ControllerRemovingTask.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/task/RequestTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/task/RequestTask.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/task/WriteTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/task/WriteTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/task/iRequestTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/request/post/task/iWriteTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/sensors/HandlerSensors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/sensors/HandlerSensors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/sensors/HandlerSensors.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/sensors/Humidity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/sensors/Light.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/sensors/SensorExtra.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/sensors/SensorUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/sensors/Temperature.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/service/Worker$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/service/Worker$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/service/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/service/Worker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/task/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/task/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/task/TimerJob.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/task/TimerJob.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/tests/ReadFileTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/tests/TasksTask$TaskTimer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/tests/TasksTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/tests/job.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/tests/task.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/ParserConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/converter/ConvertActions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/task/StatusTask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/task/Task$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/task/Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/task/TaskMode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/task/TimerJob.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/task/TypeTask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/ConvertActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/ConvertActions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/HashCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/HashCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/JsonUtils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/JsonUtils$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/JsonUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/JsonUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/files/FileReaderActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/files/FileReaderActions.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/files/FileReaderTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/files/FileReaderTasks.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/files/FileWriterTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/files/FileWriterTasks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/hash/HashCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/json/JsonUtils$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/json/JsonUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/password/PasswordUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/files/tools/iFileWriteTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/files/tools/iFileWriteTasks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/files/tools/iReaderTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/classes/utils/files/tools/iReaderTasks.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/res/Actions.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/res/Actions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/res/RegisteredPins.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/res/RegisteredPins.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/res/Tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/res/Tasks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/action/Action.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/action/ActionExtra.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/action/ApiActionExtras.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/action/Device.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/action/DeviceUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/action/PortStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/action/PortType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/errors/ErrorLogs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/request/RequestTypeUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/request/TypeRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/tcodtask/get/ControllerGETActions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/tcodtask/get/Factory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/tcodtask/get/Response.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/tcodtask/get/interfaises/iConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/tcodtask/get/interfaises/iFileReaderActions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/tcodtask/get/interfaises/iHandlerSensors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/tcodtask/get/interfaises/iResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/ListenerTasks$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/ListenerTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/ListenerTasks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/ManagerDevices$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/ManagerDevices$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/components/action/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/components/action/Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/components/action/ActionExtra.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/components/action/ApiActionExtras.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/components/action/TypePort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/DeviceManager/ControllerGETActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/DeviceManager/ControllerGETActions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/ListenerTasks/ControllerGetting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/ListenerTasks/ControllerGetting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/ListenerTasks/ControllerPosting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/controllers/ListenerTasks/ControllerPosting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/exceptions/StatusTaskException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/exceptions/StatusTaskException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/exceptions/TaskModeException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/exceptions/TaskModeException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/interfaces/iRequestTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/interfaces/iRequestTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/interfaces/iWriteTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/interfaces/iWriteTask.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/ManagerDevices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/ManagerDevices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/Manifest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/main/Manifest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/get/ControllerGetting$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/get/ControllerGetting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/pin/FileReaderRegisteredPins.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/pin/RegisteredPin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/pin/RegisteredPinsUtils$RegisteredPinException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/pin/RegisteredPinsUtils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/get/Converter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/get/Converter$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/get/Converter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/get/Converter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/get/FactoryControllerGetting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/get/ReaderHashCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/get/ReaderHashCode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/get/ReaderSensors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/get/ReaderSensors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/get/iHashCodes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/get/iReaderSensors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/ActionRecorder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/ActionRecorder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/ControllerPOSTAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/ControllerPOSTAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/Factory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/FileEmployer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/FileEmployer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/RequestAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/RequestAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/Response.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/interfaises/FileWorker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/interfaises/iRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/interfaises/iResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/interfaises/iWriteAction.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/task/ControllerPOSTTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/task/ControllerPOSTTask.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/task/ControllerRemovingTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/task/ControllerRemovingTask.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/task/RequestTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/task/RequestTask.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/task/WriteTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/task/WriteTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/task/iRequestTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/request/post/task/iWriteTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/sensors/HandlerSensors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/sensors/HandlerSensors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/sensors/HandlerSensors.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/sensors/Humidity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/sensors/Light.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/sensors/SensorExtra.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/sensors/SensorUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/sensors/Temperature.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/service/Worker$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/service/Worker$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/service/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/service/Worker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/task/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/task/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/task/TimerJob.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/task/TimerJob.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/tests/ReadFileTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/tests/TasksTask$TaskTimer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/tests/TasksTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/tests/job.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/tests/task.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/ParserConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/converter/ConvertActions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/FileReaderActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/FileReaderActions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/task/StatusTask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/task/Task$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/task/Task.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/task/TaskMode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/task/TimerJob.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/task/TypeTask.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/ConvertActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/ConvertActions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/HashCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/HashCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/JsonUtils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/JsonUtils$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/JsonUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/JsonUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/FileReaderTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/FileReaderTasks.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/FileWriterTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/FileWriterTasks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/hash/HashCode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/json/JsonUtils$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/json/JsonUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/password/PasswordUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/action/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/ActionExtra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/action/ActionExtra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/ApiActionExtras.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/action/ApiActionExtras.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/action/Device.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/DeviceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/action/DeviceUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/PortStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/action/PortStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/action/PortType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/action/TypePort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/errors/ErrorLogs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/errors/ErrorLogs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/request/RequestTypeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/RequestTypeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/request/TypeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/TypeRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/tcodtask/get/ControllerGETActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/DeviceManager/ControllerGETActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/tcodtask/get/Factory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/tcodtask/get/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/tcodtask/get/interfaises/iConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/iConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/tcodtask/get/interfaises/iFileReaderActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/iFileReaderActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/tcodtask/get/interfaises/iHandlerSensors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/iHandlerSensors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/tcodtask/get/interfaises/iResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/iResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/StatusTaskException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exceptions/StatusTaskException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exceptions/TaskModeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exceptions/TaskModeException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ListenerTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ListenerTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ManagerDevices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ManagerDevices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/tools/iFileWriteTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/tools/iFileWriteTasks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/tools/iReaderTasks.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SmartHomeServer_2.0/utils/files/tools/iReaderTasks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/action/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/action/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/action/ActionExtra.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/action/ApiActionExtras.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/action/TypePort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/action/TypePin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pin/RegisteredPin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pin/RegisteredPin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Manifest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Manifest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/get/ControllerGetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ListenerTasks/ControllerGetting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/request/get/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/get/Converter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/get/FactoryControllerGetting.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/get/ReaderHashCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/get/ReaderHashCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/get/ReaderSensors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/get/ReaderSensors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/get/iHashCodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/iHashCodes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/get/iReaderSensors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/iReaderSensors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/post/ActionRecorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/post/ActionRecorder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/post/ControllerPOSTAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/post/ControllerPOSTAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/post/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/post/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/post/FileEmployer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/post/FileEmployer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/post/RequestAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/post/RequestAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/post/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/post/ResponseStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/post/interfaises/FileWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/FileWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/post/interfaises/iRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/iRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/post/interfaises/iResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/iResponseStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/post/interfaises/iWriteAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/iWriteAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/post/task/ControllerPOSTTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/post/task/ControllerPOSTTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/post/task/ControllerRemovingTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/post/task/ControllerRemovingTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/post/task/RequestTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/post/task/RequestTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/post/task/WriteTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/request/post/task/WriteTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/post/task/iRequestTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/iRequestTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/request/post/task/iWriteTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/iWriteTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sensors/HandlerSensors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensors/HandlerSensors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sensors/Humidity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensors/Humidity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sensors/Light.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensors/Light.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sensors/SensorExtra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensors/SensorExtra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sensors/SensorUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensors/SensorUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sensors/Temperature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sensors/Temperature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task/StatusTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task/StatusTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task/TaskMode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task/TaskMode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task/TimerJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task/TimerJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task/TypeTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/task/TypeTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/ReadFileTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/TasksTask.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/job.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/task.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/ParserConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/converter/ConvertActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ConvertActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/files/FileReaderActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/files/FileReaderActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/files/FileReaderTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/files/FileReaderTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/files/FileWriterTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/files/FileWriterTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/files/tools/iFileWriteTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/files/tools/iFileWriteTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/files/tools/iReaderTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/files/tools/iReaderTasks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/hash/HashCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HashCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/json/JsonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/JsonUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/password/PasswordUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/PasswordUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/ConvertActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ConvertActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/JsonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/JsonUtils.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -252,6 +166,8 @@
       <find>id&quot;:1</find>
       <find>14</find>
       <find>6</find>
+      <find>Port</find>
+      <find>port</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -260,13 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/tests/TasksTask.java" />
-        <option value="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/res/Actions.json" />
-        <option value="$PROJECT_DIR$/src/utils/files/WriteTask.java" />
-        <option value="$PROJECT_DIR$/src/request/post/task/RequestTask.java" />
-        <option value="$PROJECT_DIR$/src/exceptions/TypeRequestException.java" />
-        <option value="$PROJECT_DIR$/src/controllers/request/RequestTypeUtils.java" />
-        <option value="$PROJECT_DIR$/src/controllers/errors/ResponseExceptions.java" />
         <option value="$PROJECT_DIR$/src/utils/time/Date.java" />
         <option value="$PROJECT_DIR$/src/exceptions/PasswordException.java" />
         <option value="$PROJECT_DIR$/src/request/post/RequestAction.java" />
@@ -290,7 +199,6 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/out/artifacts/SmartHomeServer_2_0_war_exploded/WEB-INF/ConfigurationSHS.xml" />
         <option value="$PROJECT_DIR$/src/utils/json/JsonUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/Manifest.java" />
         <option value="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/ConfigurationSHS.xml" />
         <option value="$PROJECT_DIR$/src/pin/RegisteredPin.java" />
         <option value="$PROJECT_DIR$/src/pin/RegisteredPinsUtils.java" />
@@ -299,7 +207,6 @@
         <option value="$PROJECT_DIR$/src/pin/FileReaderRegisteredPins.java" />
         <option value="$PROJECT_DIR$/src/request/get/ControllerGetting.java" />
         <option value="$PROJECT_DIR$/src/main/ControllerPosting.java" />
-        <option value="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/res/Tasks.json" />
         <option value="$PROJECT_DIR$/src/controllers/ControllerGetting.java" />
         <option value="$PROJECT_DIR$/src/controllers/DeviceManager/Factory.java" />
         <option value="$PROJECT_DIR$/src/main/ManagerDevices.java" />
@@ -311,6 +218,15 @@
         <option value="$PROJECT_DIR$/src/controllers/DeviceManager/ControllerGETActions.java" />
         <option value="$PROJECT_DIR$/src/utils/ConvertActions.java" />
         <option value="$PROJECT_DIR$/src/request/post/ResponseStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/Manifest.java" />
+        <option value="$PROJECT_DIR$/src/components/action/ApiActionExtras.java" />
+        <option value="$PROJECT_DIR$/src/components/action/ActionExtra.java" />
+        <option value="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/res/RegisteredPins.json" />
+        <option value="$PROJECT_DIR$/src/components/action/TypePort.java" />
+        <option value="$PROJECT_DIR$/src/components/action/TypePin.java" />
+        <option value="$PROJECT_DIR$/src/components/action/Action.java" />
+        <option value="$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/res/Tasks.json" />
+        <option value="$PROJECT_DIR$/src/utils/JsonUtils.java" />
       </list>
     </option>
   </component>
@@ -328,10 +244,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="21" />
+    <option name="x" value="-44" />
+    <option name="y" value="99" />
     <option name="width" value="1296" />
-    <option name="height" value="776" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -339,6 +255,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -384,19 +301,13 @@
             <path>
               <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartHomeServer_2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SmartHomeServer_2.0" type="b2602c69:ProjectViewProjectNode" />
@@ -408,7 +319,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -418,7 +328,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558627935858" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558628130343" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -676,7 +586,11 @@
       <workItem from="1558285592712" duration="2156000" />
       <workItem from="1558460338521" duration="2238000" />
       <workItem from="1558546223410" duration="5986000" />
-      <workItem from="1558615498818" duration="8646000" />
+      <workItem from="1558615498818" duration="8739000" />
+      <workItem from="1558873523854" duration="2699000" />
+      <workItem from="1558885341402" duration="745000" />
+      <workItem from="1558960028375" duration="681000" />
+      <workItem from="1559492089655" duration="3049000" />
     </task>
     <task id="LOCAL-00001" summary="Added HashCode">
       <created>1552149170171</created>
@@ -826,7 +740,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206490000" />
+    <option name="totallyTimeSpent" value="213757000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -840,7 +754,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7806563" visible="true" weight="0.29126215" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7806563" visible="true" weight="0.3106796" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -850,8 +764,8 @@
       <window_info id="Web" order="7" sideWeight="0.22068965" side_tool="true" weight="0.23462783" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49919093" weight="0.32756633" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49514562" weight="0.37716264" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39968896" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49514562" visible="true" weight="0.19838524" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39907727" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298731" />
@@ -859,7 +773,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49676377" weight="0.30334488" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5048544" side_tool="true" weight="0.33217993" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4975728" weight="0.31026527" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4975728" weight="0.19261822" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3298731" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32871974" />
@@ -870,9 +784,9 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Maven" order="5" weight="0.32928804" />
-      <window_info anchor="right" id="Database" order="6" weight="0.32928804" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32928804" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7806563" visible="true" weight="0.2920712" />
@@ -935,79 +849,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://E:/Programs/apache-tomcat-8.5.34/lib/servlet-api.jar!/javax/servlet/ServletContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/files/FileReaderActions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/ConfigurationSHS.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Manifest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfaces/iHandlerSensors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfaces/iHashCodes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfaces/iReaderSensors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfaces/FileWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfaces/iWriteAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfaces/iRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/interfaces/iConverter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -1026,13 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/action/ApiActionExtras.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -1088,13 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/res/RegisteredPins.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="78" selection-start-column="77" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pin/FileReaderRegisteredPins.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1126,23 +953,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/files/FileReaderTasks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/res/Tasks.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/errors/ErrorLogs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -1150,13 +960,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/DeviceManager/Factory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/DeviceManager/Factory.java" />
     <entry file="file://$PROJECT_DIR$/src/request/get/ReaderHashCode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1164,13 +968,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/request/get/FactoryControllerGetting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/request/get/FactoryControllerGetting.java" />
     <entry file="file://$PROJECT_DIR$/src/request/get/Converter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -1230,13 +1028,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/ParserConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/ParserConfiguration.java" />
     <entry file="file://$PROJECT_DIR$/src/request/TypeRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1299,16 +1091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/JsonUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="202" selection-start-line="202" selection-end-line="202" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/interfaces/iResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -1316,10 +1098,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/ConfigurationSHS.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/ListenerTasks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="-853">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1328,8 +1117,118 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/ManagerDevices.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Manifest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/action/TypePin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#192#193#0" expanded="true" />
+            <element signature="e#232#233#0" expanded="true" />
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#295#296#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/action/ActionExtra.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/res/Actions.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/res/Tasks.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="293" lean-forward="true" selection-start-column="293" selection-end-column="293" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/task/TimerJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/Worker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/files/FileReaderTasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/action/ActionAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/task/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/action/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-327">
+          <caret line="63" column="56" selection-start-line="63" selection-start-column="56" selection-end-line="63" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/JsonUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="193" column="25" lean-forward="true" selection-start-line="193" selection-start-column="25" selection-end-line="193" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/SmartHomeServer/WEB-INF/res/RegisteredPins.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
         </state>
       </provider>
     </entry>

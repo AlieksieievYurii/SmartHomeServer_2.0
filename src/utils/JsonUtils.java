@@ -4,7 +4,7 @@ import components.action.*;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import components.action.TypePort;
+import components.action.TypePin;
 import exceptions.*;
 import components.pin.RegisteredPin;
 import components.task.Task;
@@ -30,38 +30,38 @@ public class JsonUtils {
 
                 Device forDevice = Device.whatDevice(
                         jsonObject.get(
-                                ActionExtra
+                                ActionAPI
                                         .FOR_DEVICE
                                         .getJsonExtra())
                                 .getAsString());
 
 
-                final TypePort typePort = TypePort.getPortType(
-                        jsonObject.get(ActionExtra.TYPE_PORT.getJsonExtra()).getAsString());
+                final TypePin typePin = TypePin.getPortType(
+                        jsonObject.get(ActionAPI.PIN_TYPE.getJsonExtra()).getAsString());
 
 
-                short port = jsonObject.get(ActionExtra.PORT.getJsonExtra()).getAsShort();
+                short port = jsonObject.get(ActionAPI.PIN_ID.getJsonExtra()).getAsShort();
 
-                if (typePort == TypePort.ANALOG) {
+                if (typePin == TypePin.ANALOG) {
 
                     actions.add(new Action(
                             forDevice,
-                            typePort,
+                            typePin,
                             port,
                             jsonObject.get(
-                                    ActionExtra.SIGNAL_ON_PORT
+                                    ActionAPI.PIN_VALUE
                                             .getJsonExtra())
                                     .getAsInt()));
 
-                } else if (typePort == TypePort.DIGITAL) {
+                } else if (typePin == TypePin.DIGITAL) {
 
                     actions.add(new Action(
                             forDevice,
-                            typePort,
+                            typePin,
                             port,
                             PortStatus.getByName(
                                     jsonObject.get(
-                                            ActionExtra.STATUS_PORT
+                                            ActionAPI.PIN_STATUS
                                                     .getJsonExtra())
                                             .getAsString())));
                 }
@@ -93,7 +93,7 @@ public class JsonUtils {
         try {
             forDevice = Device.whatDevice(
                     jsonObject.get(
-                            ApiActionExtras
+                            ActionAPI
                                     .FOR_DEVICE
                                     .getJsonExtra())
                             .getAsString());
@@ -102,43 +102,43 @@ public class JsonUtils {
         }
 
 
-        final TypePort typePort;
+        final TypePin typePin;
         try {
-            typePort = TypePort.getPortType(
+            typePin = TypePin.getPortType(
                     jsonObject.get(
-                            ApiActionExtras.PORT_TYPE.getJsonExtra()
+                            ActionAPI.PIN_TYPE.getJsonExtra()
                     ).getAsString());
         } catch (PortTypeException e) {
             throw new ActionException(e.getMessage());
         }
 
-        final int port = jsonObject.get(ApiActionExtras.PORT_ID.getJsonExtra()).getAsInt();
+        final int port = jsonObject.get(ActionAPI.PIN_ID.getJsonExtra()).getAsInt();
 
 
-        if (typePort == TypePort.ANALOG) {
+        if (typePin == TypePin.ANALOG) {
             try {
                 return new Action(
                         forDevice,
-                        TypePort.ANALOG,
+                        TypePin.ANALOG,
                         port,
                         jsonObject.get(
-                                ApiActionExtras
-                                        .PORT_VALUE
+                                ActionAPI
+                                        .PIN_VALUE
                                         .getJsonExtra())
                                 .getAsInt());
             } catch (SignalException e) {
                 throw new ActionException(e.getMessage());
             }
-        } else if (typePort == TypePort.DIGITAL) {
+        } else if (typePin == TypePin.DIGITAL) {
             try {
                 return new Action(
                         forDevice,
-                        TypePort.DIGITAL,
+                        TypePin.DIGITAL,
                         port,
                         PortStatus.getByName(
                                 jsonObject.get(
-                                        ApiActionExtras
-                                                .PORT_STATUS
+                                        ActionAPI
+                                                .PIN_STATUS
                                                 .getJsonExtra())
                                         .getAsString()));
             } catch (PortStatusException e) {

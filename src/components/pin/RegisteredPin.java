@@ -1,7 +1,7 @@
 package components.pin;
 
 import components.action.Device;
-import components.action.TypePort;
+import components.action.TypePin;
 import com.google.gson.JsonObject;
 import exceptions.DeviceException;
 import exceptions.PortException;
@@ -16,14 +16,14 @@ public class RegisteredPin
     private static final String API_DESCRIPTION = "description";
 
     private int pin;
-    private TypePort typePort;
+    private TypePin typePin;
     private Device device;
     private String name;
     private String description;
 
-    private RegisteredPin(int pin, TypePort typePort, Device device, String name, String description) {
+    private RegisteredPin(int pin, TypePin typePin, Device device, String name, String description) {
         this.pin = pin;
-        this.typePort = typePort;
+        this.typePin = typePin;
         this.device = device;
         this.name = name;
         this.description = description;
@@ -33,8 +33,8 @@ public class RegisteredPin
         return pin;
     }
 
-    public TypePort getTypePort() {
-        return typePort;
+    public TypePin getTypePin() {
+        return typePin;
     }
 
     public Device getDevice() {
@@ -60,7 +60,7 @@ public class RegisteredPin
     {
         final JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty(API_PIN,pin);
-        jsonObject.addProperty(API_TYPE_PORT,typePort.toString());
+        jsonObject.addProperty(API_TYPE_PORT, typePin.toString());
         jsonObject.addProperty(API_DEVICE,device.toString());
         jsonObject.addProperty(API_NAME,name);
         jsonObject.addProperty(API_DESCRIPTION,description);
@@ -87,11 +87,11 @@ public class RegisteredPin
         if(pin < 0)
             throw new PortException(pin);
 
-        final TypePort typePort = TypePort.getPortType(jsonObject.get(API_TYPE_PORT).getAsString());
+        final TypePin typePin = TypePin.getPortType(jsonObject.get(API_TYPE_PORT).getAsString());
         final Device device = Device.whatDevice(jsonObject.get(API_DEVICE).getAsString());
         final String name = jsonObject.get(API_NAME).getAsString();
         final String description = jsonObject.get(API_DESCRIPTION).getAsString();
 
-        return new RegisteredPin(pin,typePort,device,name,description);
+        return new RegisteredPin(pin, typePin,device,name,description);
     }
 }

@@ -1,7 +1,7 @@
 package utils;
 
 import components.action.Action;
-import components.action.TypePort;
+import components.action.TypePin;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import interfaces.iConverter;
@@ -46,15 +46,15 @@ public class ConvertActions implements iConverter
     {
         JsonObject jsonObject = new JsonObject();
 
-        if(action.getTypePort() == TypePort.ANALOG) {
+        if(action.getTypePin() == TypePin.ANALOG) {
             jsonObject.addProperty(SHORT_EXTRA_TYPE_PORT, SHORT_TYPE_ANALOG);
             jsonObject.addProperty(SHORT_VALUE, action.getSignalOnPort());
         }
-        else if (action.getTypePort() == TypePort.DIGITAL) {
+        else if (action.getTypePin() == TypePin.DIGITAL) {
             jsonObject.addProperty(SHORT_EXTRA_TYPE_PORT, SHORT_TYPE_DIGITAL);
             jsonObject.addProperty(SHORT_PORT_STATUS, action.getPortStatus().getShortJsonExtra());
         }
-        jsonObject.addProperty(SHORT_ID_PORT, action.getPort());
+        jsonObject.addProperty(SHORT_ID_PORT, action.getPin());
 
         return jsonObject;
     }

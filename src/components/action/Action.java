@@ -7,25 +7,25 @@ import java.util.Objects;
 
 public class Action {
     private Device device;
-    private TypePort typePort;
-    private int port;
+    private TypePin typePin;
+    private int pin;
     private int signalOnPort;
     private PortStatus portStatus;
 
-    public Action(Device device, TypePort typePort, int port, int signalOnPort) throws SignalException {
+    public Action(Device device, TypePin typePin, int pin, int signalOnPort) throws SignalException {
         this.device = device;
-        this.typePort = typePort;
-        this.port = port;
+        this.typePin = typePin;
+        this.pin = pin;
         if(signalOnPort >= 0 && signalOnPort <= 255)
             this.signalOnPort = signalOnPort;
         else
             throw new SignalException(signalOnPort);
     }
 
-    public Action(Device device, TypePort typePort, int port, PortStatus portStatus) {
+    public Action(Device device, TypePin typePin, int pin, PortStatus portStatus) {
         this.device = device;
-        this.typePort = typePort;
-        this.port = port;
+        this.typePin = typePin;
+        this.pin = pin;
         this.portStatus = portStatus;
     }
 
@@ -33,35 +33,35 @@ public class Action {
         return device;
     }
 
-    public TypePort getTypePort() {
-        return typePort;
+    public TypePin getTypePin() {
+        return typePin;
     }
 
-    public int getPort() {
-        return port;
+    public int getPin() {
+        return pin;
     }
 
     public int getSignalOnPort() {
-        assert (typePort == TypePort.ANALOG);
+        assert (typePin == TypePin.ANALOG);
         return signalOnPort;
     }
 
     public PortStatus getPortStatus() {
-        assert (typePort == TypePort.DIGITAL);
+        assert (typePin == TypePin.DIGITAL);
         return portStatus;
     }
 
 
     public JsonObject toJsonObject() {
         JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty(ActionExtra.FOR_DEVICE.getJsonExtra(), device.toString());
-        jsonObject.addProperty(ActionExtra.TYPE_PORT.getJsonExtra(), typePort.toString());
-        jsonObject.addProperty(ActionExtra.PORT.getJsonExtra(), port);
+        jsonObject.addProperty(ActionAPI.FOR_DEVICE.getJsonExtra(), device.toString());
+        jsonObject.addProperty(ActionAPI.PIN_TYPE.getJsonExtra(), typePin.toString());
+        jsonObject.addProperty(ActionAPI.PIN_ID.getJsonExtra(), pin);
 
-        if (typePort == TypePort.ANALOG)
-            jsonObject.addProperty(ActionExtra.SIGNAL_ON_PORT.getJsonExtra(), signalOnPort);
+        if (typePin == TypePin.ANALOG)
+            jsonObject.addProperty(ActionAPI.PIN_VALUE.getJsonExtra(), signalOnPort);
         else
-            jsonObject.addProperty(ActionExtra.STATUS_PORT.getJsonExtra(), portStatus.getJsonExtra());
+            jsonObject.addProperty(ActionAPI.PIN_STATUS.getJsonExtra(), portStatus.getJsonExtra());
 
         return jsonObject;
     }
@@ -70,8 +70,8 @@ public class Action {
     public String toString() {
         return "Action{" +
                 "device=" + device +
-                ", typePort=" + typePort +
-                ", port=" + port +
+                ", typePin=" + typePin +
+                ", pin=" + pin +
                 ", signalOnPort=" + signalOnPort +
                 ", portStatus=" + portStatus +
                 '}';
@@ -79,8 +79,8 @@ public class Action {
 
     public boolean isEquals(Action a) {
         return a.device == this.device
-                && a.typePort == this.typePort
-                && a.port == this.port;
+                && a.typePin == this.typePin
+                && a.pin == this.pin;
     }
 
     @Override
@@ -88,28 +88,28 @@ public class Action {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Action action = (Action) o;
-        return port == action.port &&
+        return pin == action.pin &&
                 signalOnPort == action.signalOnPort &&
-                typePort == action.typePort &&
+                typePin == action.typePin &&
                 portStatus == action.portStatus;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(typePort, port, signalOnPort, portStatus);
+        return Objects.hash(typePin, pin, signalOnPort, portStatus);
     }
 
     public static JsonObject getApiActionAsJsonObject(Action action)
     {
         final JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty(ApiActionExtras.PORT_ID.getJsonExtra(),action.getPort());
-        jsonObject.addProperty(ApiActionExtras.PORT_TYPE.getJsonExtra(),action.getTypePort().toString());
-        jsonObject.addProperty(ApiActionExtras.FOR_DEVICE.getJsonExtra(),action.getDevice().toString());
+        jsonObject.addProperty(ActionAPI.PIN_ID.getJsonExtra(),action.getPin());
+        jsonObject.addProperty(ActionAPI.PIN_TYPE.getJsonExtra(),action.getTypePin().toString());
+        jsonObject.addProperty(ActionAPI.FOR_DEVICE.getJsonExtra(),action.getDevice().toString());
 
-        if(action.getTypePort() == TypePort.DIGITAL)
-            jsonObject.addProperty(ApiActionExtras.PORT_STATUS.getJsonExtra(),action.getPortStatus().getJsonExtra());
-        else if(action.getTypePort() == TypePort.ANALOG)
-            jsonObject.addProperty(ApiActionExtras.PORT_VALUE.getJsonExtra(),action.getSignalOnPort());
+        if(action.getTypePin() == TypePin.DIGITAL)
+            jsonObject.addProperty(ActionAPI.PIN_STATUS.getJsonExtra(),action.getPortStatus().getJsonExtra());
+        else if(action.getTypePin() == TypePin.ANALOG)
+            jsonObject.addProperty(ActionAPI.PIN_VALUE.getJsonExtra(),action.getSignalOnPort());
 
         return jsonObject;
     }

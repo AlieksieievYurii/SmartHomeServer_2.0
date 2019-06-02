@@ -4,7 +4,7 @@ import components.action.Action;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import interfaces.iConverter;
-import components.action.ApiActionExtras;
+import components.action.ActionAPI;
 import utils.HashCode;
 
 import javax.servlet.ServletContext;
@@ -42,23 +42,23 @@ public class Converter implements iConverter {
         final JsonObject jsonObject = new JsonObject();
 
         jsonObject.addProperty(
-                ApiActionExtras.FOR_DEVICE.getJsonExtra(),
+                ActionAPI.FOR_DEVICE.getJsonExtra(),
                 action.getDevice().toString());
 
-        jsonObject.addProperty(ApiActionExtras.PORT_TYPE.getJsonExtra(),
-                action.getTypePort().toString());
+        jsonObject.addProperty(ActionAPI.PIN_TYPE.getJsonExtra(),
+                action.getTypePin().toString());
 
-        jsonObject.addProperty(ApiActionExtras.PORT_ID.getJsonExtra(),
-                action.getPort());
+        jsonObject.addProperty(ActionAPI.PIN_ID.getJsonExtra(),
+                action.getPin());
 
-        switch (action.getTypePort())
+        switch (action.getTypePin())
         {
             case ANALOG:
-                jsonObject.addProperty(ApiActionExtras.PORT_VALUE.getJsonExtra(),
+                jsonObject.addProperty(ActionAPI.PIN_VALUE.getJsonExtra(),
                         action.getSignalOnPort());
                 break;
             case DIGITAL:
-                jsonObject.addProperty(ApiActionExtras.PORT_STATUS.getJsonExtra(),
+                jsonObject.addProperty(ActionAPI.PIN_STATUS.getJsonExtra(),
                         action.getPortStatus().getJsonExtra());
                 break;
         }
