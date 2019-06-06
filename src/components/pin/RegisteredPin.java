@@ -9,7 +9,7 @@ import exceptions.PortTypeException;
 
 public class RegisteredPin
 {
-    private static final String API_PIN = "components/pin";
+    private static final String API_PIN = "pin";
     private static final String API_TYPE_PORT = "type_port";
     private static final String API_DEVICE = "device";
     private static final String API_NAME = "name";
